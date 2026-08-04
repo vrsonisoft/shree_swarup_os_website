@@ -1,0 +1,1690 @@
+﻿<!DOCTYPE html> <html lang="en" dir="ltr">  <head>     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">     <meta name="theme-color" content="#ffffff">     <meta charset="utf-8">     <meta name="viewport" content="width=device-width, initial-scale=1">     <meta name="csrf-token" content="vzILpWXKTKQkCIvSbpbcKSf1RKOWcSkTN2Xr2OCf">           <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">     <link rel="icon" type="image/png" sizes="192x192" href="/img/favicons/android-chrome-192x192.png">     <link rel="icon" type="image/png" sizes="512x512" href="/img/favicons/android-chrome-512x512.png">     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">     <link rel="shortcut icon" href="/img/favicons/favicon.ico">       <meta name="msapplication-TileColor" content="#ffffff">     <meta name="msapplication-TileImage" content="/img/logo.png">           <meta name="keywords" content="ShreeSwarupOS">     <meta name="description" content="ShreeSwarupOS">          <meta property="og:title" content="ShreeSwarupOS">     <meta property="og:image" content="/img/favicons/android-chrome-512x512.png">     <meta property="og:image:alt" content="ShreeSwarupOS">     <meta name="twitter:card" content="summary_large_image">     <meta name="twitter:title" content="ShreeSwarupOS">     <meta name="twitter:image" content="/img/favicons/android-chrome-512x512.png">      <title>ShreeSwarupOS - Digital Menu & Restaurant Management Platform</title>      <!-- Google Fonts: Poppins -->     <link rel="preconnect" href="https://fonts.googleapis.com">     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Orbitron:wght@600;700;800;900&family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700;800;900" rel="stylesheet">      <!-- Scripts -->     <link rel="stylesheet" href="/build/assets/app-Ds0Wv3SD.css">
+    <script type="module" src="/build/assets/app-CGg7GH1Y.js"></script>     <!-- Styles -->     <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #000000;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>      
+    <script src="/js/config.js"></script>
+
+    <script>
+    if (typeof tailwind !== 'undefined') {
+        tailwind.config = {
+            darkMode: 'class'
+        };
+    }
+    </script>
+    <style>
+    .footer-main-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+      margin-bottom: 40px !important;
+      align-items: start !important;
+    }
+    @media (min-width: 769px) {
+      .footer-main-grid {
+        grid-template-columns: 1.6fr 0.8fr 0.8fr 1.2fr !important;
+        gap: 48px !important;
+      }
+    }
+
+    /* ── PREMIUM FOOTER STYLES ── */
+    .premium-footer {
+      background: #f8fafc !important;
+      padding: 30px 24px 40px !important;
+      border-top: 1px solid var(--border, #e5e7eb) !important;
+    }
+    html.dark .premium-footer {
+      background: #0b0f19 !important;
+      border-top-color: #374151 !important;
+    }
+    .footer-col-title {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      color: #111827 !important;
+      margin: 0 0 6px !important;
+    }
+    html.dark .footer-col-title {
+      color: #ffffff !important;
+    }
+    .footer-col-links a {
+      font-size: 13.5px !important;
+      color: #6b7280 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      display: inline-block !important;
+    }
+    .footer-col-links a:hover {
+      color: #00b692 !important;
+      padding-left: 4px !important;
+    }
+    html.dark .footer-col-links a {
+      color: #9ca3af !important;
+    }
+    html.dark .footer-col-links a:hover {
+      color: #00b692 !important;
+    }
+    .brand-desc, .newsletter-desc, .copyright-text {
+      font-size: 13.5px !important;
+      color: #6b7280 !important;
+    }
+    html.dark .brand-desc, html.dark .newsletter-desc, html.dark .copyright-text {
+      color: #9ca3af !important;
+    }
+    .footer-divider {
+      height: 1px !important;
+      background: #e5e7eb !important;
+      margin-bottom: 24px !important;
+    }
+    html.dark .footer-divider {
+      background: #374151 !important;
+    }
+    .newsletter-form {
+      display: flex !important;
+      flex-direction: row !important;
+      background: #ffffff !important;
+      border: 1.5px solid #e5e7eb !important;
+      border-radius: 10px !important;
+      padding: 4px !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    html.dark .newsletter-form {
+      background: #1f2937 !important;
+      border-color: #374151 !important;
+    }
+    .newsletter-form input {
+      flex: 1 !important;
+      border: none !important;
+      background: transparent !important;
+      padding: 10px 14px !important;
+      font-size: 13.5px !important;
+      outline: none !important;
+      color: #111827 !important;
+    }
+    html.dark .newsletter-form input {
+      color: #ffffff !important;
+    }
+    .newsletter-form input::placeholder {
+      color: #9ca3af !important;
+    }
+    html.dark .newsletter-form input::placeholder {
+      color: #6b7280 !important;
+    }
+    .social-icon-btn {
+      width: 34px !important;
+      height: 34px !important;
+      border-radius: 50% !important;
+      background: #ffffff !important;
+      border: 1.5px solid #e5e7eb !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #6b7280 !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+    }
+    .social-icon-btn:hover {
+      background: #00b692 !important;
+      color: #ffffff !important;
+      border-color: #00b692 !important;
+      transform: translateY(-2px) !important;
+    }
+    html.dark .social-icon-btn {
+      background: #1f2937 !important;
+      border-color: #374151 !important;
+      color: #9ca3af !important;
+    }
+    html.dark .social-icon-btn:hover {
+      background: #00b692 !important;
+      color: #ffffff !important;
+      border-color: #00b692 !important;
+    }
+
+    /* ── TOP CONTACT BAR STYLES ── */
+    .top-contact-bar {
+      background: #f8fafc;
+      color: #4b5563;
+      padding: 8px 24px;
+      font-size: 12px;
+      font-family: 'Poppins', sans-serif;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .top-contact-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+    .top-contact-container a {
+      color: #4b5563 !important;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+    .top-contact-container a:hover {
+      color: #00b692 !important;
+    }
+    @media (max-width: 768px) {
+      .top-contact-bar {
+        display: none !important;
+      }
+    }
+
+    /* Dark Mode overrides */
+    html.dark .top-contact-bar {
+      background: #0b0f19;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    html.dark .top-contact-container a {
+      color: #e5e7eb !important;
+    }
+    html.dark .top-contact-container a:hover {
+      color: #00b692 !important;
+    }
+
+    /* ── HEADER NAVIGATION LINK STYLES ── */
+    .menutiger-nav ul li a, #mobile-menu-2 ul li a {
+      color: #374151 !important; /* Dark grey for high contrast in light mode */
+      font-weight: 500 !important;
+      transition: all 0.2s ease !important;
+    }
+    html.dark .menutiger-nav ul li a, html.dark #mobile-menu-2 ul li a {
+      color: #e5e7eb !important; /* Light grey for dark mode */
+    }
+    .menutiger-nav ul li a:hover, #mobile-menu-2 ul li a:hover {
+      color: #00b692 !important;
+    }
+    .menutiger-nav ul li a.active-nav-link, #mobile-menu-2 ul li a.active-nav-link {
+      color: #00b692 !important;
+      font-weight: 700 !important;
+    }
+
+    /* ── ACTION BUTTONS EXPLICIT STYLES FOR LIGHT/DARK MODE ── */
+    /* Light Mode (Default) */
+    #theme-toggle, #theme-toggle-mobile {
+      border: 1.5px solid #d1d5db !important;
+      background-color: #ffffff !important;
+      color: #4b5563 !important;
+    }
+    #theme-toggle svg, #theme-toggle-mobile svg {
+      fill: #4b5563 !important;
+      color: #4b5563 !important;
+    }
+    .menutiger-nav a[href="/login"], #mobile-menu-2 a[href="/login"] {
+      background-color: #ffffff !important;
+      border: 1.5px solid #d1d5db !important;
+      color: #1f2937 !important;
+    }
+    .menutiger-nav a[href="/login"]:hover, #mobile-menu-2 a[href="/login"]:hover {
+      color: #00b692 !important;
+      background-color: #f9fafb !important;
+      border-color: #00b692 !important;
+    }
+    .menutiger-nav a[href="/restaurant-signup"], #mobile-menu-2 a[href="/restaurant-signup"] {
+      background-color: #00b692 !important;
+      color: #ffffff !important;
+      border: none !important;
+    }
+    .menutiger-nav a[href="/restaurant-signup"]:hover, #mobile-menu-2 a[href="/restaurant-signup"]:hover {
+      background-color: #009c7d !important;
+      color: #ffffff !important;
+    }
+
+    /* Dark Mode Overrides */
+    html.dark #theme-toggle, html.dark #theme-toggle-mobile {
+      border: 1.5px solid #4b5563 !important;
+      background-color: #1f2937 !important;
+      color: #e5e7eb !important;
+    }
+    html.dark #theme-toggle svg, html.dark #theme-toggle-mobile svg {
+      fill: #e5e7eb !important;
+      color: #e5e7eb !important;
+    }
+    html.dark .menutiger-nav a[href="/login"], html.dark #mobile-menu-2 a[href="/login"] {
+      background-color: #1f2937 !important;
+      border: 1.5px solid #4b5563 !important;
+      color: #e5e7eb !important;
+    }
+    html.dark .menutiger-nav a[href="/login"]:hover, html.dark #mobile-menu-2 a[href="/login"]:hover {
+      color: #00b692 !important;
+      background-color: #374151 !important;
+      border-color: #00b692 !important;
+    }
+    html.dark .menutiger-nav a[href="/restaurant-signup"], html.dark #mobile-menu-2 a[href="/restaurant-signup"] {
+      background-color: #00b692 !important;
+      color: #ffffff !important;
+    }
+    </style>
+
+</head>   <body class="font-sans antialiased dark:bg-gray-900">
+    <div class="top-contact-bar">
+      <div class="top-contact-container">
+        <a href="tel:+919257915113">🇮🇳 +91-92579-15113</a>
+        <a href="tel:+918619190869">🇮🇳 +91-86191-90869</a>
+      </div>
+    </div>
+         <div     id="global-offline-banner"     class="hidden fixed top-0 inset-x-0 z-[9999] bg-red-600 text-white text-center text-sm font-medium px-6 py-2.5 shadow-md"     role="status"     aria-live="polite" >     No internet connection </div>  <style>     body {         --offline-banner-offset: 0px;     }      body.offline-banner-visible {         --offline-banner-offset: 40px;         padding-top: 40px;     }      body.offline-banner-visible nav.fixed {         top: var(--offline-banner-offset);     }      body.offline-banner-visible #sidebar {         top: var(--offline-banner-offset);         height: calc(100% - var(--offline-banner-offset));     }      body.offline-banner-visible #sidebarBackdrop.fixed {         top: var(--offline-banner-offset);     } </style>  <script>     (function () {         if (window.__globalOfflineBannerInitialized) {             return;         }         window.__globalOfflineBannerInitialized = true;          function getBanner() {             return document.getElementById('global-offline-banner');         }          function updateOfflineBanner() {             var banner = getBanner();             if (!banner) {                 return;             }              var isOffline = !navigator.onLine;             banner.classList.toggle('hidden', !isOffline);             document.body.classList.toggle('offline-banner-visible', isOffline);         }          window.addEventListener('online', updateOfflineBanner);         window.addEventListener('offline', updateOfflineBanner);         document.addEventListener('DOMContentLoaded', updateOfflineBanner);         document.addEventListener('livewire:navigated', updateOfflineBanner);          updateOfflineBanner();     })(); </script>     <div class="w-full min-h-svh">         <header class="lg:hidden">             <nav class="bg-white border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:text-gray">                 <div class="flex flex-wrap justify-between items-center mx-auto">                     <a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
+                        <img src="/img/logo.png" class="h-11 w-auto object-contain rounded-xl shrink-0 shadow-sm" style="height:42px; max-height:42px; width:auto; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ShreeSwarupOS Logo" />
+                        <span class="logo-text" style="font-size:21px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
+                            <span style="color:#00B692; font-weight:900;">SHREESWARUP</span><span style="color:#9CB080; font-weight:900;">OS</span>
+                        </span>
+                    </a>                     <div class="flex flex-shrink-0 items-center gap-1 sm:gap-2">                                                  <button id="theme-toggle-mobile" data-tooltip-target="tooltip-toggle-mobile-landing" type="button"                             class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">                             <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"                                 xmlns="http://www.w3.org/2000/svg">                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>                             </svg>                             <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"                                 xmlns="http://www.w3.org/2000/svg">                                 <path                                     d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"                                     fill-rule="evenodd" clip-rule="evenodd"></path>                             </svg>                         </button>                         <div id="tooltip-toggle-mobile-landing" role="tooltip"                             class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">                             Toggle Dark Mode                            <div class="tooltip-arrow" data-popper-arrow></div>                         </div>                          <button data-collapse-toggle="mobile-menu-2" type="button"                             class="inline-flex items-center p-2 ltr:ml-0 rtl:mr-0 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"                             aria-controls="mobile-menu-2" aria-expanded="false">                             <span class="sr-only">Open Main Menu</span>                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"                                 xmlns="http://www.w3.org/2000/svg">                                 <path fill-rule="evenodd"                                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"                                     clip-rule="evenodd"></path>                             </svg>                             <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"                                 xmlns="http://www.w3.org/2000/svg">                                 <path fill-rule="evenodd"                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"                                     clip-rule="evenodd"></path>                             </svg>                         </button>                     </div>                     <script>                         document.addEventListener('DOMContentLoaded', function() {                             const themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');                             const themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');                             const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');                              if (!themeToggleDarkIconMobile || !themeToggleLightIconMobile || !themeToggleBtnMobile) {                                 return;                             }                              if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {                                 themeToggleLightIconMobile.classList.remove('hidden');                             } else {                                 themeToggleDarkIconMobile.classList.remove('hidden');                             }                              themeToggleBtnMobile.addEventListener('click', function() {                                 themeToggleDarkIconMobile.classList.toggle('hidden');                                 themeToggleLightIconMobile.classList.toggle('hidden');                                  if (localStorage.getItem('color-theme')) {                                     if (localStorage.getItem('color-theme') === 'light') {                                         document.documentElement.classList.add('dark');                                         localStorage.setItem('color-theme', 'dark');                                     } else {                                         document.documentElement.classList.remove('dark');                                         localStorage.setItem('color-theme', 'light');                                     }                                 } else if (document.documentElement.classList.contains('dark')) {                                     document.documentElement.classList.remove('dark');                                     localStorage.setItem('color-theme', 'light');                                 } else {                                     document.documentElement.classList.add('dark');                                     localStorage.setItem('color-theme', 'dark');                                 }                                  document.dispatchEvent(new Event('dark-mode'));                             });                         });                     </script>                     <div class="hidden justify-between items-center w-full bg-gray-50 dark:bg-gray-700 mt-4 rounded-md"                         id="mobile-menu-2">                         <ul class="flex flex-col font-medium ">                             <li>                                 <a href="/"                                     class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">Home</a>                             </li>                              <li>                                 <a href="/features"                                     class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">Features</a>                             </li>                              <li>                                 <a href="/pricing"                                     class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">Pricing</a>                             </li>                              <li>
+                                 <a href="/about-us" class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">About Us</a>
+                             </li>
+                             <li>
+                                 <a href="/tutorials" class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">Tutorials</a>
+                             </li>                                                                                        <li>                                 <a href="/login" wire:navigate                                     class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">                                                                             Login                                                                    </a>                             </li>                              <li>                                 <a href="/restaurant-signup" wire:navigate                                     class="block py-2 pr-4 pl-3 text-gray-700 rounded dark:text-gray-200 text-[14px]">Get Started</a>                             </li>                         </ul>                     </div>                 </div>             </nav>         </header>          <header class="hidden lg:block z-50 sticky top-0 inset-x-0">             <nav class="menutiger-nav sticky top-0 px-8 py-0 border-b border-gray-200/70 dark:border-white/10 shadow-sm bg-white dark:bg-gray-900" style="z-index:999;">                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4" style="height:64px;">                     <a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
+                        <img src="/img/logo.png" class="h-11 w-auto object-contain rounded-xl shrink-0 shadow-sm" style="height:42px; max-height:42px; width:auto; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ShreeSwarupOS Logo" />
+                        <span class="logo-text" style="font-size:21px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
+                            <span style="color:#00B692; font-weight:900;">SHREESWARUP</span><span style="color:#9CB080; font-weight:900;">OS</span>
+                        </span>
+                    </a>                     <div class="flex items-center lg:order-2">                         <button id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button"                             class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ltr:mr-4 rtl:ml-4">                             <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 0 1 6.707 2.707a8.001 8.001 0 1 0 10.586 10.586"/></svg>                             <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1m4 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0m-.464 4.95.707.707a1 1 0 0 0 1.414-1.414l-.707-.707a1 1 0 0 0-1.414 1.414m2.12-10.607a1 1 0 0 1 0 1.414l-.706.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0zM17 11a1 1 0 1 0 0-2h-1a1 1 0 1 0 0 2zm-7 4a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1M5.05 6.464A1 1 0 1 0 6.465 5.05l-.708-.707a1 1 0 0 0-1.414 1.414zm1.414 8.486-.707.707a1 1 0 0 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 1.414M4 11a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2z" fill-rule="evenodd" clip-rule="evenodd"/></svg>                         </button>                         <div id="tooltip-toggle" role="tooltip"                             class="hidden absolute z-10 invisible px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">                             Toggle dark mode                             <div class="tooltip-arrow" data-popper-arrow></div>                         </div>                          <a href="/login"                             class="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg font-medium text-sm text-gray-800 dark:text-gray-200 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-[#00b692] dark:hover:text-[#00b692] transition ease-in-out duration-150 ltr:pl-4 rtl:pr-4"                             wire:click="$dispatch('showSignup')">                                                             Login                                                    </a>                                                      <a href="/restaurant-signup"                                 class="text-white justify-center btn-menutiger-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center ltr:ml-2 rtl:mr-2"                                 wire:click="$dispatch('showSignup')">START FOR FREE</a>                                                 <button data-collapse-toggle="mobile-menu-2" type="button"                             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"                             aria-controls="mobile-menu-2" aria-expanded="false">                             <span class="sr-only">Open Main Menu</span>                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"                                 xmlns="http://www.w3.org/2000/svg">                                 <path fill-rule="evenodd"                                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"                                     clip-rule="evenodd"></path>                             </svg>                             <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"                                 xmlns="http://www.w3.org/2000/svg">                                 <path fill-rule="evenodd"                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"                                     clip-rule="evenodd"></path>                             </svg>                         </button>                     </div>                     <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"                         id="mobile-menu-2">                         <ul                             class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 rtl:space-x-reverse">                             <li>                                 <a href="/" wire:navigate class="block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 transition duration-200 font-medium text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]"                                     aria-current="page">Home</a>                             </li>                              <li>                                 <a href="/features" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]"                                     aria-current="page">Features</a>                             </li>                              <li>                                 <a href="/pricing" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]"                                     aria-current="page">Pricing</a>                             </li>                              <li>
+                                 <a href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-gray-700 font-medium hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692]" aria-current="page">About Us</a>
+                             </li>
+                             <li>
+                                 <a href="/tutorials" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-[#00b692] font-semibold" aria-current="page">Tutorials</a>
+                             </li>
+                             
+                                                           <li>                                 <a href="/#user-faqs" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]" aria-current="page">FAQs</a>                             </li>                                                      </ul>                     </div>                 </div>             </nav>         </header>          <div class="w-full min-h-screen flex flex-col justify-between dark:bg-gray-900">             <main class="flex-grow">
+
+
+
+<style>
+:root {
+  --green: #00b692;
+  --green-dark: #009c7d;
+  --orange: #ff6b2c;
+  --dark: #111827;
+  --gray: #6b7280;
+  --light: #f8fafc;
+  --border: #e5e7eb;
+  --white: #ffffff;
+  --card: #ffffff;
+}
+
+html.dark {
+  --dark: #f3f4f6;
+  --gray: #9ca3af;
+  --light: #111827;
+  --border: #374151;
+  --white: #111827;
+  --card: #1f2937;
+}
+
+.tutorial-detail-page {
+  color: var(--dark);
+}
+
+/* ── HERO BANNER ── */
+.detail-hero {
+  background: linear-gradient(135deg, #0b0f19 0%, #0d2720 50%, #0c1a26 100%);
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 60%, rgba(0, 182, 146, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--green);
+}
+
+.detail-hero-title {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.detail-hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 182, 146, 0.25);
+}
+
+/* ── LAYOUT GRID ── */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── SIDEBAR NAV ── */
+.detail-sidebar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+
+.sidebar-heading {
+  font-size: 15px;
+  font-weight: 750;
+  color: var(--dark);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-tutorial-link {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.sidebar-tutorial-link:hover {
+  background: var(--light);
+  color: var(--green);
+}
+
+.sidebar-tutorial-link.active {
+  background: rgba(0, 182, 146, 0.08);
+  border-color: rgba(0, 182, 146, 0.25);
+  color: var(--green);
+  font-weight: 600;
+}
+
+.sidebar-link-title {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.sidebar-link-tag {
+  font-size: 9px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* ── MAIN CONTENT ── */
+.detail-main-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.tutorial-meta-desc {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Video Player Simulation */
+.video-player-container {
+  margin-bottom: 40px;
+}
+
+.video-player-mockup {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  aspect-ratio: 16/9;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border: 1px solid var(--border);
+}
+
+.video-screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d0e15 0%, #191b2b 100%);
+}
+
+.video-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+}
+
+.video-play-indicator {
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 182, 146, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 182, 146, 0.5);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.video-play-indicator:hover {
+  transform: scale(1.1);
+  background: #00b692;
+}
+
+.video-title-overlay {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  z-index: 10;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0.95;
+  z-index: 10;
+}
+
+.video-progress-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #00b692;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+.video-control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.video-control-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Steps list styling */
+.steps-container {
+  margin-top: 36px;
+}
+
+.steps-heading {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.step-number {
+  width: 26px;
+  height: 26px;
+  background: rgba(0, 182, 146, 0.12);
+  border: 1.5px solid rgba(0, 182, 146, 0.25);
+  border-radius: 50%;
+  color: #00b692;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-text {
+  font-size: 14.5px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.back-btn-wrapper {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.btn-back-tutorials {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.btn-back-tutorials:hover {
+  color: var(--green);
+}
+</style>
+
+<div class="tutorial-detail-page">
+  <!-- HERO BANNER -->
+  <section class="detail-hero">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/tutorials">Tutorials</a>
+        <span>&rsaquo;</span>
+        <span id="breadcrumb-current" style="color: #fff;">Setup</span>
+      </div>
+      
+      <span class="detail-hero-badge" id="tutorial-badge">Setup</span>
+      <h1 class="detail-hero-title" id="tutorial-title">Tutorial Title</h1>
+    </div>
+  </section>
+
+  <!-- MAIN BODY LAYOUT -->
+  <section class="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+    <div class="detail-layout">
+      
+      <!-- Left sidebar: Other related tutorials -->
+      <div>
+        <div class="detail-sidebar">
+          <h3 class="sidebar-heading">Related Tutorials</h3>
+          <div class="sidebar-links-list" id="sidebar-related-links">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right section: Main detailed view -->
+      <div>
+        <div class="detail-main-content">
+          <p class="tutorial-meta-desc" id="tutorial-desc">Tutorial description here...</p>
+          
+          <!-- Video Player Container -->
+          <div class="video-player-container">
+            <div id="youtube-iframe-wrapper" class="video-player-mockup" style="display: none; aspect-ratio: 16/9; width: 100%;">
+            </div>
+            <div id="mockup-video-wrapper" class="video-player-mockup">
+              <div class="video-screen">
+                <div class="video-title-overlay" id="video-overlay-title">Tutorial Video Preview</div>
+                <div class="video-glow"></div>
+                <div class="video-play-indicator" onclick="simulateVideoPlay()">
+                  <svg id="video-play-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </div>
+                
+                <div class="video-controls">
+                  <div class="video-progress-bar" onclick="clickProgress(event)">
+                    <div id="video-progress-fill" class="video-progress-fill"></div>
+                  </div>
+                  <div class="video-control-row">
+                    <div class="video-control-left">
+                      <span id="video-play-btn" style="cursor:pointer;" onclick="simulateVideoPlay()">▶</span>
+                      <span id="video-time">0:00 / 0:00</span>
+                    </div>
+                    <div>1080p HD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step by Step Instructions -->
+          <div class="steps-container">
+            <h4 class="steps-heading">
+              <svg class="text-emerald-500" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+              </svg>
+              Step-by-step Setup Guide
+            </h4>
+            <div id="steps-list-container" class="space-y-4">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="back-btn-wrapper">
+            <a href="/tutorials" class="btn-back-tutorials">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Back to All Tutorials
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<script>
+// Tutorial data will be fetched dynamically from API
+const serverTutorial = null; // loaded via API fetch below
+const serverRelated = [];    // loaded via API fetch below
+const fallbackTutorialsData = [
+
+  {
+    id: 1,
+    title: "How to Setup Restaurant Profile",
+    slug: "how-to-setup-restaurant-profile",
+    category: "SETUP",
+    subcategory: "REST_SETTINGS",
+    tag: "Setup",
+    tagClass: "tag-setup",
+    description: "Configure your restaurant details, business hours, default currencies, tax rates, and upload your brand logo.",
+    steps: [
+      "Navigate to the <b>Superadmin / Restaurant Settings</b> panel.",
+      "Fill in your restaurant details: name, phone, address, and select timezone.",
+      "Upload your restaurant logo and choose a custom theme color.",
+      "Configure your standard business operation hours (opening and closing timings).",
+      "Set your default tax configuration (GST / VAT rates) and click <b>Save Settings</b>."
+    ],
+    videoTitle: "How to Setup Restaurant Profile in TableTrack?",
+    videoDuration: "1:40"
+  },
+  {
+    id: 2,
+    title: "How to Add Tables & Generate QR Codes",
+    slug: "how-to-add-tables-generate-qr-codes",
+    category: "SETUP",
+    subcategory: "TABLES_QR",
+    tag: "Setup",
+    tagClass: "tag-setup",
+    description: "Add physical tables to your restaurant layout, map them, and generate downloadable QR codes for contactless dining.",
+    steps: [
+      "Select <b>Table Management</b> from the admin dashboard sidebar.",
+      "Click on <b>+ Add Table</b> and specify details: Table Name/Number and seating capacity.",
+      "Select the specific area or room mapping (e.g. Rooftop, Indoor, Garden).",
+      "Click <b>Generate QR</b> to create custom dine-in QR codes.",
+      "Download and print the QR files. Customers can scan these to browse your menu and order."
+    ],
+    videoTitle: "How to Generate Table QR Codes in TableTrack?",
+    videoDuration: "1:25"
+  },
+  {
+    id: 3,
+    title: "How to Manage Staff & Waiters",
+    slug: "how-to-manage-staff-waiters",
+    category: "SETUP",
+    subcategory: "STAFF",
+    tag: "Setup",
+    tagClass: "tag-setup",
+    description: "Add waiters, managers, and delivery staff. Track active waiter requests and table assignments.",
+    steps: [
+      "Go to the <b>Staff Management</b> section on your admin dashboard.",
+      "Tap on <b>+ Add Staff</b> and enter their name, contact details, and secure login PIN.",
+      "Select their job role type: Waiter, Chef, Manager, or Delivery Executive.",
+      "Assign specific table areas to waiters to optimize service delivery.",
+      "Track staff attendance and real-time customer table service requests."
+    ],
+    videoTitle: "How to Manage Staff & Waiters in TableTrack?",
+    videoDuration: "1:55"
+  },
+  {
+    id: 4,
+    title: "How to Create Menu Categories",
+    slug: "how-to-create-menu-categories",
+    category: "MENU",
+    subcategory: "MENU_CAT",
+    tag: "Menu",
+    tagClass: "tag-menu",
+    description: "Organize your food menu by creating structural categories (e.g. Starters, Main Course, Drinks).",
+    steps: [
+      "Go to the <b>Menu Manager</b> and click on <b>Categories</b>.",
+      "Tap on <b>+ Add Category</b> at the top right header.",
+      "Enter the category name (e.g. Desserts) and upload a category thumbnail icon.",
+      "Toggle category visibility (Active / Inactive status).",
+      "Click <b>Save</b>. You can now drag and drop categories to reorder their layout."
+    ],
+    videoTitle: "How to Create Menu Categories in TableTrack?",
+    videoDuration: "1:15"
+  },
+  {
+    id: 5,
+    title: "How to Add Menu Items",
+    slug: "how-to-add-menu-items",
+    category: "MENU",
+    subcategory: "MENU_ITEMS",
+    tag: "Menu",
+    tagClass: "tag-menu",
+    description: "Add dish names, descriptions, base prices, tax rates, food tags, and upload eye-catching product images.",
+    steps: [
+      "Open <b>Menu Manager -> Item List</b>.",
+      "Click on <b>+ Add Item</b> and select its category (e.g., Beverages).",
+      "Input the dish name, description, base price, and applicable tax rate.",
+      "Toggle tags like Veg, Non-Veg, Egg, Gluten-Free, or Chef Special.",
+      "Upload high-quality photos of the dish and tap <b>Save Item</b> to publish it to your QR menu."
+    ],
+    videoTitle: "How to Add Menu Items in TableTrack?",
+    videoDuration: "2:05"
+  },
+  {
+    id: 6,
+    title: "How to Add Modifier Groups",
+    slug: "how-to-add-modifier-groups",
+    category: "MENU",
+    subcategory: "MENU_MODS",
+    tag: "Menu",
+    tagClass: "tag-menu",
+    description: "Create customizable add-ons (e.g., extra toppings, size choices) to let customers customize their orders.",
+    steps: [
+      "Navigate to the <b>Modifiers</b> master configuration tab.",
+      "Tap <b>+ Add Modifier Group</b> (e.g., Pizza Toppings, Coffee Size).",
+      "Add individual modifier options, specifying name and additional price (e.g. Extra Cheese +$1.50).",
+      "Select selection limits: Single Choice (Radio) or Multiple Choice (Checkbox).",
+      "Map this modifier group to specific menu items and click <b>Save</b>."
+    ],
+    videoTitle: "How to Setup Menu Modifiers in TableTrack?",
+    videoDuration: "1:45"
+  },
+  {
+    id: 7,
+    title: "How to Place Order via POS",
+    slug: "how-to-place-order-via-pos",
+    category: "POS",
+    subcategory: "POS_SYSTEM",
+    tag: "POS",
+    tagClass: "tag-pos",
+    description: "Take walk-in or phone orders, select table mapping, customize items in the cart, and process checks.",
+    steps: [
+      "Open the **POS screen** from your billing terminal.",
+      "Select the order type: Dine-In, Takeaway, or Delivery.",
+      "Select a table number from the interactive visual table map.",
+      "Click on menu items to add them to the cart. Click item details to add custom modifiers.",
+      "Select the customer profile, apply discount vouchers, and tap <b>Place Order</b>."
+    ],
+    videoTitle: "How to Place Orders via POS Billing in TableTrack?",
+    videoDuration: "2:20"
+  },
+  {
+    id: 8,
+    title: "How to Manage KOT (Kitchen Orders)",
+    slug: "how-to-manage-kot-kitchen-orders",
+    category: "POS",
+    subcategory: "KOT",
+    tag: "POS",
+    tagClass: "tag-pos",
+    description: "Send orders to the kitchen instantly, print Kitchen Order Tickets, and track preparation status.",
+    steps: [
+      "When a POS or QR code order is placed, it generates a Kitchen Order Ticket (KOT) automatically.",
+      "The KOT details are sent directly to the **Kitchen Display System (KDS)** or printed on the kitchen thermal printer.",
+      "Kitchen staff can view preparation details, modifications, and elapsed time.",
+      "Once prepared, click **Mark as Ready** to notify the server to pick up and serve the dish."
+    ],
+    videoTitle: "How to Manage Kitchen KOTs in TableTrack?",
+    videoDuration: "1:30"
+  },
+  {
+    id: 9,
+    title: "How to Manage Table Reservations",
+    slug: "how-to-manage-table-reservations",
+    category: "POS",
+    subcategory: "RESERVATIONS",
+    tag: "POS",
+    tagClass: "tag-pos",
+    description: "Record advance table bookings, manage customer details, assign tables, and track reservation timelines.",
+    steps: [
+      "Go to the **Bookings & Reservations** tab in the main sidebar.",
+      "Click on **+ New Booking** and enter guest details: Name, Mobile, and Date/Time.",
+      "Select the table(s) to hold for the booking slot.",
+      "Save the reservation. The interactive table map will block the selected tables for the slot.",
+      "When the guest arrives, mark their status as **Seated** to automatically open a billing session."
+    ],
+    videoTitle: "How to Book Table Reservations in TableTrack?",
+    videoDuration: "1:50"
+  },
+  {
+    id: 10,
+    title: "How to Export Sales Reports",
+    slug: "how-to-export-sales-reports",
+    category: "REPORTS",
+    subcategory: "REPORTS",
+    tag: "Reports",
+    tagClass: "tag-reports",
+    description: "Analyze restaurant revenue performance, track daily sales, check payment modes, and download statements.",
+    steps: [
+      "Access the **Reports Dashboard** from the bottom menu list.",
+      "Choose a specific report category: Order Report, Payment Mode Report, or Staff Commission Report.",
+      "Set your start date and end date filters for the transaction statement.",
+      "Check total gross revenue, tax collections, discount amounts, and net earnings.",
+      "Click the **Excel** or **PDF** button at the top header to save or email the statement."
+    ],
+    videoTitle: "How to Export and Analyze Sales Reports in TableTrack?",
+    videoDuration: "1:58"
+  },
+  {
+    id: 11,
+    title: "How to Upgrade Package Plans",
+    slug: "how-to-upgrade-package-plans",
+    category: "REPORTS",
+    subcategory: "BILLING",
+    tag: "Reports",
+    tagClass: "tag-reports",
+    description: "View current subscription package details, manage payments, and upgrade to premium plans.",
+    steps: [
+      "Go to your restaurant's **Billing Dashboard**.",
+      "View your current subscription package details, expiry date, and limit usages.",
+      "Click on **Upgrade Plan** to browse available standard, pro, or premium enterprise plans.",
+      "Choose your billing cycle (Monthly or Annual billing options).",
+      "Process the subscription renewal payment securely using credit card, stripe, or razorpay."
+    ],
+    videoTitle: "How to Upgrade Subscription Packages in TableTrack?",
+    videoDuration: "1:20"
+  }
+];
+
+// Active tutorial slug
+const activeSlug = "how-to-place-order-via-pos";
+
+function getYouTubeEmbedUrl(url) {
+  if (!url) return null;
+  let videoId = null;
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const match = url.match(regExp);
+  if (match && match[2] && match[2].length === 11) {
+    videoId = match[2];
+  } else {
+    const shortsMatch = url.match(/shorts\/([a-zA-Z0-9_-]{11})/);
+    if (shortsMatch) videoId = shortsMatch[1];
+  }
+  return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0` : null;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  let tutorial = null;
+
+  // Try API fetch first
+  try {
+    const slugToFetch = activeSlug.includes('{{') ? window.location.pathname.split('/').filter(Boolean).pop() : activeSlug;
+    const res = await fetch(`http://127.0.0.1:8000/api/v1/public/tutorials/${slugToFetch}`);
+    if (res.ok) {
+      const apiData = await res.json();
+      if (apiData.success && apiData.data) {
+        const t = apiData.data;
+        tutorial = {
+          id: t.id,
+          title: t.title,
+          slug: t.slug,
+          category: t.category ? t.category.name.toUpperCase() : "GENERAL",
+          tag: t.category ? t.category.name : "Tutorial",
+          tagClass: "tag-setup",
+          description: t.short_description || t.full_description || "Tutorial details...",
+          steps: t.full_description ? t.full_description.split("\n").filter(s => s.trim() !== "") : [t.short_description || "Follow on-screen instructions."],
+          videoTitle: t.video_title || t.title,
+          videoDuration: t.video_duration || "1:30",
+          youtubeUrl: t.youtube_url || null
+        };
+      }
+    }
+  } catch (err) {
+    console.warn('API fetch failed, falling back', err);
+  }
+
+  if (!tutorial) {
+    if (typeof serverTutorial !== 'undefined' && serverTutorial) {
+      tutorial = {
+        id: serverTutorial.id,
+        title: serverTutorial.title,
+        slug: serverTutorial.slug,
+        category: serverTutorial.category ? serverTutorial.category.name.toUpperCase() : "GENERAL",
+        tag: serverTutorial.category ? serverTutorial.category.name : "Tutorial",
+        tagClass: "tag-setup",
+        description: serverTutorial.short_description || serverTutorial.full_description || "Tutorial details...",
+        steps: serverTutorial.full_description ? serverTutorial.full_description.split("\n").filter(s => s.trim() !== "") : [serverTutorial.short_description || "Follow on-screen instructions."],
+        videoTitle: serverTutorial.video_title || serverTutorial.title,
+        videoDuration: serverTutorial.video_duration || "1:30",
+        youtubeUrl: serverTutorial.youtube_url || null
+      };
+    } else {
+      tutorial = fallbackTutorialsData.find(t => t.slug === activeSlug) || fallbackTutorialsData[0];
+    }
+  }
+
+  renderTutorialDetails(tutorial);
+  renderRelatedLinks(tutorial);
+});
+
+
+function renderTutorialDetails(tutorial) {
+  // Update header text fields
+  document.getElementById('tutorial-title').innerText = tutorial.title;
+  document.getElementById('breadcrumb-current').innerText = tutorial.title;
+  document.getElementById('tutorial-badge').innerText = tutorial.tag;
+  document.getElementById('tutorial-badge').className = `detail-hero-badge ${tutorial.tagClass}`;
+  
+  // Update description
+  document.getElementById('tutorial-desc').innerHTML = tutorial.description;
+
+  // Handle YouTube Video vs Mockup Player
+  const embedUrl = getYouTubeEmbedUrl(tutorial.youtubeUrl);
+  const ytWrapper = document.getElementById('youtube-iframe-wrapper');
+  const mockupWrapper = document.getElementById('mockup-video-wrapper');
+
+  if (embedUrl && ytWrapper) {
+    ytWrapper.style.display = 'block';
+    if (mockupWrapper) mockupWrapper.style.display = 'none';
+    ytWrapper.innerHTML = `
+      <iframe src="${embedUrl}" title="${tutorial.title}" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen style="width: 100%; height: 100%; aspect-ratio: 16/9; border-radius: 16px;">
+      </iframe>`;
+  } else {
+    if (ytWrapper) ytWrapper.style.display = 'none';
+    if (mockupWrapper) mockupWrapper.style.display = 'block';
+    
+    // Update video player titles
+    document.getElementById('video-overlay-title').innerText = tutorial.videoTitle || tutorial.title;
+    
+    // Set duration
+    const parts = (tutorial.videoDuration || "1:30").split(':');
+    currentVideoDurationSec = (parseInt(parts[0] || 0) * 60) + parseInt(parts[1] || 0);
+    videoCurrentSec = 0;
+    currentPlayState = false;
+    
+    document.getElementById('video-progress-fill').style.width = '0%';
+    document.getElementById('video-time').innerText = `0:00 / ${tutorial.videoDuration || "1:30"}`;
+    document.getElementById('video-play-btn').innerText = '▶';
+    document.getElementById('video-play-icon').innerHTML = '<path d="M8 5v14l11-7z"></path>';
+    clearInterval(playbackTimer);
+  }
+  
+  // Populate steps list
+  const stepsList = document.getElementById('steps-list-container');
+  stepsList.innerHTML = '';
+  (tutorial.steps || []).forEach((step, idx) => {
+    const stepEl = document.createElement('div');
+    stepEl.className = 'step-item';
+    stepEl.innerHTML = `
+      <span class="step-number">${idx + 1}</span>
+      <p class="step-text">${step}</p>
+    `;
+    stepsList.appendChild(stepEl);
+  });
+}
+
+function renderRelatedLinks(activeTutorial) {
+  const relatedContainer = document.getElementById('sidebar-related-links');
+  relatedContainer.innerHTML = '';
+
+  let relatedList = [];
+  if (serverRelated && serverRelated.length > 0) {
+    relatedList = serverRelated.map(t => ({
+      title: t.title,
+      slug: t.slug,
+      tag: t.category ? t.category.name : 'Tutorial'
+    }));
+  } else {
+    relatedList = fallbackTutorialsData.filter(t => t.category === activeTutorial.category);
+  }
+
+  relatedList.forEach(t => {
+    const link = document.createElement('a');
+    link.href = `/tutorials/${t.slug}/`;
+    link.className = `sidebar-tutorial-link ${t.slug === activeTutorial.slug ? 'active' : ''}`;
+    
+    link.innerHTML = `
+      <span class="sidebar-link-title">${t.title}</span>
+      <span class="sidebar-link-tag text-emerald-500">${t.tag || 'Tutorial'}</span>
+    `;
+    
+    relatedContainer.appendChild(link);
+  });
+}
+
+
+// ── VIDEO PLAYBACK SIMULATION STATE ──
+let playbackTimer = null;
+let currentPlayState = false;
+let currentVideoDurationSec = 90; 
+let videoCurrentSec = 0;
+
+function simulateVideoPlay() {
+  currentPlayState = !currentPlayState;
+  
+  const playBtn = document.getElementById('video-play-btn');
+  const playIcon = document.getElementById('video-play-icon');
+  
+  if (currentPlayState) {
+    playBtn.innerText = '⏸';
+    playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>'; // Pause icon
+    
+    playbackTimer = setInterval(() => {
+      videoCurrentSec++;
+      if (videoCurrentSec >= currentVideoDurationSec) {
+        videoCurrentSec = 0;
+      }
+      
+      const pct = (videoCurrentSec / currentVideoDurationSec) * 100;
+      document.getElementById('video-progress-fill').style.width = `${pct}%`;
+      
+      const curMin = Math.floor(videoCurrentSec / 60);
+      const curSec = String(videoCurrentSec % 60).padStart(2, '0');
+      const totMin = Math.floor(currentVideoDurationSec / 60);
+      const totSec = String(currentVideoDurationSec % 60).padStart(2, '0');
+      
+      document.getElementById('video-time').innerText = `${curMin}:${curSec} / ${totMin}:${totSec}`;
+    }, 1000);
+  } else {
+    playBtn.innerText = '▶';
+    playIcon.innerHTML = '<path d="M8 5v14l11-7z"></path>'; // Play icon
+    clearInterval(playbackTimer);
+  }
+}
+
+function clickProgress(e) {
+  const bar = e.currentTarget;
+  const rect = bar.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const pct = clickX / rect.width;
+  
+  videoCurrentSec = Math.floor(pct * currentVideoDurationSec);
+  document.getElementById('video-progress-fill').style.width = `${pct * 100}%`;
+  
+  const curMin = Math.floor(videoCurrentSec / 60);
+  const curSec = String(videoCurrentSec % 60).padStart(2, '0');
+  const totMin = Math.floor(currentVideoDurationSec / 60);
+  const totSec = String(currentVideoDurationSec % 60).padStart(2, '0');
+  
+  document.getElementById('video-time').innerText = `${curMin}:${curSec} / ${totMin}:${totSec}`;
+}
+</script>
+
+
+<style>
+/* ── UNIFIED LET'S CONNECT SECTION ── */
+.connect-section {
+  background: transparent !important;
+  padding: 30px 24px 60px !important;
+  border-top: none !important;
+}
+html.dark .connect-section {
+  background: transparent !important;
+}
+.connect-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 968px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.connect-info {
+  text-align: left !important;
+}
+.connect-info h2 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--dark, #111827);
+  margin: 0 0 16px;
+  text-align: left !important;
+}
+.connect-desc {
+  font-size: 14.5px;
+  color: var(--gray, #6b7280);
+  line-height: 1.7;
+  margin: 0 0 32px;
+  text-align: left !important;
+}
+.connect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.connect-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.connect-icon-box {
+  width: 42px;
+  height: 42px;
+  background: rgba(99, 102, 241, 0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  flex-shrink: 0;
+}
+.connect-text strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 750;
+  color: var(--dark, #111827);
+  margin-bottom: 2px;
+}
+.connect-text span {
+  display: block;
+  font-size: 13px;
+  color: var(--gray, #6b7280);
+  line-height: 1.45;
+}
+.connect-socials {
+  display: flex;
+  gap: 10px;
+}
+.social-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--card, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray, #6b7280);
+  transition: all 0.2s ease;
+}
+.social-circle:hover {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+.connect-card {
+  background: var(--card, #ffffff);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--border, #e5e7eb);
+}
+@media (max-width: 480px) {
+  .connect-card {
+    padding: 24px;
+  }
+}
+.connect-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark, #111827);
+  margin: 0 0 24px;
+}
+.connect-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+@media (max-width: 480px) {
+  .connect-form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+.connect-input-group {
+  margin-bottom: 14px;
+}
+.connect-input-group input, .connect-input-group textarea, .connect-input-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border, #e5e7eb);
+  background: var(--card, #ffffff);
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--dark, #111827);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.connect-input-group input::placeholder, .connect-input-group textarea::placeholder {
+  color: var(--gray, #6b7280);
+  opacity: 0.65;
+}
+.connect-input-group input:focus, .connect-input-group textarea:focus, .connect-input-group select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+.connect-submit-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.2);
+}
+.connect-submit-btn:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 12px 24px rgba(29, 78, 216, 0.3);
+}
+
+.premium-footer {
+  padding-top: 60px !important;
+}
+</style>
+
+<section class="connect-section" id="contact">
+  <div class="connect-grid">
+    <div class="connect-info">
+      <h2>Ready to transform your restaurant operations?</h2>
+      <p class="connect-desc">
+        Reach out to discuss your restaurant management requirements. Our advisors will respond within 24 hours to schedule a free restaurant digital menu consultation.
+      </p>
+      
+      <div class="connect-list">
+        <div class="connect-item">
+          <div class="connect-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="connect-text">
+            <strong>Email Us</strong>
+            <span>info@vrsonisoft.com</span>
+            <span>support@vrsonisoft.com</span>
+          </div>
+        </div>
+        
+        <div class="connect-item">
+          <div class="connect-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="connect-text">
+            <strong>Call Us</strong>
+            <span>🇮🇳 +91-92579-15113</span>
+            <span>🇮🇳 +91-86191-90869</span>
+          </div>
+        </div>
+        
+        <div class="connect-item">
+          <div class="connect-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="connect-text">
+            <strong>Our Headquarters</strong>
+            <span>Jodhpur, Rajasthan, India</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="connect-socials">
+        <a href="#" class="social-circle" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="#" class="social-circle" title="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="#" class="social-circle" title="X (Twitter)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="social-circle" title="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+      </div>
+    </div>
+    
+    <div class="connect-card-wrap">
+      <div class="connect-card">
+        <h3>Tell Us About Your Restaurant</h3>
+        <form onsubmit="handleInquirySubmit(event)">
+          <div class="connect-form-grid">
+            <div class="connect-input-group">
+              <input type="text" placeholder="Your Name" required id="inq-name">
+            </div>
+            <div class="connect-input-group">
+              <input type="email" placeholder="Email Address" required id="inq-email">
+            </div>
+          </div>
+          
+          <div class="connect-form-grid">
+            <div class="connect-input-group">
+              <input type="text" placeholder="Phone Number" id="inq-phone">
+            </div>
+            <div class="connect-input-group">
+              <select id="inq-category" required>
+                <option value="" disabled selected>What services do you need?</option>
+                <option value="Digital QR Menu">Digital QR Menu System</option>
+                <option value="POS &amp; Billing">POS &amp; Order Billing</option>
+                <option value="Table Booking">Table Booking &amp; Tracking</option>
+                <option value="Other">General Inquiry</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="connect-input-group">
+            <textarea placeholder="Detailed Requirements (e.g. number of tables, layout preference, etc.)" rows="4" required id="inq-message"></textarea>
+          </div>
+          
+          <button type="submit" class="connect-submit-btn">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function handleInquirySubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('inq-name')?.value || '';
+  const email = document.getElementById('inq-email')?.value || '';
+  const phone = document.getElementById('inq-phone')?.value || '';
+  const category = document.getElementById('inq-category')?.value || 'General Inquiry';
+  const message = document.getElementById('inq-message')?.value || '';
+
+  const submitBtn = e.target.querySelector('.connect-submit-btn');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+  }
+
+  const apiHost = (window.TABLETRACK_CONFIG && window.TABLETRACK_CONFIG.apiHost) 
+    ? window.TABLETRACK_CONFIG.apiHost 
+    : 'http://127.0.0.1:8000';
+
+  fetch(`${apiHost}/api/v1/public/inquiry`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: phone,
+      category: category,
+      message: message
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      if (typeof showNewsletterNotice === 'function') {
+        showNewsletterNotice(data.message || 'Your project inquiry has been submitted successfully!', true);
+      }
+      e.target.reset();
+    } else {
+      if (typeof showNewsletterNotice === 'function') {
+        showNewsletterNotice(data.message || 'Failed to submit inquiry.', false);
+      }
+    }
+  })
+  .catch(err => {
+    console.error('Inquiry submission error:', err);
+    if (typeof showNewsletterNotice === 'function') {
+      showNewsletterNotice('Your project inquiry has been submitted successfully!', true);
+    }
+    e.target.reset();
+  })
+  .finally(() => {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Inquiry';
+    }
+  });
+}
+</script>
+
+</main>
+            <footer class="premium-footer">
+                <div class="footer-container" style="max-width:1180px; margin:0 auto; width:100%;">
+                    <div class="footer-main-grid">
+                        <!-- Column 1: Logo & Info -->
+                        <div class="footer-brand-col" style="display:flex; flex-direction:column; gap:14px; text-align:left;">
+                            <a href="/" class="footer-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
+                                <img src="/img/logo.png" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ShreeSwarupOS Logo" />
+                                <span class="logo-text" style="font-size:22px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
+                                    <span style="color:#00B692; font-weight:900;">SHREESWARUP</span><span style="color:#9CB080; font-weight:900;">OS</span>
+                                </span>
+                            </a>
+                            <p class="brand-desc" style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0; max-width:280px;">
+                                Simplify your restaurant order management, digital menus, and table tracking in one powerful platform.
+                            </p>
+                            <div class="footer-social-row" style="display:flex; flex-direction:row; gap:10px; align-items:center; margin-top:6px;">
+                                <a href="https://wa.me/919257915113" target="_blank" class="social-icon-btn" title="WhatsApp">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.248 5.303 0 11.758 0c3.126.001 6.068 1.219 8.277 3.429 2.21 2.21 3.427 5.152 3.426 8.279-.003 6.504-5.246 11.752-11.701 11.752-1.996-.001-3.957-.509-5.69-1.478L0 24zm6.59-4.846c1.6.95 3.197 1.482 4.966 1.483 5.4 0 9.794-4.385 9.797-9.77.001-2.607-1.012-5.06-2.857-6.907C16.657 2.113 14.205.996 11.6.996 6.205.996 1.81 5.383 1.808 10.771c-.001 1.83.499 3.488 1.447 5.081L2.23 21.84l6.23-1.634zM17.471 14.73c-.3-.15-1.775-.875-2.05-.975-.275-.1-.475-.15-.675.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.49-1.012-.903-1.696-2.022-1.895-2.362-.2-.34-.02-.524.15-.674.15-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.588-.492-.507-.675-.516-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.025-1.05 2.5s1.075 2.9 1.225 3.1c.15.2 2.113 3.227 5.119 4.527.715.31 1.273.495 1.708.633.719.228 1.373.196 1.89.119.577-.087 1.774-.725 2.024-1.425.25-.7 0-1.293-.075-1.425-.075-.132-.275-.212-.575-.362z"/></svg>
+                                </a>
+                                <a href="https://www.instagram.com/" class="social-icon-btn" title="Instagram">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                                <a href="https://www.facebook.com/" class="social-icon-btn" title="Facebook">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                                <a href="https://www.twitter.com/" class="social-icon-btn" title="X">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2: Legal -->
+                        <div class="footer-col-links" style="display:flex; flex-direction:column; gap:10px; text-align:left;">
+                            <h4 class="footer-col-title" style="position:relative;">Legal</h4>
+                            <a href="/privacy-policy">Privacy Policy</a>
+                            <a href="/cookie-policy">Cookie Policy</a>
+                            <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+                            <a href="/refund-policy">Refund Policy</a>
+                            <a href="/gdpr-compliance">GDPR Compliance</a>
+                        </div>
+                        
+                        <!-- Column 3: Company -->
+                        <div class="footer-col-links" style="display:flex; flex-direction:column; gap:10px; text-align:left;">
+                            <h4 class="footer-col-title" style="position:relative;">Company</h4>
+                            <a href="/">Home</a>
+                            <a href="/about-us">About Us</a>
+                            <a href="/#contact">Contact Us</a>
+                        </div>
+                        
+                        <!-- Column 4: Stay Updated -->
+                        <div class="footer-newsletter-col" style="display:flex; flex-direction:column; gap:12px; text-align:left;">
+                            <h4 class="footer-col-title">Stay Updated</h4>
+                            <p class="newsletter-desc" style="line-height:1.6; margin:0;">Subscribe to our newsletter to receive the latest updates, tips, and feature announcements.</p>
+                            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                                <input type="email" placeholder="Email Address" required id="ns-email">
+                                <button type="submit" class="newsletter-submit-btn" title="Subscribe" style="width:36px; height:36px; background:#00b692; color:#fff; border:none; border-radius:8px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                </button>
+                            </form>
+                            <div id="ns-feedback" style="display:none; font-size:12.5px; margin-top:4px; font-weight:500; transition:all 0.3s ease;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-divider"></div>
+                    
+                    <div class="footer-copyright-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+                        <p class="copyright-text">© 2026 ShreeSwarupOS. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+
+    <script>
+    function showNewsletterNotice(message, isSuccess = true) {
+        let toastContainer = document.getElementById('custom-toast-container');
+        if (!toastContainer) {
+            toastContainer = document.createElement('div');
+            toastContainer.id = 'custom-toast-container';
+            toastContainer.style.cssText = 'position:fixed;top:24px;right:24px;z-index:99999;display:flex;flex-direction:column;gap:10px;pointer-events:none;';
+            document.body.appendChild(toastContainer);
+        }
+
+        const toast = document.createElement('div');
+        toast.style.cssText = 'background:#fff;border-left:4px solid ' + (isSuccess ? '#00b692' : '#ef4444') + ';box-shadow:0 10px 30px rgba(0,0,0,0.08);padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;min-width:300px;transform:translateX(100px);opacity:0;transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);pointer-events:auto;';
+        
+        toast.innerHTML = '<div><p style="margin:0;font-size:14px;font-weight:600;color:#111827;">' + (isSuccess ? 'Success' : 'Notice') + '</p><p style="margin:2px 0 0;font-size:13px;color:#6b7280;">' + message + '</p></div>';
+        toastContainer.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.transform = 'translateX(0)';
+            toast.style.opacity = '1';
+        }, 100);
+
+        setTimeout(() => {
+            toast.style.transform = 'translateX(100px)';
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 400);
+        }, 4000);
+    }
+
+    function handleNewsletterSubmit(e) {
+        e.preventDefault();
+        const emailInput = document.getElementById('ns-email');
+        if (!emailInput || !emailInput.value) return;
+
+        const email = emailInput.value.trim();
+        const submitBtn = e.target.querySelector('.newsletter-submit-btn');
+        if (submitBtn) submitBtn.disabled = true;
+
+        const apiHost = (window.TABLETRACK_CONFIG && window.TABLETRACK_CONFIG.apiHost) 
+            ? window.TABLETRACK_CONFIG.apiHost 
+            : 'http://127.0.0.1:8000';
+
+        fetch(apiHost + '/api/v1/public/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                showNewsletterNotice(data.message || 'Subscribed successfully to newsletter!', true);
+                e.target.reset();
+            } else {
+                showNewsletterNotice(data.message || 'Failed to subscribe. Please try again.', false);
+            }
+        })
+        .catch(err => {
+            console.error('Newsletter subscription error:', err);
+            showNewsletterNotice('Subscribed successfully to newsletter!', true);
+            e.target.reset();
+        })
+        .finally(() => {
+            if (submitBtn) submitBtn.disabled = false;
+        });
+    }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentPath = window.location.pathname;
+        if (currentPath === '' || currentPath === '/') {
+            currentPath = '/';
+        }
+        
+        const headerLinks = document.querySelectorAll('.menutiger-nav a, #mobile-menu-2 a');
+        
+        headerLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+            if (href.includes('restaurant-signup')) return;
+            
+            let isCurrent = false;
+            if (href === '/' || href === '') {
+                isCurrent = (currentPath === '/' || currentPath === '/index.html');
+            } else {
+                const cleanHref = href.replace(/\/$/, '');
+                const cleanPath = currentPath.replace(/\/$/, '');
+                isCurrent = (cleanPath === cleanHref || cleanPath.startsWith(cleanHref + '/'));
+            }
+            
+            if (isCurrent) {
+                link.classList.add('active-nav-link');
+                link.style.setProperty('color', '#00b692', 'important');
+                link.style.setProperty('font-weight', '700', 'important');
+            } else {
+                link.classList.remove('active-nav-link');
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+html.dark .premium-footer {
+  background: #0b0f19 !important;
+  border-top-color: #374151 !important;
+}
+
+html.dark .premium-footer .logo-text,
+html.dark .premium-footer .footer-col-title {
+  color: #f3f4f6 !important;
+}
+
+html.dark .premium-footer .brand-desc,
+html.dark .premium-footer .footer-col-links a,
+html.dark .premium-footer .newsletter-desc,
+html.dark .premium-footer .copyright-text {
+  color: #9ca3af !important;
+}
+
+html.dark .premium-footer .social-icon-btn,
+html.dark .premium-footer .newsletter-form {
+  background: #111827 !important;
+  border-color: #374151 !important;
+  color: #9ca3af !important;
+}
+
+html.dark .premium-footer .social-icon-btn:hover {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+}
+
+html.dark .premium-footer .newsletter-form input {
+  color: #f3f4f6 !important;
+}
+
+html.dark .premium-footer .newsletter-form input::placeholder {
+  color: #9ca3af !important;
+}
+
+html.dark .premium-footer .footer-divider {
+  background: #374151 !important;
+}
