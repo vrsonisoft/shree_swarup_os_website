@@ -6,7 +6,7 @@
  * If backend is on a separate domain (e.g. https://admin.yourdomain.com), put it in productionApiHost.
  */
 (function() {
-  const productionApiHost = ''; // <-- Put your Production Backend URL here if separate, e.g. 'https://api.tabletrack.com'
+  const productionApiHost = 'https://shreeswarupos.vrsonisoft.com'; // Live ShreeSwarupOS App
 
   const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
 
