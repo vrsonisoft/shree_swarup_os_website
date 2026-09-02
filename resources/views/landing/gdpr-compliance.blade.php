@@ -1,5 +1,8 @@
 @extends('layouts.landing')
 
+@section('title', 'GDPR Compliance Statement | ShreeSwarupOS')
+@section('meta_description', 'ShreeSwarupOS commitment to GDPR compliance, data privacy rights, data processing standards, and security.')
+
 @section('content')
 <style>
 :root {

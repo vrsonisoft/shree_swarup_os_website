@@ -1,5 +1,24 @@
 @extends('layouts.landing')
 
+@section('title', 'About Us - Our Mission & Vision | ShreeSwarupOS')
+@section('meta_description', 'Learn how ShreeSwarupOS is transforming restaurant operations with intuitive digital menu technology, seamless POS solutions, and automated table management.')
+@section('meta_keywords', 'about ShreeSwarupOS, restaurant technology company, digital menu software team, hospitality software')
+
+@section('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About ShreeSwarupOS",
+  "description": "Empowering restaurants worldwide with digital menu and POS solutions.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ShreeSwarupOS"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 <style>
 :root {

@@ -1,5 +1,24 @@
 @extends('layouts.landing')
 
+@section('title', 'Video Tutorials & User Guides | ShreeSwarupOS Knowledge Base')
+@section('meta_description', 'Step-by-step guides and video tutorials on setup, menu creation, order processing, POS configuration, and setting up digital QR codes with ShreeSwarupOS.')
+@section('meta_keywords', 'ShreeSwarupOS tutorials, restaurant software guide, QR menu setup, POS help, restaurant management guides')
+
+@section('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "ShreeSwarupOS Tutorials & Guides",
+  "description": "Step-by-step guides and tutorials for using ShreeSwarupOS restaurant management system.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ShreeSwarupOS"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 <style>
 :root {

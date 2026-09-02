@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\CustomMenuController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Middleware\DisableFrontend;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/manifest.json', [HomeController::class, 'manifest'])->name('manifest');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 Route::middleware(['web'])->group(function () {
     Route::get('/', [HomeController::class, 'landing'])->name('home')->middleware(DisableFrontend::class);

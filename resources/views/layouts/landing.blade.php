@@ -20,22 +20,66 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ global_setting()->logoUrl }}">
 
-    {{-- META TAGS --}}
-    <meta name="keywords" content="{{ global_setting()->meta_keyword ?? global_setting()->name }}">
-    <meta name="description" content="{{ global_setting()->meta_description ?? global_setting()->name }}">
-
     @php
-        $landingMetaTitle = global_setting()->meta_title ?? global_setting()->name;
-        $landingMetaImage = global_setting()->meta_image_url ?? global_setting()->upload_fav_icon_android_chrome_512_url;
+        $seoTitle = trim($__env->yieldContent('title', global_setting()->meta_title ?? 'ShreeSwarupOS - Digital Menu & Restaurant Management Platform'));
+        $seoDescription = trim($__env->yieldContent('meta_description', global_setting()->meta_description ?? 'ShreeSwarupOS is an all-in-one restaurant management system featuring digital QR menus, POS ordering, inventory management, and real-time analytics.'));
+        $seoKeywords = trim($__env->yieldContent('meta_keywords', global_setting()->meta_keyword ?? 'restaurant management system, digital menu, QR code menu, restaurant POS, online food ordering, ShreeSwarupOS'));
+        $seoImage = trim($__env->yieldContent('og_image', global_setting()->meta_image_url ?? global_setting()->upload_fav_icon_android_chrome_512_url ?? asset('favicon.png')));
+        $seoCanonical = trim($__env->yieldContent('canonical_url', url()->current()));
+        $seoRobots = trim($__env->yieldContent('meta_robots', 'index, follow'));
+        $seoOgType = trim($__env->yieldContent('og_type', 'website'));
     @endphp
-    <meta property="og:title" content="{{ $landingMetaTitle }}">
-    <meta property="og:image" content="{{ $landingMetaImage }}">
-    <meta property="og:image:alt" content="{{ $landingMetaTitle }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ $landingMetaTitle }}">
-    <meta name="twitter:image" content="{{ $landingMetaImage }}">
 
-    <title>ShreeSwarupOS - Digital Menu & Restaurant Management Platform</title>
+    <title>{{ $seoTitle }}</title>
+
+    {{-- SEO META TAGS --}}
+    <meta name="description" content="{{ $seoDescription }}">
+    <meta name="keywords" content="{{ $seoKeywords }}">
+    <meta name="robots" content="{{ $seoRobots }}">
+    <link rel="canonical" href="{{ $seoCanonical }}">
+
+    {{-- OPEN GRAPH (FACEBOOK, LINKEDIN, WHATSAPP) --}}
+    <meta property="og:site_name" content="ShreeSwarupOS">
+    <meta property="og:type" content="{{ $seoOgType }}">
+    <meta property="og:url" content="{{ $seoCanonical }}">
+    <meta property="og:title" content="{{ $seoTitle }}">
+    <meta property="og:description" content="{{ $seoDescription }}">
+    <meta property="og:image" content="{{ $seoImage }}">
+    <meta property="og:image:alt" content="{{ $seoTitle }}">
+
+    {{-- TWITTER CARDS --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ $seoCanonical }}">
+    <meta name="twitter:title" content="{{ $seoTitle }}">
+    <meta name="twitter:description" content="{{ $seoDescription }}">
+    <meta name="twitter:image" content="{{ $seoImage }}">
+
+    {{-- GLOBAL STRUCTURED DATA (JSON-LD) --}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "{{ url('/') }}#organization",
+          "name": "ShreeSwarupOS",
+          "url": "{{ url('/') }}",
+          "logo": "{{ global_setting()->logo_url ?? global_setting()->upload_fav_icon_android_chrome_512_url }}",
+          "description": "ShreeSwarupOS provides modern restaurant management software, digital QR menus, and POS tools."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ url('/') }}#website",
+          "url": "{{ url('/') }}",
+          "name": "ShreeSwarupOS",
+          "publisher": {
+            "@id": "{{ url('/') }}#organization"
+          }
+        }
+      ]
+    }
+    </script>
+    @yield('schema')
 
     <!-- Google Fonts: Montserrat, Poppins & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -204,7 +248,7 @@
 
     .premium-footer {
       background: #f8fafc !important;
-      padding: 30px 24px 40px !important;
+      padding: 24px 24px 28px !important;
       border-top: 1px solid var(--border) !important;
       font-family: 'Poppins', sans-serif;
       width: 100% !important;
@@ -325,7 +369,7 @@
       display: grid !important;
       grid-template-columns: 1.25fr 0.8fr 0.8fr 1.15fr !important;
       gap: 48px !important;
-      margin-bottom: 60px !important;
+      margin-bottom: 32px !important;
       align-items: start !important;
     }
     @media (max-width: 968px) {
@@ -796,7 +840,7 @@
                 @include('sections.connect')
             </main>
 
-            <footer class="premium-footer" style="padding:60px 24px 40px; font-family:'Poppins', sans-serif; width:100%; box-sizing:border-box;">
+            <footer class="premium-footer" style="padding:28px 24px 28px; font-family:'Poppins', sans-serif; width:100%; box-sizing:border-box;">
                 <div class="footer-container" style="max-width:1180px; margin:0 auto; width:100%;">
                     <div class="footer-main-grid" style="display:grid; align-items:start;">
                         <!-- Column 1: Logo & Info -->

@@ -1,5 +1,55 @@
 @extends('layouts.landing')
 
+@php
+    $tutorialTitle = isset($dbTutorial) && $dbTutorial->title ? $dbTutorial->title : ucwords(str_replace('-', ' ', $slug));
+    $tutorialDesc = isset($dbTutorial) && $dbTutorial->short_description ? strip_tags($dbTutorial->short_description) : 'Learn how to use ' . $tutorialTitle . ' on ShreeSwarupOS restaurant management system.';
+@endphp
+
+@section('title', $tutorialTitle . ' - ShreeSwarupOS Tutorial')
+@section('meta_description', $tutorialDesc)
+@section('meta_keywords', strtolower($tutorialTitle) . ', ShreeSwarupOS tutorial, restaurant management guide')
+
+@section('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "{{ addslashes($tutorialTitle) }}",
+      "description": "{{ addslashes($tutorialDesc) }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ShreeSwarupOS"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ url('/') }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "{{ route('landing.tutorials') }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ addslashes($tutorialTitle) }}"
+        }
+      ]
+    }
+  ]
+}
+</script>
+@endsection
+
 @section('content')
 <style>
 :root {

@@ -1,5 +1,8 @@
 @extends('layouts.landing')
 
+@section('title', 'Privacy Policy | ShreeSwarupOS')
+@section('meta_description', 'Read the official Privacy Policy of ShreeSwarupOS to understand how we handle customer data, security, and privacy protection.')
+
 @section('content')
 <style>
 :root {

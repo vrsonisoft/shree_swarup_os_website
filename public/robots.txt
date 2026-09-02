@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/backend and dynamic internal paths
+Disallow: /login
+Disallow: /register
+Disallow: /admin/
+Disallow: /super-admin/
+Disallow: /api/
+Disallow: /storage/*.php
+
+# Sitemap reference
+Sitemap: https://shreeswarupos.com/sitemap.xml

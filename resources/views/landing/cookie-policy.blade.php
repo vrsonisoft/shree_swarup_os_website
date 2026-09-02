@@ -1,5 +1,8 @@
 @extends('layouts.landing')
 
+@section('title', 'Cookie Policy | ShreeSwarupOS')
+@section('meta_description', 'Learn about how ShreeSwarupOS uses cookies and tracking technologies to optimize performance and improve user experience.')
+
 @section('content')
 <style>
 :root {

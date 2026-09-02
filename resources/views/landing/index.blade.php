@@ -1,9 +1,26 @@
 @extends('layouts.landing')
 
+@section('title', 'ShreeSwarupOS - Advanced Restaurant Management System & QR Code Menu')
+@section('meta_description', 'Simplify dining operations with ShreeSwarupOS. Digital QR code menus, POS order management, contactless ordering, table tracking, and real-time sales reporting for restaurants.')
+@section('meta_keywords', 'restaurant management system, digital QR menu, restaurant POS, contactless ordering, table management, online restaurant software, ShreeSwarupOS')
+
+@section('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ShreeSwarupOS",
+  "operatingSystem": "Web, Android, iOS",
+  "applicationCategory": "BusinessApplication",
+  "description": "Advanced Restaurant Management System with Digital QR Code Menu, Table Tracking, and Billing POS."
+}
+</script>
+@endsection
+
 @section('content')
 
 <!-- 1. Hero Section -->
-<section class="py-12 md:py-20 bg-[#f9fbfc] dark:bg-neutral-900 overflow-hidden">
+<section class="py-8 md:py-12 bg-[#f9fbfc] dark:bg-neutral-900 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -57,9 +74,9 @@
 </section>
 
 <!-- 2. Trusted Restaurant Section -->
-<section class="py-16 bg-white dark:bg-neutral-800/40 border-y border-gray-100 dark:border-neutral-800">
+<section class="py-8 bg-white dark:bg-neutral-800/40 border-y border-gray-100 dark:border-neutral-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-xl font-bold text-gray-500 dark:text-neutral-400 mb-10 tracking-wide uppercase">
+        <h2 class="text-xl font-bold text-gray-500 dark:text-neutral-400 mb-6 tracking-wide uppercase">
             The Trusted Restaurant Menu Maker by Modern Restaurants & Cafes Worldwide
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -99,7 +116,7 @@
 </section>
 
 <!-- 3. Stats Section -->
-<section class="py-12 bg-white dark:bg-neutral-900">
+<section class="py-6 bg-white dark:bg-neutral-900">
     <div class="max-w-4xl mx-auto px-4">
         <div class="bg-menutiger-green rounded-2xl p-8 text-white shadow-lg flex flex-col md:flex-row justify-around items-center gap-6 text-center">
             
@@ -127,12 +144,12 @@
 </section>
 
 <!-- 4. Video Preview Section -->
-<section class="py-16 bg-[#f9fbfc] dark:bg-neutral-800/40">
+<section class="py-10 bg-[#f9fbfc] dark:bg-neutral-800/40">
     <div class="max-w-5xl mx-auto px-4 text-center space-y-4">
         <h2 class="text-3xl font-extrabold text-menutiger-dark dark:text-teal-400">
             All-In-One Free Menu Maker And Restaurant Management System
         </h2>
-        <p class="text-gray-500 max-w-2xl mx-auto pb-6">
+        <p class="text-gray-500 max-w-2xl mx-auto pb-4">
             Boost sales and engagement using ShreeSwarupOS’s free menu maker, management system, and built-in restaurant marketing tools.
         </p>
         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-250/20 max-w-3xl mx-auto group">
@@ -151,12 +168,12 @@
 </section>
 
 <!-- 5. Features Grid Section -->
-<section class="py-20 bg-white dark:bg-neutral-900">
+<section class="py-10 bg-white dark:bg-neutral-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <h2 class="text-3xl lg:text-4xl font-extrabold text-menutiger-dark dark:text-neutral-100">
             Everything You Need To Get The <span class="text-menutiger-green">Kitchen In order</span>
         </h2>
-        <p class="text-gray-500 max-w-2xl mx-auto pb-10">
+        <p class="text-gray-500 max-w-2xl mx-auto pb-6">
             Boost sales and engagement using ShreeSwarupOS’s free menu maker, management system, and built-in restaurant marketing tools.
         </p>
         
@@ -227,7 +244,7 @@
 </section>
 
 <!-- 6. Why Operators Love Us Section -->
-<section class="py-20 bg-[#f9fbfc] dark:bg-neutral-800/40">
+<section class="py-10 bg-[#f9fbfc] dark:bg-neutral-800/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         <h2 class="text-3xl lg:text-4xl font-extrabold text-center text-menutiger-dark dark:text-neutral-100">
             Why <span class="text-menutiger-green">restaurant operators</span> love using our digital menu
@@ -325,7 +342,7 @@
 </section>
 
 <!-- 7. Integrations Section -->
-<section class="py-16 bg-white dark:bg-neutral-900">
+<section class="py-10 bg-white dark:bg-neutral-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
@@ -370,7 +387,7 @@
 </section>
 
 <!-- 8. QR Preview Scan Section -->
-<section class="py-20 bg-[#f9fbfc] dark:bg-neutral-800/40">
+<section class="py-10 bg-[#f9fbfc] dark:bg-neutral-800/40">
     <div class="max-w-5xl mx-auto px-4">
         
         <div class="bg-menutiger-green rounded-3xl p-8 md:p-12 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -405,7 +422,7 @@
 </section>
 
 <!-- 9. Templates Collection Section -->
-<section class="py-16 bg-white dark:bg-neutral-900">
+<section class="py-10 bg-white dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4">
         <div class="bg-menutiger-light rounded-3xl p-8 md:p-12 border border-menutiger-green/10 flex flex-col md:flex-row items-center justify-between gap-8">
             <div class="space-y-4 flex-1 text-center md:text-left">
@@ -426,10 +443,10 @@
 </section>
 
 <!-- 10. Reviews Section -->
-<section class="py-20 bg-[#f9fbfc] dark:bg-neutral-900" id="testimonials">
+<section class="py-10 bg-[#f9fbfc] dark:bg-neutral-900" id="testimonials">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center mb-12">
+        <div class="text-center mb-6">
             <h2 class="text-3xl lg:text-4xl font-extrabold text-menutiger-dark dark:text-teal-400">
                 Read our reviews from our satisfied customers
             </h2>
@@ -487,7 +504,7 @@
 </section>
 
 <!-- 11. Bottom CTA Banner -->
-<section class="py-16 bg-[#f9fbfc] dark:bg-neutral-900">
+<section class="py-10 bg-[#f9fbfc] dark:bg-neutral-900">
     <div class="max-w-5xl mx-auto px-4">
         <div class="bg-menutiger-dark rounded-3xl p-8 md:p-12 text-white shadow-xl space-y-6 text-center">
             <h4 class="text-xs font-bold tracking-widest text-menutiger-green uppercase">GET STARTED NOW</h4>
@@ -507,9 +524,9 @@
 </section>
 
 <!-- 12. FAQ Section -->
-<section class="py-20 bg-white dark:bg-neutral-800/40" id="user-faqs">
+<section class="py-10 bg-white dark:bg-neutral-800/40" id="user-faqs">
     <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-extrabold text-center text-menutiger-dark dark:text-teal-400 mb-12">
+        <h2 class="text-3xl font-extrabold text-center text-menutiger-dark dark:text-teal-400 mb-6">
             Frequently Asked Questions
         </h2>
         

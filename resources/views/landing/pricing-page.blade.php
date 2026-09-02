@@ -1,5 +1,30 @@
 @extends('layouts.landing')
 
+@section('title', 'Simple & Flexible Pricing Plans | ShreeSwarupOS')
+@section('meta_description', 'Choose the right plan for your restaurant with ShreeSwarupOS. Monthly, annual, and lifetime subscriptions available with unlimited digital QR menus and POS tools.')
+@section('meta_keywords', 'restaurant management pricing, QR menu cost, restaurant POS plans, ShreeSwarupOS pricing, subscription plans')
+
+@section('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "ShreeSwarupOS Restaurant Management System",
+  "description": "Complete digital menu and restaurant POS management platform.",
+  "brand": {
+    "@type": "Brand",
+    "name": "ShreeSwarupOS"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "price": "0",
+    "offerCount": "3"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 <style>
 :root {

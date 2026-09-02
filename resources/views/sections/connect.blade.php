@@ -2,7 +2,7 @@
 /* ── UNIFIED LET'S CONNECT SECTION ── */
 .connect-section {
   background: transparent !important;
-  padding: 30px 24px 60px !important;
+  padding: 20px 24px 20px !important;
   border-top: none !important;
 }
 html.dark .connect-section {
@@ -13,49 +13,49 @@ html.dark .connect-section {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 60px;
+  gap: 32px;
   align-items: center;
 }
 @media (max-width: 968px) {
   .connect-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 24px;
   }
 }
 .connect-info {
   text-align: left !important;
 }
 .connect-info h2 {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 900;
   line-height: 1.2;
   color: var(--dark, #111827);
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   text-align: left !important;
 }
 .connect-desc {
-  font-size: 14.5px;
+  font-size: 13.5px;
   color: var(--gray, #6b7280);
-  line-height: 1.7;
-  margin: 0 0 32px;
+  line-height: 1.6;
+  margin: 0 0 14px;
   text-align: left !important;
 }
 .connect-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 28px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 .connect-item {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   align-items: flex-start;
 }
 .connect-icon-box {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   background: rgba(99, 102, 241, 0.08);
-  border-radius: 10px;
+  border-radius: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,24 +64,24 @@ html.dark .connect-section {
 }
 .connect-text strong {
   display: block;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 750;
   color: var(--dark, #111827);
-  margin-bottom: 2px;
+  margin-bottom: 1px;
 }
 .connect-text span {
   display: block;
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--gray, #6b7280);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 .connect-socials {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 .social-circle {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--card, #ffffff);
   border: 1px solid var(--border, #e5e7eb);
@@ -99,21 +99,21 @@ html.dark .connect-section {
 }
 .connect-card {
   background: var(--card, #ffffff);
-  border-radius: 20px;
-  padding: 36px;
+  border-radius: 18px;
+  padding: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
   border: 1px solid var(--border, #e5e7eb);
 }
 @media (max-width: 480px) {
   .connect-card {
-    padding: 24px;
+    padding: 18px;
   }
 }
 .connect-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--dark, #111827);
-  margin: 0 0 24px;
+  margin: 0 0 16px;
 }
 .connect-form-grid {
   display: grid;

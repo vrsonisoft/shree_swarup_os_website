@@ -34,9 +34,10 @@ const headerTemplate = aboutHtml.substring(0, mainStartIdx + mainStartTag.length
 const footerTemplate = aboutHtml.substring(mainEndIdx); // includes </main>
 
 // ── Strip Blade directives ──
-// Remove @extends, @section, @endsection
+// Remove @extends, @section, @endsection, schema blocks, etc.
 blade = blade.replace(/@extends\([^)]+\)\s*/g, '');
-blade = blade.replace(/@section\('content'\)\s*/g, '');
+blade = blade.replace(/@section\('schema'\)[\s\S]*?@endsection\s*/g, '');
+blade = blade.replace(/@section\([^)]+\)\s*/g, '');
 blade = blade.replace(/@endsection\s*/g, '');
 
 // Remove Blade comments {{-- ... --}}

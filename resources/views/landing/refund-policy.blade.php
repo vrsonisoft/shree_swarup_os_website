@@ -1,5 +1,8 @@
 @extends('layouts.landing')
 
+@section('title', 'Refund & Cancellation Policy | ShreeSwarupOS')
+@section('meta_description', 'Information regarding subscription billing, plan cancellations, and refund eligibility for ShreeSwarupOS restaurant platform.')
+
 @section('content')
 <style>
 :root {

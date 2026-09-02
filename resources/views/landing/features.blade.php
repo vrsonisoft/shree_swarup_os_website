@@ -1,5 +1,24 @@
 @extends('layouts.landing')
 
+@section('title', 'Restaurant Features & POS Capabilities | ShreeSwarupOS')
+@section('meta_description', 'Explore features of ShreeSwarupOS: QR Code digital menus, POS order tracking, kitchen display system (KDS), inventory management, staff roles, and analytics.')
+@section('meta_keywords', 'restaurant features, QR menu features, kitchen display system, POS features, inventory management, ShreeSwarupOS features')
+
+@section('schema')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Restaurant Features & POS Capabilities",
+  "description": "Explore comprehensive features of ShreeSwarupOS restaurant management system.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ShreeSwarupOS"
+  }
+}
+</script>
+@endsection
+
 @section('content')
 <style>
 :root {
