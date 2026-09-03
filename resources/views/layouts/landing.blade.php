@@ -732,7 +732,7 @@
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
 
-                        <a href="{{ route('login') }}"
+                        <a href="{{ route('login') }}" target="_blank"
                             class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg font-semibold text-sm text-gray-800 shadow-sm hover:bg-gray-50 hover:text-menutiger-green transition ease-in-out duration-150 ltr:pl-4 rtl:pr-4"
                             wire:click="$dispatch('showSignup')">
                             @if (user())
@@ -743,7 +743,7 @@
                         </a>
 
                         @if (!user())
-                            <a href="{{ route('restaurant_signup') }}"
+                            <a href="{{ route('restaurant_signup') }}" target="_blank"
                                 class="text-white justify-center btn-menutiger-primary font-semibold rounded-lg text-sm px-5 py-2.5 text-center ltr:ml-2 rtl:mr-2"
                                 wire:click="$dispatch('showSignup')">START FOR FREE</a>
                         @endif

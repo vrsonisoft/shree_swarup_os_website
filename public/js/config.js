@@ -30,10 +30,10 @@
       const href = link.getAttribute('href');
       if (href === '/login' || href === 'https://shreeswarupos.vrsonisoft.com/login' || href === 'http://127.0.0.1:8000/login') {
         e.preventDefault();
-        window.location.href = window.TABLETRACK_CONFIG.loginUrl;
+        window.open(window.TABLETRACK_CONFIG.loginUrl, '_blank');
       } else if (href === '/restaurant-signup' || href === 'https://shreeswarupos.vrsonisoft.com/restaurant-signup' || href === 'http://127.0.0.1:8000/restaurant-signup') {
         e.preventDefault();
-        window.location.href = window.TABLETRACK_CONFIG.signupUrl;
+        window.open(window.TABLETRACK_CONFIG.signupUrl, '_blank');
       }
     });
   });
