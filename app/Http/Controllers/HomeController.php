@@ -68,7 +68,7 @@ class HomeController extends Controller
         $global = global_setting();
 
         if ($global->disable_landing_site && !request()->ajax()) {
-            return redirect(route('login'));
+            return redirect(config('app.app_login_url'));
         }
 
         if ($global->landing_site_type == 'custom') {
@@ -115,12 +115,7 @@ class HomeController extends Controller
 
     public function signup()
     {
-        $customMenu = CustomMenu::all();
-        if (global_setting()->disable_landing_site) {
-            return view('auth.restaurant_register', compact('customMenu'));
-        }
-
-        return view('auth.restaurant_signup', compact('customMenu'));
+        return redirect(config('app.app_signup_url'));
     }
 
     public function features()

@@ -18,7 +18,9 @@ return [
     'main_domain_name' => env('MAIN_DOMAIN_NAME', null),
     'short_domain_name' => env('SHORT_DOMAIN_NAME', false),
     'redirect_https' => env('REDIRECT_HTTPS', false),
-    'tabletrack_app_url' => env('TABLETRACK_APP_URL', env('APP_ENV') === 'local' ? 'http://127.0.0.1:8000' : env('APP_URL', 'http://127.0.0.1:8000')),
+    'tabletrack_app_url' => env('TABLETRACK_APP_URL', (env('APP_DEBUG', false) || env('APP_ENV') === 'local') ? 'http://127.0.0.1:8000' : 'https://shreeswarupos.vrsonisoft.com'),
+    'app_login_url' => env('APP_LOGIN_URL', (env('APP_DEBUG', false) || env('APP_ENV') === 'local') ? 'http://127.0.0.1:8000/login' : 'https://shreeswarupos.vrsonisoft.com/login'),
+    'app_signup_url' => env('APP_SIGNUP_URL', (env('APP_SIGNUP_URL') || env('APP_DEBUG', false) || env('APP_ENV') === 'local') ? 'http://127.0.0.1:8000/restaurant-signup' : 'https://shreeswarupos.vrsonisoft.com/restaurant-signup'),
 
 
     /*
