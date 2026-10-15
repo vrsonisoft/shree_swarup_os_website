@@ -4,10 +4,12 @@ Allow: /
 # Disallow admin/backend and dynamic internal paths
 Disallow: /login
 Disallow: /register
+Disallow: /restaurant-signup
+Disallow: /restaurant-signup/
 Disallow: /admin/
 Disallow: /super-admin/
 Disallow: /api/
 Disallow: /storage/*.php
 
 # Sitemap reference
-Sitemap: https://shreeswarupos.com/sitemap.xml
+Sitemap: https://shreeswaruposweb.vrsonisoft.com/sitemap.xml

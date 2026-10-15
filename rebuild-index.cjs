@@ -57,7 +57,7 @@ blade = blade.replace(/\{\{\s*\$frontDetails->video_thumbnail_url\s*\?\?\s*asset
   '/landing/dashboard.png');
 
 // ── Replace route() calls ──
-blade = blade.replace(/\{\{\s*route\('restaurant_signup'\)\s*\}\}/g, '/restaurant-signup');
+blade = blade.replace(/\{\{\s*route\('restaurant_signup'\)\s*\}\}/g, 'https://shreeswarupos.vrsonisoft.com/restaurant-signup');
 
 // ── Replace $love @php block + @foreach ──
 const loveData = [

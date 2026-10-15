@@ -1,0 +1,28 @@
+# ShreeSwarupOS
+
+> ShreeSwarupOS is a comprehensive, cloud-based restaurant operating system that unifies contactless QR digital menus, POS order billing, Kitchen Order Ticketing (KOT), staff management, table reservations, and live analytics.
+
+## Main Pages
+- [Homepage](https://shreeswaruposweb.vrsonisoft.com/): Official overview of ShreeSwarupOS features, benefits, and digital restaurant transformation.
+- [Features](https://shreeswaruposweb.vrsonisoft.com/features): Complete breakdown of POS billing, QR digital ordering, kitchen display systems, inventory tracking, and waiter apps.
+- [Pricing Plans](https://shreeswaruposweb.vrsonisoft.com/pricing): Standard subscription tiers, feature comparison, and plan details for single and multi-branch restaurants.
+- [About Us](https://shreeswaruposweb.vrsonisoft.com/about-us): Mission, vision, and technology stack behind ShreeSwarupOS.
+- [Tutorials & Guides](https://shreeswaruposweb.vrsonisoft.com/tutorials): Step-by-step guides and video tutorials for setting up and operating restaurant workflows.
+
+## Guides & Tutorials
+- [Dashboard Setup Guide](https://shreeswaruposweb.vrsonisoft.com/tutorials/dashboard-setup): How to initialize and configure your restaurant dashboard.
+- [POS Order Processing](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-place-order-via-pos): Creating dine-in, takeaway, and delivery orders from the POS terminal.
+- [KOT Kitchen Management](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-manage-kot-kitchen-orders): Managing real-time kitchen orders and chef displays.
+- [Table & QR Code Generation](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-add-tables-generate-qr-codes): Adding dining areas, tables, and downloading high-resolution QR codes.
+- [Menu Categories & Items](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-add-menu-items): Adding dishes, variations, prices, images, and item categories.
+- [Modifier Groups](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-add-modifier-groups): Creating add-ons, toppings, and dish customization options.
+- [Table Reservations](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-manage-table-reservations): Accepting online customer table reservations and slot management.
+- [Staff & Waiter Management](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-manage-staff-waiters): Setting up waiter accounts, assigning table sections, and permissions.
+- [Sales & Tax Reports](https://shreeswaruposweb.vrsonisoft.com/tutorials/how-to-export-sales-reports): Exporting revenue reports, itemized breakdown, and tax summaries.
+
+## Legal & Compliance
+- [Privacy Policy](https://shreeswaruposweb.vrsonisoft.com/privacy-policy): Customer data privacy standards and policies.
+- [Terms & Conditions](https://shreeswaruposweb.vrsonisoft.com/terms-and-conditions): Service terms and subscription conditions.
+- [Cookie Policy](https://shreeswaruposweb.vrsonisoft.com/cookie-policy): Details on website cookies and analytics tracking.
+- [Refund Policy](https://shreeswaruposweb.vrsonisoft.com/refund-policy): Subscription refund guidelines and policies.
+- [GDPR Compliance](https://shreeswaruposweb.vrsonisoft.com/gdpr-compliance): European General Data Protection Regulation compliance and data privacy rights.

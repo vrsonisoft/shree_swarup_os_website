@@ -13,9 +13,11 @@ Route::middleware(['web'])->group(function () {
     Route::get('/', [HomeController::class, 'landing'])->name('home')->middleware(DisableFrontend::class);
     Route::get('/change-locale/{locale}', [HomeController::class, 'changeLocale'])->name('change.locale');
     Route::get('/login', function() {
-        return redirect(config('app.app_login_url'));
+        return redirect(config('app.app_login_url'), 301);
     })->name('login');
-    Route::get('/restaurant-signup', [HomeController::class, 'signup'])->name('restaurant_signup');
+    Route::get('/restaurant-signup', function() {
+        return redirect(config('app.app_signup_url'), 301);
+    })->name('restaurant_signup');
     Route::get('/features', [HomeController::class, 'features'])->name('landing.features');
     Route::get('/pricing', [HomeController::class, 'pricingPage'])->name('landing.pricing');
     Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('landing.about');
