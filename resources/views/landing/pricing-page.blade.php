@@ -583,7 +583,7 @@ html.dark .connect-section {
 <section class="pr-hero">
   <div style="position:relative;z-index:1;">
     <h1>Transparent Plans,<br><em>No Hidden Fees</em></h1>
-    <p>Start free, scale as you grow. Every plan includes core features to help you run your restaurant smarter.</p>
+    <p>All plans include a <strong>14-Day Free Trial</strong> • No credit card required • Cancel anytime</p>
   </div>
 </section>
 
@@ -603,36 +603,65 @@ html.dark .connect-section {
     <div class="pr-cards-grid" id="pricing-cards-container">
       <div class="pr-card">
         <div class="pr-card-name">Starter</div>
-        <div class="pr-card-desc">For small restaurants just getting started with digital menus.</div>
+        <div class="pr-card-desc">Ideal for small cafes, bakeries, food trucks, and quick-service counters.</div>
         <div class="pr-card-price">
-          <span class="pr-free-tag">Free</span>
-          <span class="pr-price-period">forever</span>
+          <span class="pr-price-main monthly-price-show">₹499</span>
+          <span class="pr-price-period monthly-price-show">/ month</span>
+          <span class="pr-price-main annual-price-show">₹4,999</span>
+          <span class="pr-price-period annual-price-show">/ year</span>
         </div>
-        <a href="/restaurant-signup" class="pr-btn pr-btn-outline">Get Started</a>
+        <a href="/restaurant-signup" class="pr-btn pr-btn-outline">Start 14-Day Free Trial</a>
         <hr class="pr-divider">
         <ul class="pr-features-list">
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>QR Code Menu</li>
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 30 Menu Items</li>
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Table Management</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>1 Restaurant Branch</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>1 POS Billing Counter</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>QR Code Digital Menu</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Takeaway & Delivery Orders</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Thermal Slip Printing</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>2 Staff Accounts</li>
         </ul>
       </div>
       <div class="pr-card featured">
         <div class="pr-popular-badge">⭐ Most Popular</div>
-        <div class="pr-card-name">Professional</div>
-        <div class="pr-card-desc">For growing restaurants that need full order management.</div>
+        <div class="pr-card-name">Pro</div>
+        <div class="pr-card-desc">Complete Restaurant OS for dine-in restaurants, cafes, bars, and lounges.</div>
         <div class="pr-card-price">
           <span class="pr-price-main monthly-price-show">₹999</span>
           <span class="pr-price-period monthly-price-show">/ month</span>
-          <span class="pr-price-main annual-price-show">₹799</span>
-          <span class="pr-price-period annual-price-show">/ month · billed yearly</span>
+          <span class="pr-price-main annual-price-show">₹8,999</span>
+          <span class="pr-price-period annual-price-show">/ year · launch offer</span>
         </div>
-        <a href="/restaurant-signup" class="pr-btn pr-btn-primary">Get Started</a>
+        <a href="/restaurant-signup" class="pr-btn pr-btn-primary">Start 14-Day Free Trial</a>
         <hr class="pr-divider">
         <ul class="pr-features-list">
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Starter</li>
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Menu Items</li>
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Order Management</li>
-          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Advanced Analytics</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Starter, plus:</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Live Table & Floor Layout</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Contactless QR Table Ordering</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Kitchen Order Tickets (KOT) & KDS</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>ShreeSwarupOS Printer App</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 POS Billing Counters</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>10 Staff Accounts</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Priority WhatsApp & Phone Support</li>
+        </ul>
+      </div>
+      <div class="pr-card">
+        <div class="pr-card-name">Enterprise</div>
+        <div class="pr-card-desc">Built for multi-outlet restaurant chains, franchises, and large food establishments.</div>
+        <div class="pr-card-price">
+          <span class="pr-price-main monthly-price-show">₹1,999</span>
+          <span class="pr-price-period monthly-price-show">/ month</span>
+          <span class="pr-price-main annual-price-show">₹17,999</span>
+          <span class="pr-price-period annual-price-show">/ year</span>
+        </div>
+        <a href="/restaurant-signup" class="pr-btn pr-btn-outline">Start 14-Day Free Trial</a>
+        <hr class="pr-divider">
+        <ul class="pr-features-list">
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Pro, plus:</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Multi-Branch Centralized (3 Outlets)</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited POS Terminals</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Multi-Kitchen KOT Routing</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Staff & Custom Roles</li>
+          <li><svg class="pr-check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated 24/7 Account Manager</li>
         </ul>
       </div>
     </div>
@@ -733,16 +762,16 @@ function loadPricingPageData() {
       if (cardsContainer && packages.length > 0) {
         cardsContainer.innerHTML = packages.map((pkg, index) => {
           const isFeatured = pkg.is_recommended || index === 1;
-          const symbol = (pkg.currency && pkg.currency.currency_symbol) ? pkg.currency.currency_symbol : '$';
+          const symbol = (pkg.currency && pkg.currency.currency_symbol) ? pkg.currency.currency_symbol : '₹';
           
           let priceHtml = '';
           if (pkg.is_free || pkg.package_type === 'free') {
-            priceHtml = `<span class="pr-free-tag">Free</span><span class="pr-price-period">forever</span>`;
+            priceHtml = `<span class="pr-free-tag">Free Trial</span><span class="pr-price-period">14 days</span>`;
           } else if (pkg.package_type === 'lifetime') {
             priceHtml = `<span class="pr-price-main">${symbol}${pkg.price || '0'}</span><span class="pr-price-period">one-time</span>`;
           } else {
-            const mPrice = pkg.monthly_price ? `${symbol}${pkg.monthly_price}` : '';
-            const aPrice = pkg.annual_price ? `${symbol}${pkg.annual_price}` : '';
+            const mPrice = pkg.monthly_price ? `${symbol}${Math.round(pkg.monthly_price)}` : '';
+            const aPrice = pkg.annual_price ? `${symbol}${Math.round(pkg.annual_price).toLocaleString('en-IN')}` : '';
             priceHtml = `
               ${mPrice ? `<span class="pr-price-main monthly-price-show">${mPrice}</span><span class="pr-price-period monthly-price-show">/ month</span>` : ''}
               ${aPrice ? `<span class="pr-price-main annual-price-show">${aPrice}</span><span class="pr-price-period annual-price-show">/ year</span>` : ''}
@@ -769,7 +798,7 @@ function loadPricingPageData() {
               <div class="pr-card-name">${pkg.package_name}</div>
               <div class="pr-card-desc">${pkg.description || 'Perfect for growing restaurants looking for a complete solution.'}</div>
               <div class="pr-card-price">${priceHtml}</div>
-              <a href="/restaurant-signup" class="pr-btn ${isFeatured ? 'pr-btn-primary' : 'pr-btn-outline'}">Get Started</a>
+              <a href="/restaurant-signup" class="pr-btn ${isFeatured ? 'pr-btn-primary' : 'pr-btn-outline'}">Start 14-Day Free Trial</a>
               <hr class="pr-divider">
               <ul class="pr-features-list">
                 ${displayedFeatures.map(f => `
