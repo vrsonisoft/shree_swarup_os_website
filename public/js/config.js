@@ -1,5 +1,5 @@
 /**
- * TableTrack Global Application Configuration
+ * ChowChak Global Application Configuration
  * 
  * Central place to manage API URL for both Local & Production.
  * If productionApiHost is left empty '', it auto-detects current website domain.

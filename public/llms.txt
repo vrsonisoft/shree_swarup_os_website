@@ -1,12 +1,12 @@
-# ShreeSwarupOS
+# ChowChak
 
-> ShreeSwarupOS is a comprehensive, cloud-based restaurant operating system that unifies contactless QR digital menus, POS order billing, Kitchen Order Ticketing (KOT), staff management, table reservations, and live analytics.
+> ChowChak is a comprehensive, cloud-based restaurant operating system that unifies contactless QR digital menus, POS order billing, Kitchen Order Ticketing (KOT), staff management, table reservations, and live analytics.
 
 ## Main Pages
-- [Homepage](https://shreeswaruposweb.vrsonisoft.com/): Official overview of ShreeSwarupOS features, benefits, and digital restaurant transformation.
+- [Homepage](https://shreeswaruposweb.vrsonisoft.com/): Official overview of ChowChak features, benefits, and digital restaurant transformation.
 - [Features](https://shreeswaruposweb.vrsonisoft.com/features): Complete breakdown of POS billing, QR digital ordering, kitchen display systems, inventory tracking, and waiter apps.
 - [Pricing Plans](https://shreeswaruposweb.vrsonisoft.com/pricing): Standard subscription tiers, feature comparison, and plan details for single and multi-branch restaurants.
-- [About Us](https://shreeswaruposweb.vrsonisoft.com/about-us): Mission, vision, and technology stack behind ShreeSwarupOS.
+- [About Us](https://shreeswaruposweb.vrsonisoft.com/about-us): Mission, vision, and technology stack behind ChowChak.
 - [Tutorials & Guides](https://shreeswaruposweb.vrsonisoft.com/tutorials): Step-by-step guides and video tutorials for setting up and operating restaurant workflows.
 
 ## Guides & Tutorials
