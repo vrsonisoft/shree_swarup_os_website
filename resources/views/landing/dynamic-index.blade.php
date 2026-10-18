@@ -1,15 +1,15 @@
 @extends('layouts.landing')
 
-@section('title', 'ShreeSwarupOS - Complete Restaurant Software & Digital Menu Platform')
-@section('meta_description', 'Empower your restaurant with ShreeSwarupOS. Smart QR code menus, instant order dispatching, POS integration, customer feedback, and multi-location management.')
-@section('meta_keywords', 'restaurant software, digital menu platform, QR ordering system, restaurant POS, food ordering system, ShreeSwarupOS')
+@section('title', 'ChowChak - Complete Restaurant Software & Digital Menu Platform')
+@section('meta_description', 'Empower your restaurant with ChowChak. Smart QR code menus, instant order dispatching, POS integration, customer feedback, and multi-location management.')
+@section('meta_keywords', 'restaurant software, digital menu platform, QR ordering system, restaurant POS, food ordering system, ChowChak')
 
 @section('schema')
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "ShreeSwarupOS",
+  "name": "ChowChak",
   "operatingSystem": "Web, Android, iOS",
   "applicationCategory": "BusinessApplication",
   "description": "Complete Restaurant Management Software & Digital QR Code Menu Platform."
@@ -1164,7 +1164,7 @@ html.dark .premium-footer {
   </div>
 </section>
 
-{{-- ═══════════ 6. TABLETRACK VIDEO DEMO BANNER ═══════════ --}}
+{{-- ═══════════ 6. CHOWCHAK VIDEO DEMO BANNER ═══════════ --}}
 <section class="section-sm" style="background:var(--white);">
   <div class="wrap">
     <a href="https://www.youtube.com/watch?v=KKla4E_e_tY" target="_blank" style="text-decoration:none; display:block;">
@@ -1174,7 +1174,7 @@ html.dark .premium-footer {
         </div>
         <div class="yt-text">
           <small>YouTube</small>
-          <p>Watch how TableTrack simplifies digital ordering and billing</p>
+          <p>Watch how ChowChak simplifies digital ordering and billing</p>
           <span>Click here to watch</span>
         </div>
       </div>
@@ -1693,11 +1693,11 @@ html.dark .premium-footer {
       {{-- Initial fallback skeleton/SSR items --}}
       <div class="faq-item">
         <div class="faq-question open" onclick="toggleFaq(this)">
-          How does TableTrack Digital QR Menu work?
+          How does ChowChak Digital QR Menu work?
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
         <div class="faq-answer open">
-          TableTrack allows restaurant customers to scan a QR code placed on their table using their smartphone camera, view the digital interactive menu, customize their order, and place orders directly without waiting for a waiter.
+          ChowChak allows restaurant customers to scan a QR code placed on their table using their smartphone camera, view the digital interactive menu, customize their order, and place orders directly without waiting for a waiter.
         </div>
       </div>
     </div>

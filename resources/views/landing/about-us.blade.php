@@ -1,19 +1,19 @@
 @extends('layouts.landing')
 
-@section('title', 'About Us - Our Mission & Vision | ShreeSwarupOS')
-@section('meta_description', 'Learn how ShreeSwarupOS is transforming restaurant operations with intuitive digital menu technology, seamless POS solutions, and automated table management.')
-@section('meta_keywords', 'about ShreeSwarupOS, restaurant technology company, digital menu software team, hospitality software')
+@section('title', 'About Us - Our Mission & Vision | ChowChak')
+@section('meta_description', 'Learn how ChowChak is transforming restaurant operations with intuitive digital menu technology, seamless POS solutions, and automated table management.')
+@section('meta_keywords', 'about ChowChak, restaurant technology company, digital menu software team, hospitality software')
 
 @section('schema')
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "name": "About ShreeSwarupOS",
+  "name": "About ChowChak",
   "description": "Empowering restaurants worldwide with digital menu and POS solutions.",
   "publisher": {
     "@type": "Organization",
-    "name": "ShreeSwarupOS"
+    "name": "ChowChak"
   }
 }
 </script>
@@ -358,7 +358,7 @@ html.dark {
   <div style="position:relative;z-index:1;">
     <span class="ab-hero-tag">About Us</span>
     <h1>We're on a Mission to Make<br><em>Every Restaurant Smarter</em></h1>
-    <p>TableTrack was built by restaurant operators, for restaurant operators. We know the chaos — and we built the solution to tame it.</p>
+    <p>ChowChak was built by restaurant operators, for restaurant operators. We know the chaos — and we built the solution to tame it.</p>
   </div>
 </section>
 
@@ -395,8 +395,8 @@ html.dark {
       <div class="story-text">
         <h2>Born from<br><em>Real Restaurant Pain</em></h2>
         <p>It started with a frustrating dinner experience — misplaced orders, a confused waiter, and a paper menu that hadn't been updated in months. Our founders, who had spent years managing restaurant operations, knew there had to be a better way.</p>
-        <p>In 2022, we began building TableTrack as an internal tool. Within 6 months, it had transformed operations — order errors dropped by 80%, average table turnover improved by 35%, and customer satisfaction scores soared.</p>
-        <p>Today, TableTrack serves hundreds of restaurants across India and beyond. We're just getting started.</p>
+        <p>In 2022, we began building ChowChak as an internal tool. Within 6 months, it had transformed operations — order errors dropped by 80%, average table turnover improved by 35%, and customer satisfaction scores soared.</p>
+        <p>Today, ChowChak serves hundreds of restaurants across India and beyond. We're just getting started.</p>
       </div>
       <div class="timeline">
         <div class="tl-item">
@@ -436,7 +436,7 @@ html.dark {
 <section class="ab-section">
   <div class="ab-inner">
     <div class="section-head">
-      <h2>TableTrack <em>By the Numbers</em></h2>
+      <h2>ChowChak <em>By the Numbers</em></h2>
     </div>
     <div class="stats-grid">
       <div class="stat-card">
@@ -485,7 +485,7 @@ html.dark {
       <div class="value-card">
         <div class="value-icon">🌍</div>
         <h4>Inclusivity</h4>
-        <p>Whether you run a roadside dhaba or a 5-star restaurant, TableTrack should be accessible, affordable, and powerful for everyone.</p>
+        <p>Whether you run a roadside dhaba or a 5-star restaurant, ChowChak should be accessible, affordable, and powerful for everyone.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">🤝</div>
@@ -548,7 +548,7 @@ html.dark {
 {{-- ── CTA ── --}}
 <section class="ab-cta">
   <div style="position:relative;z-index:1;">
-    <h2>Ready to Join the TableTrack Family?</h2>
+    <h2>Ready to Join the ChowChak Family?</h2>
     <p>Start free today. No credit card required. Join 500+ restaurants who've transformed how they operate.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
       <a href="{{ route('restaurant_signup') }}" class="btn-white">Start For Free →</a>

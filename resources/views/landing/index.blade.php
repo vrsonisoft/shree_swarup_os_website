@@ -150,7 +150,7 @@
             All-In-One Free Menu Maker And Restaurant Management System
         </h2>
         <p class="text-gray-500 max-w-2xl mx-auto pb-4">
-            Boost sales and engagement using ShreeSwarupOS’s free menu maker, management system, and built-in restaurant marketing tools.
+            Boost sales and engagement using ChowChak’s free menu maker, management system, and built-in restaurant marketing tools.
         </p>
         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-250/20 max-w-3xl mx-auto group">
             <img src="https://www.menutiger.com/_next/static/media/video_thumbnail.aab4b033.webp" 
@@ -174,7 +174,7 @@
             Everything You Need To Get The <span class="text-menutiger-green">Kitchen In order</span>
         </h2>
         <p class="text-gray-500 max-w-2xl mx-auto pb-6">
-            Boost sales and engagement using ShreeSwarupOS’s free menu maker, management system, and built-in restaurant marketing tools.
+            Boost sales and engagement using ChowChak’s free menu maker, management system, and built-in restaurant marketing tools.
         </p>
         
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

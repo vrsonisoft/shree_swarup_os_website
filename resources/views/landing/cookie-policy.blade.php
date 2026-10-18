@@ -1,7 +1,7 @@
 @extends('layouts.landing')
 
-@section('title', 'Cookie Policy | ShreeSwarupOS')
-@section('meta_description', 'Learn about how ShreeSwarupOS uses cookies and tracking technologies to optimize performance and improve user experience.')
+@section('title', 'Cookie Policy | ChowChak')
+@section('meta_description', 'Learn about how ChowChak uses cookies and tracking technologies to optimize performance and improve user experience.')
 
 @section('content')
 <style>
@@ -245,7 +245,7 @@ html.dark {
 
       <template id="content-static-fallback">
         <div class="legal-callout">
-          <p>🍪 <strong>Understanding Cookies at TableTrack:</strong> This Cookie Policy explains how TableTrack uses cookies and tracking technologies to ensure seamless restaurant management and QR menu browsing.</p>
+          <p>🍪 <strong>Understanding Cookies at ChowChak:</strong> This Cookie Policy explains how ChowChak uses cookies and tracking technologies to ensure seamless restaurant management and QR menu browsing.</p>
         </div>
 
         <section id="sec-1" class="legal-section">
@@ -255,7 +255,7 @@ html.dark {
 
         <section id="sec-2" class="legal-section">
           <h2><span class="num">2</span> How We Use Cookies</h2>
-          <p>At TableTrack, we use cookies to keep our platform secure, fast, and user-friendly for both restaurant owners and dining guests:</p>
+          <p>At ChowChak, we use cookies to keep our platform secure, fast, and user-friendly for both restaurant owners and dining guests:</p>
           <ul>
             <li>To maintain active admin session logins and user authorization tokens.</li>
             <li>To remember active ordering carts, table selections, and preferred currency/language settings.</li>
@@ -305,7 +305,7 @@ html.dark {
 
         <section id="sec-6" class="legal-section">
           <h2><span class="num">6</span> Questions & Contact</h2>
-          <p>If you have any questions regarding our Cookie Policy, please contact our team at <strong>privacy@tabletrack.com</strong>.</p>
+          <p>If you have any questions regarding our Cookie Policy, please contact our team at <strong>privacy@chowchak.com</strong>.</p>
         </section>
       </template>
 

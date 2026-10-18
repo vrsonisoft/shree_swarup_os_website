@@ -1,8 +1,8 @@
 @extends('layouts.landing')
 
-@section('title', 'Restaurant Features & POS Capabilities | ShreeSwarupOS')
-@section('meta_description', 'Explore features of ShreeSwarupOS: QR Code digital menus, POS order tracking, kitchen display system (KDS), inventory management, staff roles, and analytics.')
-@section('meta_keywords', 'restaurant features, QR menu features, kitchen display system, POS features, inventory management, ShreeSwarupOS features')
+@section('title', 'Restaurant Features & POS Capabilities | ChowChak')
+@section('meta_description', 'Explore features of ChowChak: QR Code digital menus, POS order tracking, kitchen display system (KDS), inventory management, staff roles, and analytics.')
+@section('meta_keywords', 'restaurant features, QR menu features, kitchen display system, POS features, inventory management, ChowChak features')
 
 @section('schema')
 <script type="application/ld+json">
@@ -10,10 +10,10 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Restaurant Features & POS Capabilities",
-  "description": "Explore comprehensive features of ShreeSwarupOS restaurant management system.",
+  "description": "Explore comprehensive features of ChowChak restaurant management system.",
   "publisher": {
     "@type": "Organization",
-    "name": "ShreeSwarupOS"
+    "name": "ChowChak"
   }
 }
 </script>
@@ -457,7 +457,7 @@ html.dark {
 <section class="feat-hero">
   <span class="feat-hero-tag">All Features</span>
   <h1>Everything You Need to Run<br>Your <em>Restaurant Smarter</em></h1>
-  <p>From digital QR menus to live order tracking, table management, and insightful analytics — TableTrack has it all under one roof.</p>
+  <p>From digital QR menus to live order tracking, table management, and insightful analytics — ChowChak has it all under one roof.</p>
   <div class="feat-hero-btns">
     <a href="/restaurant-signup" class="btn-hero-primary">Start For Free</a>
     <a href="/pricing" class="btn-hero-ghost">View Pricing</a>
@@ -513,7 +513,7 @@ html.dark {
 <!-- CTA -->
 <section class="feat-cta">
   <div style="position:relative;z-index:1;">
-    <h2>Ready to Get Started?<br>Try TableTrack Free Today.</h2>
+    <h2>Ready to Get Started?<br>Try ChowChak Free Today.</h2>
     <p>No credit card required. Set up your restaurant in under 10 minutes and start taking orders digitally.</p>
     <a href="/restaurant-signup" class="btn-cta-white">Start For Free →</a>
   </div>

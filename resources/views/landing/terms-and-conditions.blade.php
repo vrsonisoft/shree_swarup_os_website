@@ -1,7 +1,7 @@
 @extends('layouts.landing')
 
-@section('title', 'Terms & Conditions | ShreeSwarupOS')
-@section('meta_description', 'Terms and conditions governing the use of ShreeSwarupOS restaurant management system and digital QR services.')
+@section('title', 'Terms & Conditions | ChowChak')
+@section('meta_description', 'Terms and conditions governing the use of ChowChak restaurant management system and digital QR services.')
 
 @section('content')
 <style>

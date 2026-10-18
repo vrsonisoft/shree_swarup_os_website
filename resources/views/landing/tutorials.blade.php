@@ -1,19 +1,19 @@
 @extends('layouts.landing')
 
-@section('title', 'Video Tutorials & User Guides | ShreeSwarupOS Knowledge Base')
-@section('meta_description', 'Step-by-step guides and video tutorials on setup, menu creation, order processing, POS configuration, and setting up digital QR codes with ShreeSwarupOS.')
-@section('meta_keywords', 'ShreeSwarupOS tutorials, restaurant software guide, QR menu setup, POS help, restaurant management guides')
+@section('title', 'Video Tutorials & User Guides | ChowChak Knowledge Base')
+@section('meta_description', 'Step-by-step guides and video tutorials on setup, menu creation, order processing, POS configuration, and setting up digital QR codes with ChowChak.')
+@section('meta_keywords', 'ChowChak tutorials, restaurant software guide, QR menu setup, POS help, restaurant management guides')
 
 @section('schema')
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "ShreeSwarupOS Tutorials & Guides",
-  "description": "Step-by-step guides and tutorials for using ShreeSwarupOS restaurant management system.",
+  "name": "ChowChak Tutorials & Guides",
+  "description": "Step-by-step guides and tutorials for using ChowChak restaurant management system.",
   "publisher": {
     "@type": "Organization",
-    "name": "ShreeSwarupOS"
+    "name": "ChowChak"
   }
 }
 </script>
@@ -538,8 +538,8 @@ html.dark {
   <!-- HERO -->
   <section class="tutorials-hero">
     <div class="max-w-4xl mx-auto">
-      <h1 class="hero-title">TableTrack Tutorials</h1>
-      <p class="hero-subtitle">Learn how to configure your restaurant, customize your digital menu, manage live orders, set up physical tables, and run POS billing in TableTrack.</p>
+      <h1 class="hero-title">ChowChak Tutorials</h1>
+      <p class="hero-subtitle">Learn how to configure your restaurant, customize your digital menu, manage live orders, set up physical tables, and run POS billing in ChowChak.</p>
       
       <!-- Live Search Box -->
       <div class="search-wrapper">
@@ -640,7 +640,7 @@ let activeSubcategory = 'all';
 function initTutorialsPage() {
   const apiHost = window.TABLETRACK_CONFIG ? window.TABLETRACK_CONFIG.apiHost : 'http://127.0.0.1:8000';
 
-  // 1. Fetch Live Tutorials from TableTrack API
+  // 1. Fetch Live Tutorials from ChowChak API
   fetch(`${apiHost}/api/v1/public/tutorials`)
     .then(res => res.json())
     .then(res => {
@@ -656,7 +656,7 @@ function initTutorialsPage() {
       filterTutorials();
     });
 
-  // 2. Fetch Live Categories from TableTrack API
+  // 2. Fetch Live Categories from ChowChak API
   fetch(`${apiHost}/api/v1/public/tutorials/categories`)
     .then(res => res.json())
     .then(res => {
@@ -814,7 +814,7 @@ function renderCards(cards) {
           <div class="thumbnail-right">
             <div class="thumbnail-tagline">How to ${card.tag} in</div>
             <div class="thumbnail-title">${card.displayTitle}</div>
-            <div class="thumbnail-badge">TableTrack Tutorial</div>
+            <div class="thumbnail-badge">ChowChak Tutorial</div>
           </div>
         </div>
       `;

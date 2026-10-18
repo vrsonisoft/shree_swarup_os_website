@@ -1,7 +1,7 @@
 @extends('layouts.landing')
 
-@section('title', 'GDPR Compliance Statement | ShreeSwarupOS')
-@section('meta_description', 'ShreeSwarupOS commitment to GDPR compliance, data privacy rights, data processing standards, and security.')
+@section('title', 'GDPR Compliance Statement | ChowChak')
+@section('meta_description', 'ChowChak commitment to GDPR compliance, data privacy rights, data processing standards, and security.')
 
 @section('content')
 <style>
@@ -221,12 +221,12 @@ html.dark {
 
       <template id="content-static-fallback">
         <div class="legal-callout">
-          <p>🇪🇺 <strong>GDPR Compliance Statement:</strong> TableTrack is committed to supporting European General Data Protection Regulation (GDPR) standards for data protection and user privacy rights.</p>
+          <p>🇪🇺 <strong>GDPR Compliance Statement:</strong> ChowChak is committed to supporting European General Data Protection Regulation (GDPR) standards for data protection and user privacy rights.</p>
         </div>
 
         <section id="sec-1" class="legal-section">
           <h2><span class="num">1</span> Commitment to GDPR</h2>
-          <p>The General Data Protection Regulation (GDPR) is a comprehensive EU privacy law that regulates data collection and processing for European citizens. TableTrack complies with all core GDPR mandates across our web platform and digital QR services.</p>
+          <p>The General Data Protection Regulation (GDPR) is a comprehensive EU privacy law that regulates data collection and processing for European citizens. ChowChak complies with all core GDPR mandates across our web platform and digital QR services.</p>
         </section>
 
         <section id="sec-2" class="legal-section">
@@ -242,7 +242,7 @@ html.dark {
 
         <section id="sec-3" class="legal-section">
           <h2><span class="num">3</span> Data Controller vs Processor</h2>
-          <p>When restaurant operators use TableTrack to store guest order histories, TableTrack acts as a Data Processor, and the restaurant acts as the Data Controller under GDPR guidelines.</p>
+          <p>When restaurant operators use ChowChak to store guest order histories, ChowChak acts as a Data Processor, and the restaurant acts as the Data Controller under GDPR guidelines.</p>
         </section>
 
         <section id="sec-4" class="legal-section">
@@ -252,7 +252,7 @@ html.dark {
 
         <section id="sec-5" class="legal-section">
           <h2><span class="num">5</span> DPO Contact Information</h2>
-          <p>If you wish to exercise your GDPR rights or submit a Data Subject Access Request (DSAR), please contact our Data Protection Officer at <strong>dpo@tabletrack.com</strong>.</p>
+          <p>If you wish to exercise your GDPR rights or submit a Data Subject Access Request (DSAR), please contact our Data Protection Officer at <strong>dpo@chowchak.com</strong>.</p>
         </section>
       </template>
 

@@ -42,7 +42,12 @@ htmlFiles.forEach((filePath) => {
         );
     }
 
-    // 1. Replace desktop header logo block
+    // 1. Replace desktop and mobile header logos
+    content = content.replace(/<span style="color:#00B692; font-weight:900;">SHREESWARUP<\/span>\s*<span style="color:#9CB080; font-weight:900;">OS<\/span>/g, '<span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>');
+    content = content.replace(/SHREESWARUP/g, 'CHOW');
+    content = content.replace(/<span style="color:#9CB080; font-weight:900;">OS<\/span>/g, '<span style="color:#9CB080; font-weight:900;">CHAK</span>');
+    content = content.replace(/<span class="logo-subtext"[^>]*>OS<\/span>/g, '<span class="logo-subtext" style="font-weight:900;">CHAK</span>');
+
     const desktopLogoRegex = /<a href="\/" class="flex items-center gap-[^"]* app-logo">[\s\S]*?<\/a>/g;
     const newDesktopLogo = `<a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="/img/logo.png" class="w-[52px] h-[52px] object-contain rounded-md shrink-0 shadow-sm" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
@@ -62,18 +67,31 @@ htmlFiles.forEach((filePath) => {
                             </a>`;
     content = content.replace(footerLogoRegex, newFooterLogo);
 
-    // 2. Replace title occurrences
+    // 2. Titles & Meta tags
     content = content.replace(/<title>(?:TableTrack|ShreeSwarupOS)[^<]*<\/title>/gi, '<title>ChowChak - Digital Menu & Restaurant Management Platform</title>');
     content = content.replace(/<title>Help & Tutorials - (?:TableTrack|ShreeSwarupOS)<\/title>/gi, '<title>Help & Tutorials - ChowChak</title>');
+    content = content.replace(/<title>(.*?)ShreeSwarupOS(.*?)<\/title>/gi, '<title>$1ChowChak$2</title>');
+    content = content.replace(/<title>(.*?)TableTrack(.*?)<\/title>/gi, '<title>$1ChowChak$2</title>');
+    content = content.replace(/content="([^"]*)ShreeSwarupOS([^"]*)"/gi, 'content="$1ChowChak$2"');
+    content = content.replace(/content="([^"]*)TableTrack([^"]*)"/gi, 'content="$1ChowChak$2"');
 
     // 3. Replace text occurrences (preserving domain URLs)
     content = content.replace(/ShreeSwarupOS/g, 'ChowChak');
+    content = content.replace(/ShreeSwarup/g, 'ChowChak');
     content = content.replace(/TableTrack/g, 'ChowChak');
+    content = content.replace(/TABLETRACK/g, 'CHOWCHAK');
+    content = content.replace(/Tabletrack/g, 'ChowChak');
     content = content.replace(/MENU TIGER/g, 'ChowChak');
     content = content.replace(/MENUTIGER/g, 'ChowChak');
     content = content.replace(/MenuTiger/g, 'ChowChak');
 
-    // 4. Fix copyright line in footer
+    // 4. Email & Support Links
+    content = content.replace(/privacy@tabletrack\.com/g, 'privacy@chowchak.com');
+    content = content.replace(/billing@tabletrack\.com/g, 'billing@chowchak.com');
+    content = content.replace(/dpo@tabletrack\.com/g, 'dpo@chowchak.com');
+    content = content.replace(/support\.tabletrack\.com/g, 'support.chowchak.com');
+
+    // 5. Fix copyright line in footer
     content = content.replace(/© (\d{4}) (?:ShreeSwarupOS|TableTrack|ChowChak)/g, '© $1 ChowChak');
 
     if (content !== original) {
