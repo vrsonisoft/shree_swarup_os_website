@@ -21,9 +21,9 @@
     <meta name="msapplication-TileImage" content="{{ global_setting()->logoUrl }}">
 
     @php
-        $seoTitle = trim($__env->yieldContent('title', global_setting()->meta_title ?? 'ShreeSwarupOS - Digital Menu & Restaurant Management Platform'));
-        $seoDescription = trim($__env->yieldContent('meta_description', global_setting()->meta_description ?? 'ShreeSwarupOS is an all-in-one restaurant management system featuring digital QR menus, POS ordering, inventory management, and real-time analytics.'));
-        $seoKeywords = trim($__env->yieldContent('meta_keywords', global_setting()->meta_keyword ?? 'restaurant management system, digital menu, QR code menu, restaurant POS, online food ordering, ShreeSwarupOS'));
+        $seoTitle = trim($__env->yieldContent('title', global_setting()->meta_title ?? 'ChowChak - Digital Menu & Restaurant Management Platform'));
+        $seoDescription = trim($__env->yieldContent('meta_description', global_setting()->meta_description ?? 'ChowChak is an all-in-one restaurant management system featuring digital QR menus, POS ordering, inventory management, and real-time analytics.'));
+        $seoKeywords = trim($__env->yieldContent('meta_keywords', global_setting()->meta_keyword ?? 'restaurant management system, digital menu, QR code menu, restaurant POS, online food ordering, ChowChak'));
         $seoImage = trim($__env->yieldContent('og_image', global_setting()->meta_image_url ?? global_setting()->upload_fav_icon_android_chrome_512_url ?? asset('favicon.png')));
         $seoCanonical = trim($__env->yieldContent('canonical_url', url()->current()));
         $seoRobots = trim($__env->yieldContent('meta_robots', 'index, follow'));
@@ -39,7 +39,7 @@
     <link rel="canonical" href="{{ $seoCanonical }}">
 
     {{-- OPEN GRAPH (FACEBOOK, LINKEDIN, WHATSAPP) --}}
-    <meta property="og:site_name" content="ShreeSwarupOS">
+    <meta property="og:site_name" content="ChowChak">
     <meta property="og:type" content="{{ $seoOgType }}">
     <meta property="og:url" content="{{ $seoCanonical }}">
     <meta property="og:title" content="{{ $seoTitle }}">
@@ -62,16 +62,16 @@
         {
           "@type": "Organization",
           "@id": "{{ url('/') }}#organization",
-          "name": "ShreeSwarupOS",
+          "name": "ChowChak",
           "url": "{{ url('/') }}",
           "logo": "{{ global_setting()->logo_url ?? global_setting()->upload_fav_icon_android_chrome_512_url }}",
-          "description": "ShreeSwarupOS provides modern restaurant management software, digital QR menus, and POS tools."
+          "description": "ChowChak provides modern restaurant management software, digital QR menus, and POS tools."
         },
         {
           "@type": "WebSite",
           "@id": "{{ url('/') }}#website",
           "url": "{{ url('/') }}",
-          "name": "ShreeSwarupOS",
+          "name": "ChowChak",
           "publisher": {
             "@id": "{{ url('/') }}#organization"
           }
@@ -558,9 +558,9 @@
             <nav class="bg-white border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:text-gray">
                 <div class="flex flex-wrap justify-between items-center mx-auto">
                     <a href="/" class="flex items-center gap-2.5 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
-                        <img src="{{ asset('img/logo.png') }}" class="w-[52px] h-[52px] object-contain rounded-md shrink-0" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ShreeSwarupOS Logo" />
+                        <img src="{{ asset('img/logo.png') }}" class="w-[52px] h-[52px] object-contain rounded-md shrink-0" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text" style="font-size:19px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:10px;">
-                            <span style="color:#00B692; font-weight:900;">SHREESWARUP</span><span style="color:#9CB080; font-weight:900;">OS</span>
+                            <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
                         </span>
                     </a>
                     <div class="flex flex-shrink-0 items-center gap-1 sm:gap-2">
@@ -846,9 +846,9 @@
                         <!-- Column 1: Logo & Info -->
                         <div class="footer-brand-col" style="display:flex; flex-direction:column; gap:14px; text-align:left;">
                             <a href="/" class="footer-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
-                                <img src="{{ asset('img/logo.png') }}" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ShreeSwarupOS Logo" />
+                                <img src="{{ asset('img/logo.png') }}" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ChowChak Logo" />
                                 <span class="logo-text" style="font-size:22px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
-                                    <span style="color:#00B692; font-weight:900;">SHREESWARUP</span><span style="color:#9CB080; font-weight:900;">OS</span>
+                                    <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
                                 </span>
                             </a>
                             <p class="brand-desc" style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0; max-width:280px;">

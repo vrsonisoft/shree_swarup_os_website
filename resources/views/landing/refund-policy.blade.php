@@ -227,7 +227,7 @@ html.dark {
 
         <section id="sec-1" class="legal-section">
           <h2><span class="num">1</span> Refund Overview</h2>
-          <p>TableTrack offers subscription plans for our restaurant software. Because our software is provided on a software-as-a-service (SaaS) basis with trial options, payments are generally non-refundable except under specified conditions.</p>
+          <p>ChowChak offers subscription plans for our restaurant software. Because our software is provided on a software-as-a-service (SaaS) basis with trial options, payments are generally non-refundable except under specified conditions.</p>
         </section>
 
         <section id="sec-2" class="legal-section">
@@ -247,12 +247,12 @@ html.dark {
 
         <section id="sec-4" class="legal-section">
           <h2><span class="num">4</span> Refund Request Process</h2>
-          <p>To request a billing review or refund, please submit your transaction invoice ID and reason to <strong>billing@tabletrack.com</strong>. Approved refunds will be processed to your original payment method within 5–7 business days.</p>
+          <p>To request a billing review or refund, please submit your transaction invoice ID and reason to <strong>support@vrsonisoft.com</strong>. Approved refunds will be processed to your original payment method within 5–7 business days.</p>
         </section>
 
         <section id="sec-5" class="legal-section">
           <h2><span class="num">5</span> Billing Contact</h2>
-          <p>If you have any questions regarding billing statements or charges, please contact our financial operations team at <strong>billing@tabletrack.com</strong>.</p>
+          <p>If you have any questions regarding billing statements or charges, please contact our financial operations team at <strong>support@vrsonisoft.com</strong>.</p>
         </section>
       </template>
 

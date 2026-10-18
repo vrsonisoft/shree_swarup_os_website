@@ -2,12 +2,12 @@
 
 @php
     $tutorialTitle = isset($dbTutorial) && $dbTutorial->title ? $dbTutorial->title : ucwords(str_replace('-', ' ', $slug));
-    $tutorialDesc = isset($dbTutorial) && $dbTutorial->short_description ? strip_tags($dbTutorial->short_description) : 'Learn how to use ' . $tutorialTitle . ' on ShreeSwarupOS restaurant management system.';
+    $tutorialDesc = isset($dbTutorial) && $dbTutorial->short_description ? strip_tags($dbTutorial->short_description) : 'Learn how to use ' . $tutorialTitle . ' on ChowChak restaurant management system.';
 @endphp
 
-@section('title', $tutorialTitle . ' - ShreeSwarupOS Tutorial')
+@section('title', $tutorialTitle . ' - ChowChak Tutorial')
 @section('meta_description', $tutorialDesc)
-@section('meta_keywords', strtolower($tutorialTitle) . ', ShreeSwarupOS tutorial, restaurant management guide')
+@section('meta_keywords', strtolower($tutorialTitle) . ', ChowChak tutorial, restaurant management guide')
 
 @section('schema')
 <script type="application/ld+json">
@@ -20,7 +20,7 @@
       "description": "{{ addslashes($tutorialDesc) }}",
       "publisher": {
         "@type": "Organization",
-        "name": "ShreeSwarupOS"
+        "name": "ChowChak"
       }
     },
     {
@@ -528,7 +528,7 @@ const fallbackTutorialsData = [
       "Configure your standard business operation hours (opening and closing timings).",
       "Set your default tax configuration (GST / VAT rates) and click <b>Save Settings</b>."
     ],
-    videoTitle: "How to Setup Restaurant Profile in TableTrack?",
+    videoTitle: "How to Setup Restaurant Profile in ChowChak?",
     videoDuration: "1:40"
   },
   {
@@ -547,7 +547,7 @@ const fallbackTutorialsData = [
       "Click <b>Generate QR</b> to create custom dine-in QR codes.",
       "Download and print the QR files. Customers can scan these to browse your menu and order."
     ],
-    videoTitle: "How to Generate Table QR Codes in TableTrack?",
+    videoTitle: "How to Generate Table QR Codes in ChowChak?",
     videoDuration: "1:25"
   },
   {
@@ -566,7 +566,7 @@ const fallbackTutorialsData = [
       "Assign specific table areas to waiters to optimize service delivery.",
       "Track staff attendance and real-time customer table service requests."
     ],
-    videoTitle: "How to Manage Staff & Waiters in TableTrack?",
+    videoTitle: "How to Manage Staff & Waiters in ChowChak?",
     videoDuration: "1:55"
   },
   {
@@ -585,7 +585,7 @@ const fallbackTutorialsData = [
       "Toggle category visibility (Active / Inactive status).",
       "Click <b>Save</b>. You can now drag and drop categories to reorder their layout."
     ],
-    videoTitle: "How to Create Menu Categories in TableTrack?",
+    videoTitle: "How to Create Menu Categories in ChowChak?",
     videoDuration: "1:15"
   },
   {
@@ -604,7 +604,7 @@ const fallbackTutorialsData = [
       "Toggle tags like Veg, Non-Veg, Egg, Gluten-Free, or Chef Special.",
       "Upload high-quality photos of the dish and tap <b>Save Item</b> to publish it to your QR menu."
     ],
-    videoTitle: "How to Add Menu Items in TableTrack?",
+    videoTitle: "How to Add Menu Items in ChowChak?",
     videoDuration: "2:05"
   },
   {
@@ -623,7 +623,7 @@ const fallbackTutorialsData = [
       "Select selection limits: Single Choice (Radio) or Multiple Choice (Checkbox).",
       "Map this modifier group to specific menu items and click <b>Save</b>."
     ],
-    videoTitle: "How to Setup Menu Modifiers in TableTrack?",
+    videoTitle: "How to Setup Menu Modifiers in ChowChak?",
     videoDuration: "1:45"
   },
   {
@@ -642,7 +642,7 @@ const fallbackTutorialsData = [
       "Click on menu items to add them to the cart. Click item details to add custom modifiers.",
       "Select the customer profile, apply discount vouchers, and tap <b>Place Order</b>."
     ],
-    videoTitle: "How to Place Orders via POS Billing in TableTrack?",
+    videoTitle: "How to Place Orders via POS Billing in ChowChak?",
     videoDuration: "2:20"
   },
   {
@@ -660,7 +660,7 @@ const fallbackTutorialsData = [
       "Kitchen staff can view preparation details, modifications, and elapsed time.",
       "Once prepared, click **Mark as Ready** to notify the server to pick up and serve the dish."
     ],
-    videoTitle: "How to Manage Kitchen KOTs in TableTrack?",
+    videoTitle: "How to Manage Kitchen KOTs in ChowChak?",
     videoDuration: "1:30"
   },
   {
@@ -679,7 +679,7 @@ const fallbackTutorialsData = [
       "Save the reservation. The interactive table map will block the selected tables for the slot.",
       "When the guest arrives, mark their status as **Seated** to automatically open a billing session."
     ],
-    videoTitle: "How to Book Table Reservations in TableTrack?",
+    videoTitle: "How to Book Table Reservations in ChowChak?",
     videoDuration: "1:50"
   },
   {
@@ -698,7 +698,7 @@ const fallbackTutorialsData = [
       "Check total gross revenue, tax collections, discount amounts, and net earnings.",
       "Click the **Excel** or **PDF** button at the top header to save or email the statement."
     ],
-    videoTitle: "How to Export and Analyze Sales Reports in TableTrack?",
+    videoTitle: "How to Export and Analyze Sales Reports in ChowChak?",
     videoDuration: "1:58"
   },
   {
@@ -717,7 +717,7 @@ const fallbackTutorialsData = [
       "Choose your billing cycle (Monthly or Annual billing options).",
       "Process the subscription renewal payment securely using credit card, stripe, or razorpay."
     ],
-    videoTitle: "How to Upgrade Subscription Packages in TableTrack?",
+    videoTitle: "How to Upgrade Subscription Packages in ChowChak?",
     videoDuration: "1:20"
   }
 ];

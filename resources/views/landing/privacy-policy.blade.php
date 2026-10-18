@@ -253,13 +253,13 @@ html.dark {
 
       <template id="content-static-fallback">
         <div class="legal-callout">
-          <p>🔒 <strong>Your privacy matters to us.</strong> At TableTrack, we are committed to transparently explaining how we collect, store, and protect your personal and restaurant business information.</p>
+          <p>🔒 <strong>Your privacy matters to us.</strong> At ChowChak, we are committed to transparently explaining how we collect, store, and protect your personal and restaurant business information.</p>
         </div>
 
         <section id="sec-1" class="legal-section">
           <h2><span class="num">1</span> Overview</h2>
-          <p>This Privacy Policy explains how <strong>TableTrack</strong> ("we", "us", or "our") collects, uses, discloses, and protects your information when you visit our landing pages, utilize our digital QR menu system, or interact with our restaurant management system platform.</p>
-          <p>By registering for TableTrack or browsing our services, you agree to the practices described in this policy. If you do not agree with any part of this policy, please discontinue using our software and website services.</p>
+          <p>This Privacy Policy explains how <strong>ChowChak</strong> ("we", "us", or "our") collects, uses, discloses, and protects your information when you visit our landing pages, utilize our digital QR menu system, or interact with our restaurant management system platform.</p>
+          <p>By registering for ChowChak or browsing our services, you agree to the practices described in this policy. If you do not agree with any part of this policy, please discontinue using our software and website services.</p>
         </section>
 
         <section id="sec-2" class="legal-section">
@@ -318,7 +318,7 @@ html.dark {
         <section id="sec-7" class="legal-section">
           <h2><span class="num">7</span> Contact Us</h2>
           <p>If you have any questions, concerns, or privacy requests regarding this policy, please reach out to our privacy officer:</p>
-          <p><strong>Email:</strong> privacy@tabletrack.com | <strong>Support Portal:</strong> support.tabletrack.com</p>
+          <p><strong>Email:</strong> privacy@vrsonisoft.com | <strong>Support:</strong> support@vrsonisoft.com</p>
         </section>
       </template>
 

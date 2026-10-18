@@ -223,17 +223,17 @@ html.dark {
 
       <template id="content-static-fallback">
         <div class="legal-callout">
-          <p>📋 <strong>Terms & Conditions Overview:</strong> Please read these terms carefully before accessing or using the TableTrack restaurant management platform and digital menu services.</p>
+          <p>📋 <strong>Terms & Conditions Overview:</strong> Please read these terms carefully before accessing or using the ChowChak restaurant management platform and digital menu services.</p>
         </div>
 
         <section id="sec-1" class="legal-section">
           <h2><span class="num">1</span> Acceptance of Terms</h2>
-          <p>By creating a TableTrack account, accessing our admin dashboards, or utilizing our digital QR menus, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree, you must immediately cease all usage of our services.</p>
+          <p>By creating a ChowChak account, accessing our admin dashboards, or utilizing our digital QR menus, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree, you must immediately cease all usage of our services.</p>
         </section>
 
         <section id="sec-2" class="legal-section">
           <h2><span class="num">2</span> Service Scope</h2>
-          <p>TableTrack provides cloud-based software-as-a-service (SaaS) tools for restaurant menu management, POS ordering, table tracking, kitchen KOT displays, and sales analytics reporting.</p>
+          <p>ChowChak provides cloud-based software-as-a-service (SaaS) tools for restaurant menu management, POS ordering, table tracking, kitchen KOT displays, and sales analytics reporting.</p>
         </section>
 
         <section id="sec-3" class="legal-section">

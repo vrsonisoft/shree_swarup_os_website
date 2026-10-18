@@ -19,6 +19,7 @@
     loginUrl: `${baseHost}/login`,
     signupUrl: `${baseHost}/restaurant-signup`
   };
+  window.CHOWCHAK_CONFIG = window.TABLETRACK_CONFIG;
   window.SHREESWARUP_CONFIG = window.TABLETRACK_CONFIG;
 
   // Intercept any Login & Restaurant Signup links on website to respect Debug vs Release target

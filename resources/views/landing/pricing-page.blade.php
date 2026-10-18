@@ -1,24 +1,24 @@
 @extends('layouts.landing')
 
-@section('title', 'Simple & Flexible Pricing Plans | ShreeSwarupOS')
-@section('meta_description', 'Choose the right plan for your restaurant with ShreeSwarupOS. Monthly, annual, and lifetime subscriptions available with unlimited digital QR menus and POS tools.')
-@section('meta_keywords', 'restaurant management pricing, QR menu cost, restaurant POS plans, ShreeSwarupOS pricing, subscription plans')
+@section('title', 'Simple & Flexible Pricing Plans | ChowChak')
+@section('meta_description', 'Choose the right plan for your restaurant with ChowChak. Monthly and annual subscriptions available with unlimited digital QR menus, POS tools, and a 14-day free trial.')
+@section('meta_keywords', 'restaurant management pricing, QR menu cost, restaurant POS plans, ChowChak pricing, subscription plans')
 
 @section('schema')
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "ShreeSwarupOS Restaurant Management System",
+  "name": "ChowChak Restaurant Management System",
   "description": "Complete digital menu and restaurant POS management platform.",
   "brand": {
     "@type": "Brand",
-    "name": "ShreeSwarupOS"
+    "name": "ChowChak"
   },
   "offers": {
     "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "price": "0",
+    "priceCurrency": "INR",
+    "price": "499",
     "offerCount": "3"
   }
 }
@@ -698,7 +698,7 @@ html.dark .connect-section {
 <section class="pr-cta">
   <div style="position:relative;z-index:1;">
     <h2>Start Free Today.<br>No Credit Card Required.</h2>
-    <p>Join hundreds of restaurants using TableTrack to manage their digital menus, orders, and tables more efficiently.</p>
+    <p>Join hundreds of restaurants using ChowChak to manage their digital menus, orders, and tables more efficiently.</p>
     <a href="{{ route('restaurant_signup') }}" class="btn-cta-white">Create Your Free Account →</a>
   </div>
 </section>

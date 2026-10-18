@@ -1,15 +1,15 @@
 @extends('layouts.landing')
 
-@section('title', 'ShreeSwarupOS - Advanced Restaurant Management System & QR Code Menu')
-@section('meta_description', 'Simplify dining operations with ShreeSwarupOS. Digital QR code menus, POS order management, contactless ordering, table tracking, and real-time sales reporting for restaurants.')
-@section('meta_keywords', 'restaurant management system, digital QR menu, restaurant POS, contactless ordering, table management, online restaurant software, ShreeSwarupOS')
+@section('title', 'ChowChak - Advanced Restaurant Management System & QR Code Menu')
+@section('meta_description', 'Simplify dining operations with ChowChak. Digital QR code menus, POS order management, contactless ordering, table tracking, and real-time sales reporting for restaurants.')
+@section('meta_keywords', 'restaurant management system, digital QR menu, restaurant POS, contactless ordering, table management, online restaurant software, ChowChak')
 
 @section('schema')
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "ShreeSwarupOS",
+  "name": "ChowChak",
   "operatingSystem": "Web, Android, iOS",
   "applicationCategory": "BusinessApplication",
   "description": "Advanced Restaurant Management System with Digital QR Code Menu, Table Tracking, and Billing POS."
@@ -37,7 +37,7 @@
                 </h1>
                 
                 <p class="text-base md:text-lg text-gray-600 dark:text-neutral-400 leading-relaxed max-w-2xl">
-                    Simplify dining with ShreeSwarupOS restaurant management software. Let guests order and pay seamlessly, manage orders efficiently, monitor sales performance, and execute promotions with precision for a smooth, streamlined operation year-round.
+                    Simplify dining with ChowChak restaurant management software. Let guests order and pay seamlessly, manage orders efficiently, monitor sales performance, and execute promotions with precision for a smooth, streamlined operation year-round.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
@@ -572,7 +572,7 @@
                     <span class="text-2xl" x-text="open ? '−' : '+'"></span>
                 </button>
                 <div class="mt-4 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed border-t border-gray-100 dark:border-neutral-800 pt-4" x-show="open" x-cloak>
-                    QR code menus can be free or paid. Free options include static QR codes linking to a PDF or website, but they can't be edited after creation. Paid options, like MENU TIGER restaurant management software, offer dynamic QR codes that allow menu updates, ordering, payments, and analytics. If you need a simple, non-editable QR code, you can create one for free. For more advanced features, a paid solution is required.
+                    QR code menus can be free or paid. Free options include static QR codes linking to a PDF or website, but they can't be edited after creation. Paid options, like ChowChak restaurant management software, offer dynamic QR codes that allow menu updates, ordering, payments, and analytics. If you need a simple, non-editable QR code, you can create one for free. For more advanced features, a paid solution is required.
                 </div>
             </div>
 
@@ -583,7 +583,7 @@
                     <span class="text-2xl" x-text="open ? '−' : '+'"></span>
                 </button>
                 <div class="mt-4 text-sm text-gray-600 dark:text-neutral-400 leading-relaxed border-t border-gray-100 dark:border-neutral-800 pt-4" x-show="open" x-cloak>
-                    You can get a QR code for your menu in three simple steps: Create or Upload Your Menu - Use a website, Google Drive, or a digital menu platform like MENU TIGER. Generate a QR Code - Use a free QR code generator for a static link or a paid service for a dynamic, editable QR code. Print & Display It - Download the QR code, print it on table tents, menus, or posters, and place it where customers can scan easily.
+                    You can get a QR code for your menu in three simple steps: Create or Upload Your Menu - Use a website, Google Drive, or a digital menu platform like ChowChak. Generate a QR Code - Use a free QR code generator for a static link or a paid service for a dynamic, editable QR code. Print & Display It - Download the QR code, print it on table tents, menus, or posters, and place it where customers can scan easily.
                 </div>
             </div>
 
