@@ -79,11 +79,12 @@ html.dark {
 
 /* ── HERO BANNER ── */
 .detail-hero {
-  background: linear-gradient(135deg, #0b0f19 0%, #0d2720 50%, #0c1a26 100%);
+  background: linear-gradient(135deg, #f0fdf9 0%, #ffffff 50%, #f6f9f8 100%);
   padding: 60px 24px;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .detail-hero::before {
@@ -92,7 +93,7 @@ html.dark {
   inset: 0;
   background:
     radial-gradient(ellipse at 20% 60%, rgba(0, 182, 146, 0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+    radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -101,12 +102,12 @@ html.dark {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #64748b;
   margin-bottom: 16px;
 }
 
 .breadcrumb a {
-  color: rgba(255, 255, 255, 0.7);
+  color: #475569;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -118,9 +119,25 @@ html.dark {
 .detail-hero-title {
   font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 800;
-  color: #ffffff;
+  color: #111827;
   margin-bottom: 12px;
   line-height: 1.25;
+  transition: color 0.3s ease;
+}
+
+/* ── DARK DETAIL HERO OVERRIDES ── */
+html.dark .detail-hero {
+  background: linear-gradient(135deg, #0b0f19 0%, #0d2720 50%, #0c1a26 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+html.dark .breadcrumb {
+  color: rgba(255, 255, 255, 0.5);
+}
+html.dark .breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+}
+html.dark .detail-hero-title {
+  color: #ffffff;
 }
 
 .detail-hero-badge {

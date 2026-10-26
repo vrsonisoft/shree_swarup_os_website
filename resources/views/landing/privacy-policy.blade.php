@@ -29,11 +29,13 @@ html.dark {
 
 /* ── HERO ── */
 .legal-hero {
-  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  background: linear-gradient(135deg, #f0fdf9 0%, #ffffff 50%, #f6f9f8 100%);
   padding: 80px 24px 60px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 .legal-hero::before {
   content: '';
@@ -58,13 +60,39 @@ html.dark {
 .legal-hero h1 {
   font-size: clamp(30px, 4.5vw, 48px);
   font-weight: 900;
-  color: #fff;
+  color: #111827;
   line-height: 1.2;
   margin: 0 0 14px;
+  transition: color 0.3s ease;
 }
 .legal-hero h1 em { color: #00b692; font-style: normal; }
 .legal-hero-meta {
   font-size: 13.5px;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+/* ── DARK HERO OVERRIDES ── */
+html.dark .legal-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+html.dark .legal-hero h1 {
+  color: #ffffff;
+}
+html.dark .legal-hero-meta {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ── DARK HERO OVERRIDES ── */
+html.dark .legal-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+html.dark .legal-hero h1 {
+  color: #ffffff;
+}
+html.dark .legal-hero-meta {
   color: rgba(255,255,255,0.65);
 }
 

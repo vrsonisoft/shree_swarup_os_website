@@ -52,18 +52,20 @@ html.dark {
 
 /* ── HERO ── */
 .pr-hero {
-  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  background: linear-gradient(135deg, #f0fdf9 0%, #ffffff 50%, #f6f9f8 100%);
   padding: 90px 24px 70px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 .pr-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .pr-hero-tag {
@@ -82,17 +84,35 @@ html.dark {
 .pr-hero h1 {
   font-size: clamp(30px, 5vw, 52px);
   font-weight: 900;
-  color: #fff;
+  color: #111827;
   line-height: 1.18;
   margin: 0 0 16px;
+  transition: color 0.3s ease;
 }
 .pr-hero h1 em { color: #00b692; font-style: normal; }
 .pr-hero p {
   font-size: 16px;
-  color: rgba(255,255,255,0.7);
+  color: #4b5563;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+/* ── DARK HERO OVERRIDES ── */
+html.dark .pr-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+html.dark .pr-hero::before {
+  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.08) 0%, transparent 60%);
+}
+html.dark .pr-hero h1 {
+  color: #ffffff;
+}
+html.dark .pr-hero p {
+  color: rgba(255,255,255,0.7);
 }
 
 /* ── TOGGLE ── */
@@ -320,42 +340,126 @@ html.dark {
 .check-svg { color: #00b692; display: inline-block; }
 .dash-svg { color: var(--border); display: inline-block; }
 
-/* ── FAQ ── */
-.pr-faq-section { padding: 60px 24px 30px; background: transparent !important; }
-.pr-faq-inner { max-width: 760px; margin: 0 auto; }
+/* ── FAQ (EXPLICIT LIGHT & DARK MODE) ── */
+.pr-faq-section {
+  padding: 64px 24px 44px !important;
+  background: #ffffff !important;
+  transition: background-color 0.3s ease;
+}
+html.dark .pr-faq-section {
+  background: #111827 !important;
+}
+.pr-faq-inner {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
+.pr-faq-section .section-title {
+  color: #111827 !important;
+}
+html.dark .pr-faq-section .section-title {
+  color: #f3f4f6 !important;
+}
+.pr-faq-section .section-sub {
+  color: #6b7280 !important;
+}
+html.dark .pr-faq-section .section-sub {
+  color: #9ca3af !important;
+}
 .faq-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: border-color .2s;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  margin-bottom: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: all .25s ease !important;
 }
-.faq-item:hover { border-color: #00b692; }
+.faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.1) !important;
+}
+html.dark .faq-item {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  box-shadow: none !important;
+}
+html.dark .faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.18) !important;
+}
 .faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dark);
-  user-select: none;
-  gap: 12px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px 24px !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  user-select: none !important;
+  gap: 14px !important;
+  transition: color .2s ease !important;
 }
-.faq-question svg { flex-shrink: 0; color: #00b692; transition: transform .25s; }
-.faq-question.open svg { transform: rotate(45deg); }
+.faq-question:hover,
+.faq-question.open {
+  color: #00b692 !important;
+}
+html.dark .faq-question {
+  color: #f3f4f6 !important;
+}
+html.dark .faq-question:hover,
+html.dark .faq-question.open {
+  color: #00b692 !important;
+}
+.faq-toggle-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  background: #ecfdf5 !important;
+  border: 1.5px solid #a7f3d0 !important;
+  color: #00b692 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: all .25s ease !important;
+}
+.faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+  transform: rotate(180deg);
+}
+html.dark .faq-toggle-icon {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #34d399 !important;
+}
+html.dark .faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+}
 .faq-answer {
-  padding: 0 24px;
-  max-height: 0;
-  overflow: hidden;
-  font-size: 13.5px;
-  color: var(--gray);
-  line-height: 1.8;
-  transition: max-height .3s ease, padding .3s ease;
+  padding: 0 24px !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  line-height: 1.8 !important;
+  transition: max-height .3s ease, padding .3s ease !important;
 }
-.faq-answer.open { max-height: 300px; padding: 0 24px 20px; }
+.faq-answer.open {
+  max-height: 400px !important;
+  padding: 0 24px 22px !important;
+}
+html.dark .faq-answer {
+  color: #9ca3af !important;
+}
 
 /* ── CTA ── */
 .pr-cta {
@@ -689,8 +793,46 @@ html.dark .connect-section {
       <p class="section-sub">Everything you need to know about our pricing and plans.</p>
     </div>
 
-    <div id="faq-container">
-      <!-- Dynamic Pricing FAQs loaded via API fetch -->
+        <div id="faq-container">
+      <div class="faq-item">
+        <div class="faq-question open" onclick="toggleFaq(this)">
+          <span>Can I change or cancel my plan at any time?</span>
+          <span class="faq-toggle-icon">−</span>
+        </div>
+        <div class="faq-answer open">
+          Yes, absolutely. You can upgrade, downgrade, or cancel your subscription anytime directly from your billing dashboard without any cancellation penalty.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is there a free trial available?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes! We offer a 14-day full-featured free trial with no credit card required so you can experience how ChowChak simplifies ordering and increases revenue.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Are there any setup fees or hidden transaction charges?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          No hidden fees or commissions. Our pricing is straightforward and transparent. You keep 100% of your earnings.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What payment methods are supported for subscriptions?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We support all major debit/credit cards, UPI, Net Banking, and recurring digital payment methods securely processed via encrypted gateways.
+        </div>
+      </div>
     </div>
   </div>
 </section>

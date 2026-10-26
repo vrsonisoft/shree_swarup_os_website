@@ -320,14 +320,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-</head>   <body class="font-sans antialiased dark:bg-gray-900">
+    <link href="/css/footer-dark-fix.css" rel="stylesheet" />
+</head>   <body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">
         <a href="tel:+919257915113">🇮🇳 +91-92579-15113</a>
         <a href="tel:+918619190869">🇮🇳 +91-86191-90869</a>
       </div>
     </div>
-         <div     id="global-offline-banner"     class="hidden fixed top-0 inset-x-0 z-[9999] bg-red-600 text-white text-center text-sm font-medium px-6 py-2.5 shadow-md"     role="status"     aria-live="polite" >     No internet connection </div>  <style>     body {         --offline-banner-offset: 0px;     }      body.offline-banner-visible {         --offline-banner-offset: 40px;         padding-top: 40px;     }      body.offline-banner-visible nav.fixed {         top: var(--offline-banner-offset);     }      body.offline-banner-visible #sidebar {         top: var(--offline-banner-offset);         height: calc(100% - var(--offline-banner-offset));     }      body.offline-banner-visible #sidebarBackdrop.fixed {         top: var(--offline-banner-offset);     } </style>  <script>     (function () {         if (window.__globalOfflineBannerInitialized) {             return;         }         window.__globalOfflineBannerInitialized = true;          function getBanner() {             return document.getElementById('global-offline-banner');         }          function updateOfflineBanner() {             var banner = getBanner();             if (!banner) {                 return;             }              var isOffline = !navigator.onLine;             banner.classList.toggle('hidden', !isOffline);             document.body.classList.toggle('offline-banner-visible', isOffline);         }          window.addEventListener('online', updateOfflineBanner);         window.addEventListener('offline', updateOfflineBanner);         document.addEventListener('DOMContentLoaded', updateOfflineBanner);         document.addEventListener('livewire:navigated', updateOfflineBanner);          updateOfflineBanner();     })(); </script>     <div class="w-full min-h-svh">         <header class="lg:hidden">             <nav class="bg-white border-gray-200 px-3 py-2.5 dark:bg-gray-800 dark:text-gray">                 <div class="flex flex-nowrap justify-between items-center w-full mx-auto">                     <a href="/" class="flex items-center gap-2 app-logo min-w-0 shrink" style="display:inline-flex; align-items:center; text-decoration:none;">
+         <div     id="global-offline-banner"     class="hidden fixed top-0 inset-x-0 z-[9999] bg-red-600 text-white text-center text-sm font-medium px-6 py-2.5 shadow-md"     role="status"     aria-live="polite" >     No internet connection </div>  <style>     body {         --offline-banner-offset: 0px;     }      body.offline-banner-visible {         --offline-banner-offset: 40px;         padding-top: 40px;     }      body.offline-banner-visible nav.fixed {         top: var(--offline-banner-offset);     }      body.offline-banner-visible #sidebar {         top: var(--offline-banner-offset);         height: calc(100% - var(--offline-banner-offset));     }      body.offline-banner-visible #sidebarBackdrop.fixed {         top: var(--offline-banner-offset);     } </style>  <script>     (function () {         if (window.__globalOfflineBannerInitialized) {             return;         }         window.__globalOfflineBannerInitialized = true;          function getBanner() {             return document.getElementById('global-offline-banner');         }          function updateOfflineBanner() {             var banner = getBanner();             if (!banner) {                 return;             }              var isOffline = !navigator.onLine;             banner.classList.toggle('hidden', !isOffline);             document.body.classList.toggle('offline-banner-visible', isOffline);         }          window.addEventListener('online', updateOfflineBanner);         window.addEventListener('offline', updateOfflineBanner);         document.addEventListener('DOMContentLoaded', updateOfflineBanner);         document.addEventListener('livewire:navigated', updateOfflineBanner);          updateOfflineBanner();     })(); </script>     <div class="w-full min-h-svh bg-white dark:bg-gray-900">         <header class="lg:hidden">             <nav class="bg-white border-gray-200 px-3 py-2.5 dark:bg-gray-800 dark:text-gray">                 <div class="flex flex-nowrap justify-between items-center w-full mx-auto">                     <a href="/" class="flex items-center gap-2 app-logo min-w-0 shrink" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="/img/logo.png" class="h-10 w-auto object-contain rounded-xl shrink-0 shadow-sm" style="height:40px; max-height:40px; width:auto; object-fit:contain; border-radius:8px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text shrink min-w-0 overflow-hidden text-ellipsis" style="font-size:clamp(14px, 4.5vw, 18px); font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:6px; white-space:nowrap;">
                             <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
@@ -441,20 +442,17 @@
                     });
                 }
 
-                const darkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
-                const lightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+                const iconPairs = [
+                    { dark: document.getElementById('theme-toggle-dark-icon'), light: document.getElementById('theme-toggle-light-icon') },
+                    { dark: document.getElementById('theme-toggle-dark-icon-mobile'), light: document.getElementById('theme-toggle-light-icon-mobile') },
+                    { dark: document.getElementById('theme-toggle-dark-icon-drawer'), light: document.getElementById('theme-toggle-light-icon-drawer') }
+                ];
                 const btnMobile = document.getElementById('theme-toggle-mobile');
-
-                const darkIconDrawer = document.getElementById('theme-toggle-dark-icon-drawer');
-                const lightIconDrawer = document.getElementById('theme-toggle-light-icon-drawer');
                 const btnDrawer = document.getElementById('theme-toggle-drawer');
 
                 function updateThemeUI() {
                     const isDark = document.documentElement.classList.contains('dark') || localStorage.getItem('color-theme') === 'dark';
-                    [
-                        { dark: darkIconMobile, light: lightIconMobile },
-                        { dark: darkIconDrawer, light: lightIconDrawer }
-                    ].forEach(pair => {
+                    iconPairs.forEach(pair => {
                         if (pair.dark && pair.light) {
                             if (isDark) {
                                 pair.light.classList.remove('hidden');
@@ -476,10 +474,13 @@
                         localStorage.setItem('color-theme', 'dark');
                     }
                     updateThemeUI();
+                    document.dispatchEvent(new Event('dark-mode'));
                 }
 
                 if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
                 if (btnDrawer) btnDrawer.addEventListener('click', toggleTheme);
+                document.addEventListener('dark-mode', updateThemeUI);
+
                 updateThemeUI();
             });
         </script>
@@ -496,7 +497,7 @@
                                  <a href="/tutorials" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-gray-700 font-medium hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692]" aria-current="page">Tutorials</a>
                              </li>
                              
-                                                           <li>                                 <a href="/#user-faqs" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]" aria-current="page">FAQs</a>                             </li>                                                      </ul>                     </div>                 </div>             </nav>         </header>          <div class="w-full min-h-screen flex flex-col justify-between dark:bg-gray-900">             <main class="flex-grow">
+                                                           <li>                                 <a href="/#user-faqs" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]" aria-current="page">FAQs</a>                             </li>                                                      </ul>                     </div>                 </div>             </nav>         </header>          <div class="w-full min-h-screen flex flex-col justify-between bg-white dark:bg-gray-900">             <main class="flex-grow">
 
 
 
@@ -526,18 +527,20 @@ html.dark {
 
 /* ── HERO ── */
 .pr-hero {
-  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  background: linear-gradient(135deg, #f0fdf9 0%, #ffffff 50%, #f6f9f8 100%);
   padding: 90px 24px 70px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 .pr-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.08) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .pr-hero-tag {
@@ -556,17 +559,35 @@ html.dark {
 .pr-hero h1 {
   font-size: clamp(30px, 5vw, 52px);
   font-weight: 900;
-  color: #fff;
+  color: #111827;
   line-height: 1.18;
   margin: 0 0 16px;
+  transition: color 0.3s ease;
 }
 .pr-hero h1 em { color: #00b692; font-style: normal; }
 .pr-hero p {
   font-size: 16px;
-  color: rgba(255,255,255,0.7);
+  color: #4b5563;
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+/* ── DARK HERO OVERRIDES ── */
+html.dark .pr-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+html.dark .pr-hero::before {
+  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.08) 0%, transparent 60%);
+}
+html.dark .pr-hero h1 {
+  color: #ffffff;
+}
+html.dark .pr-hero p {
+  color: rgba(255,255,255,0.7);
 }
 
 /* ── TOGGLE ── */
@@ -794,42 +815,126 @@ html.dark {
 .check-svg { color: #00b692; display: inline-block; }
 .dash-svg { color: var(--border); display: inline-block; }
 
-/* ── FAQ ── */
-.pr-faq-section { padding: 60px 24px 30px; background: transparent !important; }
-.pr-faq-inner { max-width: 760px; margin: 0 auto; }
+/* ── FAQ (EXPLICIT LIGHT & DARK MODE) ── */
+.pr-faq-section {
+  padding: 64px 24px 44px !important;
+  background: #ffffff !important;
+  transition: background-color 0.3s ease;
+}
+html.dark .pr-faq-section {
+  background: #111827 !important;
+}
+.pr-faq-inner {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
+.pr-faq-section .section-title {
+  color: #111827 !important;
+}
+html.dark .pr-faq-section .section-title {
+  color: #f3f4f6 !important;
+}
+.pr-faq-section .section-sub {
+  color: #6b7280 !important;
+}
+html.dark .pr-faq-section .section-sub {
+  color: #9ca3af !important;
+}
 .faq-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: border-color .2s;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  margin-bottom: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: all .25s ease !important;
 }
-.faq-item:hover { border-color: #00b692; }
+.faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.1) !important;
+}
+html.dark .faq-item {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  box-shadow: none !important;
+}
+html.dark .faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.18) !important;
+}
 .faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dark);
-  user-select: none;
-  gap: 12px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px 24px !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  user-select: none !important;
+  gap: 14px !important;
+  transition: color .2s ease !important;
 }
-.faq-question svg { flex-shrink: 0; color: #00b692; transition: transform .25s; }
-.faq-question.open svg { transform: rotate(45deg); }
+.faq-question:hover,
+.faq-question.open {
+  color: #00b692 !important;
+}
+html.dark .faq-question {
+  color: #f3f4f6 !important;
+}
+html.dark .faq-question:hover,
+html.dark .faq-question.open {
+  color: #00b692 !important;
+}
+.faq-toggle-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  background: #ecfdf5 !important;
+  border: 1.5px solid #a7f3d0 !important;
+  color: #00b692 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: all .25s ease !important;
+}
+.faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+  transform: rotate(180deg);
+}
+html.dark .faq-toggle-icon {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #34d399 !important;
+}
+html.dark .faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+}
 .faq-answer {
-  padding: 0 24px;
-  max-height: 0;
-  overflow: hidden;
-  font-size: 13.5px;
-  color: var(--gray);
-  line-height: 1.8;
-  transition: max-height .3s ease, padding .3s ease;
+  padding: 0 24px !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  line-height: 1.8 !important;
+  transition: max-height .3s ease, padding .3s ease !important;
 }
-.faq-answer.open { max-height: 300px; padding: 0 24px 20px; }
+.faq-answer.open {
+  max-height: 400px !important;
+  padding: 0 24px 22px !important;
+}
+html.dark .faq-answer {
+  color: #9ca3af !important;
+}
 
 /* ── CTA ── */
 .pr-cta {
@@ -1163,8 +1268,46 @@ html.dark .connect-section {
       <p class="section-sub">Everything you need to know about our pricing and plans.</p>
     </div>
 
-    <div id="faq-container">
-      <!-- Dynamic Pricing FAQs loaded via API fetch -->
+        <div id="faq-container">
+      <div class="faq-item">
+        <div class="faq-question open" onclick="toggleFaq(this)">
+          <span>Can I change or cancel my plan at any time?</span>
+          <span class="faq-toggle-icon">−</span>
+        </div>
+        <div class="faq-answer open">
+          Yes, absolutely. You can upgrade, downgrade, or cancel your subscription anytime directly from your billing dashboard without any cancellation penalty.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is there a free trial available?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes! We offer a 14-day full-featured free trial with no credit card required so you can experience how ChowChak simplifies ordering and increases revenue.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Are there any setup fees or hidden transaction charges?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          No hidden fees or commissions. Our pricing is straightforward and transparent. You keep 100% of your earnings.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What payment methods are supported for subscriptions?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We support all major debit/credit cards, UPI, Net Banking, and recurring digital payment methods securely processed via encrypted gateways.
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1448,14 +1591,16 @@ function handleInquirySubmit(e) {
 
 
 <style>
-/* ── UNIFIED LET'S CONNECT SECTION ── */
+/* ── UNIFIED LET'S CONNECT SECTION (EXPLICIT LIGHT & DARK MODE) ── */
 .connect-section {
-  background: transparent !important;
-  padding: 30px 24px 60px !important;
-  border-top: none !important;
+  background: #ffffff !important;
+  padding: 64px 24px 48px !important;
+  border-top: 1px solid #e5e7eb !important;
+  transition: background-color 0.3s ease;
 }
 html.dark .connect-section {
-  background: transparent !important;
+  background: #111827 !important;
+  border-top-color: #1f2937 !important;
 }
 .connect-grid {
   max-width: 1180px;

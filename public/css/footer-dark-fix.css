@@ -39,3 +39,372 @@ html.dark .premium-footer .newsletter-form input::placeholder {
 html.dark .premium-footer .footer-divider {
   background: #374151 !important;
 }
+
+/* ── GLOBAL FAQ LIGHT & DARK FIX ── */
+.pr-faq-section {
+  padding: 64px 24px 44px !important;
+  background: #ffffff !important;
+  transition: background-color 0.3s ease;
+}
+html.dark .pr-faq-section {
+  background: #111827 !important;
+}
+.pr-faq-inner {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
+.pr-faq-section .section-title {
+  color: #111827 !important;
+}
+html.dark .pr-faq-section .section-title {
+  color: #f3f4f6 !important;
+}
+.pr-faq-section .section-sub {
+  color: #6b7280 !important;
+}
+html.dark .pr-faq-section .section-sub {
+  color: #9ca3af !important;
+}
+.faq-item {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  margin-bottom: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: all .25s ease !important;
+}
+.faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.1) !important;
+}
+html.dark .faq-item {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  box-shadow: none !important;
+}
+html.dark .faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.18) !important;
+}
+.faq-question {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px 24px !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  user-select: none !important;
+  gap: 14px !important;
+  transition: color .2s ease !important;
+}
+.faq-question:hover,
+.faq-question.open {
+  color: #00b692 !important;
+}
+html.dark .faq-question {
+  color: #f3f4f6 !important;
+}
+html.dark .faq-question:hover,
+html.dark .faq-question.open {
+  color: #00b692 !important;
+}
+.faq-toggle-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  background: #ecfdf5 !important;
+  border: 1.5px solid #a7f3d0 !important;
+  color: #00b692 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: all .25s ease !important;
+}
+.faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+  transform: rotate(180deg);
+}
+html.dark .faq-toggle-icon {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #34d399 !important;
+}
+html.dark .faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+}
+.faq-answer {
+  padding: 0 24px !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  line-height: 1.8 !important;
+  transition: max-height .3s ease, padding .3s ease !important;
+}
+.faq-answer.open {
+  max-height: 400px !important;
+  padding: 0 24px 22px !important;
+}
+html.dark .faq-answer {
+  color: #9ca3af !important;
+}
+
+/* ── GLOBAL CONNECT SECTION LIGHT & DARK FIX ── */
+.connect-section {
+  background: #ffffff !important;
+  padding: 64px 24px 48px !important;
+  border-top: 1px solid #e5e7eb !important;
+  transition: background-color 0.3s ease;
+}
+html.dark .connect-section {
+  background: #111827 !important;
+  border-top-color: #1f2937 !important;
+}
+.connect-grid {
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 40px !important;
+  align-items: center !important;
+}
+@media (max-width: 968px) {
+  .connect-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+.connect-info {
+  text-align: left !important;
+}
+.connect-info h2 {
+  font-size: clamp(24px, 3vw, 32px) !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+  color: #111827 !important;
+  margin: 0 0 12px !important;
+  text-align: left !important;
+}
+html.dark .connect-info h2 {
+  color: #f3f4f6 !important;
+}
+.connect-desc {
+  font-size: 14.5px !important;
+  color: #4b5563 !important;
+  line-height: 1.7 !important;
+  margin: 0 0 24px !important;
+  text-align: left !important;
+}
+html.dark .connect-desc {
+  color: #9ca3af !important;
+}
+.connect-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+}
+.connect-item {
+  display: flex !important;
+  gap: 14px !important;
+  align-items: flex-start !important;
+}
+.connect-icon-box {
+  width: 42px !important;
+  height: 42px !important;
+  background: rgba(0, 182, 146, 0.1) !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #00b692 !important;
+  flex-shrink: 0 !important;
+}
+html.dark .connect-icon-box {
+  background: rgba(0, 182, 146, 0.18) !important;
+  color: #34d399 !important;
+}
+.connect-text strong {
+  display: block !important;
+  font-size: 13.5px !important;
+  font-weight: 750 !important;
+  color: #111827 !important;
+  margin-bottom: 2px !important;
+}
+html.dark .connect-text strong {
+  color: #f3f4f6 !important;
+}
+.connect-text span {
+  display: block !important;
+  font-size: 13px !important;
+  color: #6b7280 !important;
+  line-height: 1.5 !important;
+}
+html.dark .connect-text span {
+  color: #9ca3af !important;
+}
+.connect-socials {
+  display: flex !important;
+  gap: 10px !important;
+}
+.social-circle {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #4b5563 !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+.social-circle:hover {
+  background: #00b692 !important;
+  color: #ffffff !important;
+  border-color: #00b692 !important;
+  transform: translateY(-2px) !important;
+}
+html.dark .social-circle {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  color: #9ca3af !important;
+  box-shadow: none !important;
+}
+html.dark .social-circle:hover {
+  background: #00b692 !important;
+  color: #ffffff !important;
+  border-color: #00b692 !important;
+}
+.connect-card {
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  padding: 32px 28px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #e5e7eb !important;
+  transition: all 0.3s ease !important;
+}
+html.dark .connect-card {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 480px) {
+  .connect-card {
+    padding: 22px 18px !important;
+  }
+}
+.connect-card h3 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #111827 !important;
+  margin: 0 0 20px !important;
+  text-align: left !important;
+}
+html.dark .connect-card h3 {
+  color: #f3f4f6 !important;
+}
+.connect-form-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+  margin-bottom: 14px !important;
+}
+@media (max-width: 480px) {
+  .connect-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
+.connect-input-group {
+  margin-bottom: 14px !important;
+}
+.connect-input-group input,
+.connect-input-group textarea,
+.connect-input-group select {
+  width: 100% !important;
+  padding: 13px 16px !important;
+  border-radius: 10px !important;
+  border: 1.5px solid #e5e7eb !important;
+  background: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  outline: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  box-sizing: border-box !important;
+}
+.connect-input-group input::placeholder,
+.connect-input-group textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+}
+.connect-input-group input:focus,
+.connect-input-group textarea:focus,
+.connect-input-group select:focus {
+  border-color: #00b692 !important;
+  box-shadow: 0 0 0 3px rgba(0, 182, 146, 0.15) !important;
+}
+html.dark .connect-input-group input,
+html.dark .connect-input-group textarea,
+html.dark .connect-input-group select {
+  background: #111827 !important;
+  border-color: #374151 !important;
+  color: #f3f4f6 !important;
+}
+html.dark .connect-input-group input::placeholder,
+html.dark .connect-input-group textarea::placeholder {
+  color: #6b7280 !important;
+}
+html.dark .connect-input-group input:focus,
+html.dark .connect-input-group textarea:focus,
+html.dark .connect-input-group select:focus {
+  border-color: #00b692 !important;
+  box-shadow: 0 0 0 3px rgba(0, 182, 146, 0.25) !important;
+}
+.connect-submit-btn {
+  width: 100% !important;
+  padding: 14px !important;
+  background: #00b692 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 182, 146, 0.35) !important;
+}
+.connect-submit-btn:hover {
+  background: #009c7d !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 8px 20px rgba(0, 182, 146, 0.45) !important;
+}
+
+/* ── GLOBAL BODY & NAVBAR FIX FOR LIGHT & DARK MODE ── */
+body {
+  background-color: #ffffff !important;
+}
+html.dark body {
+  background-color: #111827 !important;
+}
+.menutiger-nav {
+  background-color: #ffffff !important;
+}
+html.dark .menutiger-nav {
+  background-color: #111827 !important;
+}
+

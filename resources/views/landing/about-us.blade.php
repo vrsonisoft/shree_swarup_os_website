@@ -41,31 +41,38 @@ html.dark {
   --card: #1f2937;
 }
 
-.ab-page { font-family: 'Poppins', sans-serif; color: var(--dark); }
+.ab-page {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 .ab-page *, .ab-page *::before, .ab-page *::after { box-sizing: border-box; }
 .ab-page a { text-decoration: none; }
 
-/* ── HERO ── */
+/* ── HERO (LIGHT & DARK MODE) ── */
 .ab-hero {
-  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  background: linear-gradient(135deg, #f0fdf9 0%, #ffffff 50%, #f6f9f8 100%);
   padding: 100px 24px 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 .ab-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 25% 60%, rgba(0,182,146,0.15) 0%, transparent 55%),
-    radial-gradient(ellipse at 75% 30%, rgba(255,107,44,0.07) 0%, transparent 55%);
+    radial-gradient(ellipse at 25% 60%, rgba(0,182,146,0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 30%, rgba(255,107,44,0.05) 0%, transparent 55%);
   pointer-events: none;
 }
 .ab-hero-tag {
   display: inline-block;
-  background: rgba(0,182,146,0.12);
-  border: 1px solid rgba(0,182,146,0.3);
+  background: rgba(0,182,146,0.08);
+  border: 1px solid rgba(0,182,146,0.25);
   color: #00b692;
   font-size: 11px;
   font-weight: 700;
@@ -74,26 +81,57 @@ html.dark {
   padding: 6px 18px;
   border-radius: 30px;
   margin-bottom: 24px;
+  transition: all 0.3s ease;
 }
 .ab-hero h1 {
   font-size: clamp(32px, 5vw, 58px);
   font-weight: 900;
-  color: #fff;
+  color: #111827;
   line-height: 1.15;
   margin: 0 0 20px;
+  transition: color 0.3s ease;
 }
 .ab-hero h1 em { color: #00b692; font-style: normal; }
 .ab-hero p {
   font-size: 17px;
-  color: rgba(255,255,255,0.7);
+  color: #4b5563;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+html.dark .ab-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #0d2b22 50%, #0f1f2e 100%);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+html.dark .ab-hero::before {
+  background:
+    radial-gradient(ellipse at 25% 60%, rgba(0,182,146,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 30%, rgba(255,107,44,0.07) 0%, transparent 55%);
+}
+html.dark .ab-hero-tag {
+  background: rgba(0,182,146,0.12);
+  border-color: rgba(0,182,146,0.3);
+  color: #34d399;
+}
+html.dark .ab-hero h1 {
+  color: #ffffff;
+}
+html.dark .ab-hero p {
+  color: rgba(255,255,255,0.75);
 }
 
 /* ── SECTIONS ── */
-.ab-section { padding: 80px 24px; }
-.ab-section.alt { background: var(--light); }
+.ab-section {
+  padding: 80px 24px;
+  background: var(--white);
+  transition: background-color 0.3s ease;
+}
+.ab-section.alt {
+  background: var(--light);
+  transition: background-color 0.3s ease;
+}
 .ab-inner { max-width: 1180px; margin: 0 auto; }
 .ab-inner-narrow { max-width: 860px; margin: 0 auto; }
 
@@ -440,20 +478,20 @@ html.dark {
     </div>
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="stat-num">500+</span>
-        <div class="stat-lbl">Restaurants Served</div>
+        <span class="stat-num">50+</span>
+        <div class="stat-lbl">Partner Outlets</div>
       </div>
       <div class="stat-card">
-        <span class="stat-num">2M+</span>
-        <div class="stat-lbl">Orders Processed</div>
+        <span class="stat-num">15K+</span>
+        <div class="stat-lbl">Orders Handled</div>
       </div>
       <div class="stat-card">
-        <span class="stat-num">99.9%</span>
-        <div class="stat-lbl">Platform Uptime</div>
+        <span class="stat-num">30 Min</span>
+        <div class="stat-lbl">Quick Setup</div>
       </div>
       <div class="stat-card">
-        <span class="stat-num">4.9★</span>
-        <div class="stat-lbl">Average Rating</div>
+        <span class="stat-num">24/7</span>
+        <div class="stat-lbl">Active Support</div>
       </div>
     </div>
   </div>

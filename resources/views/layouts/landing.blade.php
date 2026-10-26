@@ -88,11 +88,19 @@
 
     <!-- Tailwind CSS & Flowbite CDN -->
     <script>
-      window.tailwind = {
-        config: {
-          darkMode: 'class'
+      (function() {
+        const theme = localStorage.getItem('color-theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
         }
-      };
+        window.tailwind = {
+          config: {
+            darkMode: 'class'
+          }
+        };
+      })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -164,6 +172,23 @@
     }
 
     /* ── HEADER NAVIGATION LINK STYLES ── */
+    header.lg\:hidden nav, .mobile-header-nav {
+      background-color: #ffffff !important;
+      border-bottom: 1px solid #e5e7eb !important;
+    }
+    html.dark header.lg\:hidden nav, html.dark .mobile-header-nav {
+      background-color: #111827 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    #mobile-menu-2 {
+      background-color: #ffffff !important;
+      border: 1px solid #e5e7eb !important;
+    }
+    html.dark #mobile-menu-2 {
+      background-color: #111827 !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
     .menutiger-nav a, #mobile-menu-2 a {
       color: #374151 !important; /* Dark grey for high contrast in light mode */
       font-weight: 500 !important;
@@ -545,7 +570,7 @@
 </head>
 
 
-<body class="font-sans antialiased dark:bg-gray-900">
+<body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">
         <a href="tel:+919257915113">🇮🇳 +91-92579-15113</a>
@@ -833,7 +858,7 @@
             </nav>
         </header>
 
-        <div class="w-full min-h-screen flex flex-col justify-between dark:bg-gray-900">
+        <div class="w-full min-h-screen flex flex-col justify-between bg-white dark:bg-gray-900">
             <main class="flex-grow">
                 @yield('content')
                 {{ $slot ?? '' }}

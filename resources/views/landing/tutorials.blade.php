@@ -51,12 +51,13 @@ html.dark {
 
 /* ── HERO SECTION ── */
 .tutorials-hero {
-  background: linear-gradient(135deg, #0b0f19 0%, #0d2720 50%, #0c1a26 100%);
+  background: linear-gradient(135deg, #f0fdf9 0%, #ffffff 50%, #f6f9f8 100%);
   padding: 80px 24px 70px;
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .tutorials-hero::before {
@@ -65,23 +66,25 @@ html.dark {
   inset: 0;
   background:
     radial-gradient(ellipse at 20% 60%, rgba(0, 182, 146, 0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+    radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
 .hero-title {
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 800;
-  color: #ffffff;
+  color: #111827;
   margin-bottom: 16px;
   line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.65);
+  color: #4b5563;
   font-size: 16px;
   max-width: 600px;
   margin: 0 auto 32px;
+  transition: color 0.3s ease;
 }
 
 /* ── SEARCH CONTAINER ── */
@@ -95,24 +98,24 @@ html.dark {
   width: 100%;
   padding: 16px 20px 16px 52px;
   border-radius: 99px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  color: #111827;
   font-size: 15px;
   outline: none;
   backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: #94a3b8;
 }
 
 .search-input:focus {
-  background: rgba(255, 255, 255, 0.12);
+  background: #ffffff;
   border-color: var(--green);
-  box-shadow: 0 0 0 4px rgba(0, 182, 146, 0.25), 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(0, 182, 146, 0.2), 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .search-icon-svg {
@@ -120,13 +123,41 @@ html.dark {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.45);
+  color: #94a3b8;
   pointer-events: none;
   transition: color 0.3s;
 }
 
 .search-wrapper:focus-within .search-icon-svg {
   color: #00b692;
+}
+
+/* ── DARK HERO OVERRIDES ── */
+html.dark .tutorials-hero {
+  background: linear-gradient(135deg, #0b0f19 0%, #0d2720 50%, #0c1a26 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+html.dark .hero-title {
+  color: #ffffff;
+}
+html.dark .hero-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
+html.dark .search-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+html.dark .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+html.dark .search-input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 4px rgba(0, 182, 146, 0.25), 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+html.dark .search-icon-svg {
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* ── CUSTOM ROW LAYOUT (Squeeze Proof Grid) ── */

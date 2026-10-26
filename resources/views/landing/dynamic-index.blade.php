@@ -36,7 +36,7 @@
   --bg-connect: #ffffff;
 }
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 html.dark {
   --dark: #f3f4f6;
@@ -419,209 +419,15 @@ html.dark .brand-name { color: #4b5563; }
 .cta-right img { height: 200px; object-fit: contain; filter: drop-shadow(0 16px 40px rgba(0,0,0,.4)); }
 
 /* ═══════════════════════════════════════════
-   14. FAQ
+   14. FAQ (STYLED IN DEDICATED SECTION BELOW)
 ═══════════════════════════════════════════ */
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-btn {
-  width: 100%; display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 0; background: none; border: none; cursor: pointer; text-align: left;
-  font-family: 'Poppins', sans-serif;
-}
-.faq-q { font-size: 13.5px; font-weight: 600; color: var(--dark); padding-right: 14px; line-height: 1.45; }
-.faq-icon { width: 26px; height: 26px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 15px; flex-shrink: 0; transition: background .2s, color .2s; }
-.faq-btn:hover .faq-icon, .faq-open .faq-icon { background: var(--green); color: #fff; }
-.faq-a { display: none; padding: 0 0 14px; }
-.faq-a.open { display: block; }
-.faq-a p { font-size: 12.5px; color: var(--gray); line-height: 1.65; margin: 0; }
 
 /* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
 /* ═══════════════════════════════════════════
-   PREMIUM CONNECT SECTION
+   PREMIUM CONNECT SECTION (STYLED IN DEDICATED SECTION)
 ═══════════════════════════════════════════ */
-.connect-section {
-  background: #ffffff !important;
-  padding: 24px 24px 0px !important;
-  border-top: 1px solid var(--border);
-}
-html.dark .connect-section {
-  background: #0f172a !important;
-}
-.connect-grid {
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
-  align-items: center;
-}
-@media (max-width: 968px) {
-  .connect-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-}
-.connect-info {
-  text-align: left !important;
-}
-.connect-tag {
-  display: inline-block;
-  color: #6366f1;
-  font-weight: 750;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  text-align: left !important;
-}
-.connect-info h2 {
-  font-size: 38px;
-  font-weight: 900;
-  line-height: 1.2;
-  color: var(--dark);
-  margin: 0 0 16px;
-  text-align: left !important;
-}
-.connect-desc {
-  font-size: 14.5px;
-  color: var(--gray);
-  line-height: 1.7;
-  margin: 0 0 36px;
-  text-align: left !important;
-}
-.connect-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 36px;
-}
-.connect-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.connect-icon-box {
-  width: 44px;
-  height: 44px;
-  background: rgba(99, 102, 241, 0.08);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6366f1;
-  flex-shrink: 0;
-}
-.connect-text strong {
-  display: block;
-  font-size: 13.5px;
-  font-weight: 750;
-  color: var(--dark);
-  margin-bottom: 2px;
-}
-.connect-text span {
-  display: block;
-  font-size: 13px;
-  color: var(--gray);
-  line-height: 1.45;
-}
-.connect-socials {
-  display: flex;
-  gap: 10px;
-}
-.social-circle {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--card);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray);
-  transition: all 0.2s ease;
-}
-.social-circle:hover {
-  background: #6366f1;
-  color: #fff;
-  border-color: #6366f1;
-  transform: translateY(-2px);
-}
-.connect-card {
-  background: var(--card);
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
-  border: 1px solid var(--border);
-}
-@media (max-width: 480px) {
-  .connect-card {
-    padding: 24px;
-  }
-}
-.connect-card h3 {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--dark);
-  margin: 0 0 28px;
-}
-.connect-form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 14px;
-}
-@media (max-width: 480px) {
-  .connect-form-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-}
-.connect-input-group {
-  margin-bottom: 14px;
-}
-.connect-input-group input,
-.connect-input-group textarea,
-.connect-input-group select {
-  width: 100%;
-  padding: 13px 16px;
-  border-radius: 8px;
-  border: 1.5px solid var(--border);
-  background: var(--card);
-  font-family: inherit;
-  font-size: 13.5px;
-  color: var(--dark);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.connect-input-group input::placeholder,
-.connect-input-group textarea::placeholder {
-  color: var(--gray);
-  opacity: 0.65;
-}
-.connect-input-group input:focus,
-.connect-input-group textarea:focus,
-.connect-input-group select:focus {
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
-}
-.connect-submit-btn {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 14.5px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.2);
-}
-.connect-submit-btn:hover {
-  transform: translateY(-1.5px);
-  box-shadow: 0 12px 24px rgba(29, 78, 216, 0.3);
-}
 
 /* ═══════════════════════════════════════════
    PREMIUM FOOTER SECTION
@@ -856,20 +662,20 @@ html.dark .premium-footer {
       </div>
       <div class="hero-stats">
         <div class="hero-stat-item">
-          <div class="hero-stat-num">20M+</div>
-          <div class="hero-stat-lbl">Active Users</div>
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-lbl">Partner Outlets</div>
         </div>
         <div class="hero-stat-item">
-          <div class="hero-stat-num">7K+</div>
-          <div class="hero-stat-lbl">Restaurants</div>
+          <div class="hero-stat-num">15K+</div>
+          <div class="hero-stat-lbl">Orders Handled</div>
         </div>
         <div class="hero-stat-item">
-          <div class="hero-stat-num">100M+</div>
-          <div class="hero-stat-lbl">Orders Processed</div>
+          <div class="hero-stat-num">30 Min</div>
+          <div class="hero-stat-lbl">Quick Setup</div>
         </div>
         <div class="hero-stat-item">
-          <div class="hero-stat-num">4.9★</div>
-          <div class="hero-stat-lbl">Average Rating</div>
+          <div class="hero-stat-num">24/7</div>
+          <div class="hero-stat-lbl">Active Support</div>
         </div>
       </div>
     </div>
@@ -892,19 +698,218 @@ html.dark .premium-footer {
 </section>
 
 {{-- ═══════════ 2. TRUSTED BRANDS ═══════════ --}}
-<div class="brands-wrap">
-  <div class="wrap-md">
-    <p class="brands-title">Trusted by leading hotels and restaurant chains worldwide</p>
-    <div class="brands-logos">
-      <span class="brand-name" style="font-family:serif; font-size:20px; letter-spacing:1px;">HYATT</span>
-      <span class="brand-name" style="color:#003087 !important; opacity:.5;">Hilton</span>
-      <span class="brand-name" style="letter-spacing:2px; font-size:14px;">SHANGRI·LA</span>
-      <span class="brand-name" style="font-size:13px;">The Ritz-Carlton</span>
-      <span class="brand-name" style="font-style:italic; font-size:20px;">aloft</span>
-      <span class="brand-name">Marriott</span>
+<div class="qr-flow-banner">
+  <div class="wrap">
+    <div class="qr-flow-header">
+      <span class="qr-flow-badge">SMART CONTACTLESS DINING</span>
+      <h3 class="qr-flow-title">How ChowChak's QR Ordering Works</h3>
+      <p class="qr-flow-sub">From customer scan to kitchen print — fast, error-free table service in 4 simple steps</p>
+    </div>
+    <div class="qr-flow-grid">
+      <!-- Step 1 -->
+      <div class="qr-step-card">
+        <div class="qr-step-top">
+          <span class="qr-step-num">01</span>
+          <div class="qr-step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <path d="M7 7h.01"></path>
+              <path d="M17 7h.01"></path>
+              <path d="M7 17h.01"></path>
+              <path d="M17 17h.01"></path>
+            </svg>
+          </div>
+        </div>
+        <h4 class="qr-step-heading">Scan Table QR</h4>
+        <p class="qr-step-desc">Zero app download required. Diners simply scan the tabletop QR code with any smartphone camera to open the menu instantly.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="qr-step-card">
+        <div class="qr-step-top">
+          <span class="qr-step-num">02</span>
+          <div class="qr-step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              <path d="M9 7h6"></path>
+              <path d="M9 11h6"></path>
+            </svg>
+          </div>
+        </div>
+        <h4 class="qr-step-heading">Browse & Customize</h4>
+        <p class="qr-step-desc">Interactive digital menu with dish photos, spice levels, add-on toppings, and real-time out-of-stock indicators.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="qr-step-card">
+        <div class="qr-step-top">
+          <span class="qr-step-num">03</span>
+          <div class="qr-step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+              <line x1="10" y1="18" x2="14" y2="18"></line>
+            </svg>
+          </div>
+        </div>
+        <h4 class="qr-step-heading">Instant Kitchen KOT</h4>
+        <p class="qr-step-desc">The moment the order is placed, kitchen thermal printers fire tickets in under 2 seconds. Zero waiting for busy waiters.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="qr-step-card">
+        <div class="qr-step-top">
+          <span class="qr-step-num">04</span>
+          <div class="qr-step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+              <path d="M12 15h2"></path>
+            </svg>
+          </div>
+        </div>
+        <h4 class="qr-step-heading">Easy Pay & Re-order</h4>
+        <p class="qr-step-desc">Customers can pay seamlessly via UPI, card, or cash, add more items anytime, and get instant digital receipts.</p>
+      </div>
     </div>
   </div>
 </div>
+<style>
+.qr-flow-banner {
+  padding: 48px 24px;
+  background: var(--bg-main, #ffffff);
+  border-top: 1px solid var(--border, #e2e8f0);
+  border-bottom: 1px solid var(--border, #e2e8f0);
+}
+html.dark .qr-flow-banner {
+  background: #091512;
+  border-color: #17332a;
+}
+.qr-flow-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 34px;
+}
+.qr-flow-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(0, 182, 146, 0.12);
+  color: #00B692;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 182, 146, 0.25);
+}
+.qr-flow-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main, #111827);
+  letter-spacing: -0.5px;
+  margin: 0 0 8px;
+}
+html.dark .qr-flow-title {
+  color: #f3f4f6;
+}
+.qr-flow-sub {
+  font-size: 14px;
+  color: var(--gray, #6b7280);
+  margin: 0;
+}
+html.dark .qr-flow-sub {
+  color: #9ca3af;
+}
+.qr-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.qr-step-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 16px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+html.dark .qr-step-card {
+  background: #0f1f1a;
+  border-color: #1a382e;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+.qr-step-card:hover {
+  transform: translateY(-5px);
+  border-color: #00B692;
+  box-shadow: 0 12px 30px rgba(0, 182, 146, 0.15);
+}
+.qr-step-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.qr-step-num {
+  font-size: 24px;
+  font-weight: 900;
+  color: rgba(0, 182, 146, 0.35);
+  line-height: 1;
+}
+.qr-step-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(0, 182, 146, 0.1);
+  border: 1px solid rgba(0, 182, 146, 0.22);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00B692;
+}
+.qr-step-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main, #111827);
+  margin: 0 0 8px;
+}
+html.dark .qr-step-heading {
+  color: #f3f4f6;
+}
+.qr-step-desc {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--gray, #6b7280);
+  margin: 0;
+}
+html.dark .qr-step-desc {
+  color: #9ca3af;
+}
+@media (max-width: 960px) {
+  .qr-flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  .qr-flow-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .qr-flow-title {
+    font-size: 20px;
+  }
+  .qr-flow-banner {
+    padding: 32px 16px;
+  }
+}
+</style>
 <style>
 .premium-video-card {
   position: relative;
@@ -1019,141 +1024,177 @@ html.dark .premium-footer {
     <div class="kitchen-card">
       <h2 class="h2" style="margin-bottom:12px;">Everything You Need To Get The Kitchen In order</h2>
       <p class="lead" style="max-width:560px; margin-left:auto; margin-right:auto; margin-bottom:48px;">
-        Boost sales and engagement using MENU TIGER's free menu maker, management system, and built-in restaurant marketing tools.
+        Boost sales and engagement using ChowChak's free menu maker, management system, and built-in restaurant marketing tools.
       </p>
       <div class="features-grid">
 
-        {{-- 1: Ordering Dashboard --}}
+        <!-- 1: Ordering Dashboard -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="8" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M14 26a10 10 0 0120 0H14z" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M22 16h4M24 16v-2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="34" cy="30" r="4.5" fill="#00b692" fill-opacity="0.15" stroke="#00b692" stroke-width="2"/>
-            <path d="M34 32v4M34 30h0.01" stroke="#00b692" stroke-width="2" stroke-linecap="round"/>
-            <path d="M36 34l3 6M33 34v6" stroke="#00b692" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="38" cy="12" r="6" fill="#00b692" stroke="#00b692" stroke-width="1.5"/>
-            <path d="M35.5 12l1.5 1.5 3-3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+              <path d="M7 8h4"></path>
+              <path d="M7 12h8"></path>
+            </svg>
+          </div>
           <span class="feat-lbl">Ordering<br>Dashboard</span>
           <div class="feat-tooltip">Track and manage incoming orders in real-time; view table assignments, order status, and instant kitchen updates.</div>
         </div>
 
-        {{-- 2: Sales Analytics --}}
+        <!-- 2: Sales Analytics -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 32l10-10 10 8 16-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M38 14h6v6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="20" cy="24" r="8" stroke="#00b692" stroke-width="3" fill="#00b692" fill-opacity="0.15"/>
-            <path d="M26 30l8 8" stroke="#00b692" stroke-width="3" stroke-linecap="round"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+              <path d="M4 20h16"></path>
+            </svg>
+          </div>
           <span class="feat-lbl">Sales<br>Analytics</span>
           <div class="feat-tooltip">Optimize your menu for profitability; understand customer preferences and utilize smart menu QR code insights.</div>
         </div>
 
-        {{-- 3: Purchase Analytics --}}
+        <!-- 3: Purchase Analytics -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 16h24l2 24H10l2-24z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
-            <path d="M18 16v-4a6 6 0 0112 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M17 32l4.5-4.5 3.5 3.5 6-6" stroke="#00b692" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M27 25h4v4" stroke="#00b692" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
           <span class="feat-lbl">Purchase<br>Analytics</span>
           <div class="feat-tooltip">Monitor ingredients, supplier costs, and inventory trends to reduce waste and optimize restaurant purchasing.</div>
         </div>
 
-        {{-- 4: POS Integration --}}
+        <!-- 4: POS Integration -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="16" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="28" y="16" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="10" y="30" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="28" y="30" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="2.5"/>
-            <path d="M24 16c-1-3-4-3-4-1s3 1 4 1zm0 0c1-3 4-3 4-1s-3 1-4 1z" fill="#00b692" stroke="#00b692" stroke-width="1.5"/>
-            <circle cx="24" cy="16" r="2" fill="#00b692"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+              <line x1="6" y1="15" x2="10" y2="15"></line>
+              <circle cx="17" cy="15" r="1.5"></circle>
+            </svg>
+          </div>
           <span class="feat-lbl">POS<br>Integration</span>
           <div class="feat-tooltip">Seamlessly sync tables, menus, and order billing directly with your existing restaurant Point of Sale terminal.</div>
         </div>
 
-        {{-- 5: QR Code Menu --}}
+        <!-- 5: QR Code Menu Creation -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="12" y="6" width="26" height="36" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M8 12h8M8 18h8M8 24h8M8 30h8M8 36h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <rect x="19" y="13" width="12" height="12" rx="1" stroke="#00b692" stroke-width="2" fill="none"/>
-            <rect x="22" y="16" width="6" height="6" fill="#00b692"/>
-            <path d="M17 19v-5h5M28 14h5v5M17 27v5h5M28 32h5v-5" stroke="#00b692" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="feat-lbl">QR code<br>Menu Creation</span>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <path d="M7 7h.01"></path>
+              <path d="M17 7h.01"></path>
+              <path d="M7 17h.01"></path>
+              <path d="M17 17h.01"></path>
+            </svg>
+          </div>
+          <span class="feat-lbl">QR Code<br>Menu Creation</span>
           <div class="feat-tooltip">Generate customizable, brand-themed QR codes for every table; allow instant scanning and digital menu browsing.</div>
         </div>
 
-        {{-- 6: Customer Order Management --}}
+        <!-- 6: Customer Order Management -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="12" y="6" width="24" height="36" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M18 14h12M18 20h12M18 26h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="34" cy="34" r="6" fill="#00b692" stroke="#00b692" stroke-width="1.5"/>
-            <path d="M31.5 34l1.5 1.5 3-3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              <path d="m9 14 2 2 4-4"></path>
+            </svg>
+          </div>
           <span class="feat-lbl">Customer Order<br>Management</span>
           <div class="feat-tooltip">Track order flows from table request to final billing; assign servers, manage custom modifiers, and process requests.</div>
         </div>
 
-        {{-- 7: Menu Analytics --}}
+        <!-- 7: Menu Analytics & Insights -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="8" width="36" height="32" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M16 22a4 4 0 110-8 4 4 0 010 8z" stroke="currentColor" stroke-width="2" fill="none"/>
-            <path d="M16 18h4v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 30v-4M16 30v-6M20 30v-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="30" cy="22" r="5" stroke="#00b692" stroke-width="2.5" fill="#00b692" fill-opacity="0.15"/>
-            <path d="M34 26l4 4" stroke="#00b692" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+              <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+            </svg>
+          </div>
           <span class="feat-lbl">Menu Analytics<br>and Insights</span>
           <div class="feat-tooltip">Get detailed item performance reports; identify bestsellers, low-margin dishes, and optimize menu pricing.</div>
         </div>
 
-        {{-- 8: Restaurant Branding --}}
+        <!-- 8: Restaurant Branding -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 18v22h32V18" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M6 10h36v8H6v-8z" fill="#00b692" fill-opacity="0.15" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M6 18c1.5 2 4.5 2 6 0s1.5-2 3-2s1.5 2 3 0s1.5-2 3-2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <rect x="14" y="28" width="8" height="12" stroke="currentColor" stroke-width="2.5"/>
-            <rect x="28" y="28" width="6" height="6" stroke="currentColor" stroke-width="2"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+              <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+              <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+              <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"></path>
+            </svg>
+          </div>
           <span class="feat-lbl">Restaurant<br>Branding</span>
           <div class="feat-tooltip">Customize colors, logos, banners, and fonts on your digital menu page to establish a premium brand identity.</div>
         </div>
 
-        {{-- 9: Customer Feedback --}}
+        <!-- 9: Customer Feedback -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 12 Q8 8 12 8 H36 Q40 8 40 12 V28 Q40 32 36 32 H24 L14 40 V32 H12 Q8 32 8 28 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
-            <path d="M14 16h20M14 22h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="38" cy="12" r="6" fill="#00b692" stroke="#00b692" stroke-width="1.5"/>
-            <path d="M38 8.5l.8 1.8 2 .3-1.4 1.4.3 2-1.7-1-1.7 1 .3-2-1.4-1.4 2-.3z" fill="#fff"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <polygon points="12 7 13.5 10 17 10.5 14.5 13 15 16.5 12 15 9 16.5 9.5 13 7 10.5 10.5 10 12 7" fill="currentColor"></polygon>
+            </svg>
+          </div>
           <span class="feat-lbl">Customer<br>Feedback</span>
           <div class="feat-tooltip">Collect real-time reviews and ratings directly from tables; monitor staff service quality and customer satisfaction.</div>
         </div>
 
-        {{-- 10: Multilingual Support --}}
+        <!-- 10: Multilingual Support -->
         <div class="feat-card">
-          <svg width="54" height="54" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="12" width="28" height="28" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <path d="M16 32l5-10 5 10M17.5 28h7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="38" cy="14" r="7" fill="#00b692" stroke="#00b692" stroke-width="1.5"/>
-            <path d="M35 11h6M38 10v4M36 15l4.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+          <div class="feat-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
           <span class="feat-lbl">Multilingual<br>Support</span>
           <div class="feat-tooltip">Translate your digital menu into multiple languages automatically; serve global tourists and local guests effortlessly.</div>
         </div>
 
       </div>
+      <style>
+      .feat-icon-box {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: rgba(0, 182, 146, 0.08);
+        border: 1px solid rgba(0, 182, 146, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #00B692;
+        transition: all 0.25s ease;
+        margin-bottom: 2px;
+      }
+      html.dark .feat-icon-box {
+        background: rgba(0, 182, 146, 0.12);
+        border-color: rgba(0, 182, 146, 0.25);
+        color: #00B692;
+      }
+      .feat-card:hover .feat-icon-box {
+        background: #00B692;
+        color: #ffffff;
+        border-color: #00B692;
+        transform: scale(1.08);
+        box-shadow: 0 8px 18px rgba(0, 182, 146, 0.3);
+      }
+      </style>
       {{-- SEE ALL FEATURES button - dark teal style like reference --}}
       <div style="margin-top:8px;">
         <a href="/features" style="display:inline-block; background:#2d4a4e; color:#fff; font-weight:700; font-size:12px; padding:14px 36px; border-radius:8px; letter-spacing:1.5px; text-transform:uppercase; transition:background .2s; text-decoration:none;" onmouseover="this.style.background='#1a3538'" onmouseout="this.style.background='#2d4a4e'">
@@ -1259,124 +1300,16 @@ html.dark .premium-footer {
   </div>
 </section>
 
-{{-- ═══════════ 8. INTEGRATIONS ═══════════ --}}
-<style>
-.integration-glow-box {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 48px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-}
-.integ-tag-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.integ-tag-title {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--gray);
-  letter-spacing: 1.5px;
-  width: 100%;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.integ-tag-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-.premium-chip {
-  background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: 12px;
-  padding: 12px 24px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dark);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-  transition: all 0.25s;
-}
-.premium-chip:hover {
-  border-color: var(--green);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,182,146,0.08);
-}
-.premium-chip.highlight {
-  border-color: rgba(255, 107, 44, 0.3);
-}
-.premium-chip.highlight:hover {
-  border-color: var(--orange);
-  box-shadow: 0 8px 20px rgba(255,107,44,0.08);
-}
-.premium-chip span.dot {
-  width: 6px; height: 6px;
-  background: var(--green);
-  border-radius: 50%;
-}
-.premium-chip.highlight span.dot {
-  background: var(--orange);
-}
-</style>
-<section class="section" style="background:var(--white);">
-  <div class="wrap">
-    <div class="integ-grid">
-      <div>
-        <h3 class="integ-title">Pairs perfectly<br>with <em>tools you use</em></h3>
-        <p class="integ-sub" style="margin-bottom:28px;">Easily connect your digital menu dashboard with payment gateways, POS terminals, and marketing automation software.</p>
-        <div style="background: var(--light); border-radius: 16px; padding: 20px; border-left: 4px solid var(--green);">
-          <strong style="display:block; font-size:13px; color:var(--dark); margin-bottom:4px;">Auto-Sync Enabled</strong>
-          <span style="font-size:12px; color:var(--gray);">Menus, items, and pricing synchronize automatically across all payment and dashboard connections instantly.</span>
-        </div>
-      </div>
-      <div class="integration-glow-box">
-        <div class="integ-tag-title">Payment Connections</div>
-        <div class="integ-tag-row">
-          <div class="premium-chip"><span class="dot"></span>Apple Pay</div>
-          <div class="premium-chip"><span class="dot"></span>Google Pay</div>
-          <div class="premium-chip highlight"><span class="dot"></span>PayPal</div>
-          <div class="premium-chip"><span class="dot"></span>stripe</div>
-          <div class="premium-chip">Venmo</div>
-        </div>
 
-        <div class="integ-tag-title" style="margin-top:16px;">Marketing &amp; POS Systems</div>
-        <div class="integ-tag-row">
-          <div class="premium-chip highlight"><span class="dot"></span>Loyverse POS</div>
-          <div class="premium-chip" style="color:#00c4cc;"><span class="dot" style="background:#00c4cc;"></span>Canva</div>
-          <div class="premium-chip"><span class="dot"></span>Zapier</div>
-          <div class="premium-chip">Google Analytics</div>
-        </div>
-
-        <div class="pm-row" style="background:var(--light); padding:14px; border-radius:12px; margin-top:28px;">
-          <div style="font-size: 11px; font-weight:700; color:var(--gray); margin-bottom:10px; text-transform:uppercase; letter-spacing:1px;">Global Card Support</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            @foreach(['VISA','Mastercard','AMEX','iDEAL','Alipay','GrabPay','WeChat Pay','PAYNOW'] as $m)
-            <span class="pm" style="background:var(--white); border:1px solid var(--border); padding:6px 12px; border-radius:8px; font-size:11px; font-weight:600; color:var(--dark);">{{ $m }}</span>
-            @endforeach
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 {{-- ═══════════ 9. QR PREVIEW ═══════════ --}}
 <style>
 .premium-qr-preview-box {
   background: radial-gradient(circle at 0% 0%, #00b692 0%, #009c7d 100%);
   border-radius: 32px;
-  padding: 64px;
+  padding: 56px 48px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 48px;
   align-items: center;
   box-shadow: 0 30px 70px rgba(0,182,146,0.22);
@@ -1392,35 +1325,73 @@ html.dark .premium-footer {
   top: -150px; left: -150px;
   pointer-events: none;
 }
+.qr-preview-content {
+  position: relative;
+  z-index: 1;
+}
+.qr-preview-content h3 {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+.qr-preview-content p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+.qr-preview-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.qr-preview-actions .btn-orange,
+.qr-preview-actions .btn-ghost {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .qr-scanner-card {
   background: var(--white);
-  padding: 32px;
+  padding: 30px;
   border-radius: 24px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 320px;
+  max-width: 300px;
+  width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+html.dark .qr-scanner-card {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .qr-frame-beautified {
-  padding: 24px;
-  border: 3px stroke var(--green);
-  border-radius: 20px;
+  padding: 18px;
+  border-radius: 18px;
   background: #fff;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
 }
 /* Corner brackets for scanner effect */
 .qr-frame-beautified::before, .qr-frame-beautified::after {
   content: '';
   position: absolute;
-  width: 24px;
-  height: 24px;
-  border: 4px solid var(--green);
+  width: 22px;
+  height: 22px;
+  border: 3px solid var(--green);
   pointer-events: none;
 }
 .qr-frame-beautified::before { top: 0; left: 0; border-right: none; border-bottom: none; border-radius: 8px 0 0 0; }
@@ -1428,7 +1399,7 @@ html.dark .premium-footer {
 
 .qr-scanner-line {
   position: absolute;
-  left: 10px; right: 10px;
+  left: 8px; right: 8px;
   height: 3px;
   background: var(--orange);
   box-shadow: 0 0 10px var(--orange);
@@ -1437,6 +1408,79 @@ html.dark .premium-footer {
 @keyframes scan-anim {
   0%, 100% { top: 12px; }
   50% { top: calc(100% - 15px); }
+}
+.qr-scanner-card span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 18px;
+}
+html.dark .qr-scanner-card span {
+  color: #9ca3af;
+}
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 900px) {
+  .premium-qr-preview-box {
+    grid-template-columns: 1fr;
+    padding: 38px 24px;
+    gap: 32px;
+    text-align: center;
+    border-radius: 24px;
+  }
+  .qr-preview-content {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .qr-preview-actions {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .premium-qr-preview-box {
+    padding: 26px 16px;
+    border-radius: 20px;
+    gap: 22px;
+  }
+  .qr-preview-content h3 {
+    font-size: 21px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+  .qr-preview-content p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .qr-preview-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .qr-preview-actions a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    padding: 12px 18px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .qr-scanner-card {
+    padding: 20px 16px;
+    max-width: 250px;
+    border-radius: 18px;
+  }
+  .qr-frame-beautified {
+    padding: 12px;
+  }
+  .qr-frame-beautified svg {
+    width: 125px;
+    height: 125px;
+  }
 }
 </style>
 <section class="section section-alt tc">
@@ -1447,14 +1491,14 @@ html.dark .premium-footer {
     </p>
 
     <div class="premium-qr-preview-box">
-      <div>
-        <h3 style="font-size: 28px; font-weight: 800; color: #fff; margin: 0 0 16px; line-height: 1.3;">Experience the ordering flow live on your device</h3>
-        <p style="font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 32px;">
+      <div class="qr-preview-content">
+        <h3>Experience the ordering flow live on your device</h3>
+        <p>
           Simply scan the QR code with your phone camera. You will instantly load a live interactive digital menu layout. Add dishes, custom modifiers, and experience table-ordering in real-time.
         </p>
-        <div style="display: flex; gap: 16px;">
+        <div class="qr-preview-actions">
           <a href="{{ route('restaurant_signup') }}" class="btn-orange">Create Your QR Menu</a>
-          <a href="#reviews" class="btn-ghost" style="color:#fff; border-color:#fff;">See Reviews</a>
+          <a href="#reviews" class="btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.7);">See Reviews</a>
         </div>
       </div>
       <div>
@@ -1481,7 +1525,7 @@ html.dark .premium-footer {
               <rect x="56" y="56" width="16" height="16" fill="#00b692" rx="4"/>
             </svg>
           </div>
-          <span style="font-size: 11px; font-weight:700; color:var(--gray); text-transform:uppercase; letter-spacing:1px; margin-top:20px;">Scan to open menu</span>
+          <span>Scan to open menu</span>
         </div>
       </div>
     </div>
@@ -1529,25 +1573,45 @@ html.dark .premium-footer {
   box-shadow: 0 20px 40px rgba(0,182,146,0.08);
 }
 .tmpl-preview-box {
-  height: 150px;
-  background: linear-gradient(135deg, var(--light) 0%, #e0f2f1 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 56px;
+  height: 175px;
+  background: #f1f5f9;
   position: relative;
+  overflow: hidden;
+  display: block;
+}
+.tmpl-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.premium-tmpl-card:hover .tmpl-preview-box img {
+  transform: scale(1.08);
 }
 .tmpl-badge {
   position: absolute;
-  top: 12px; right: 12px;
-  background: #fff;
-  border: 1px solid var(--border);
-  font-size: 9px;
-  font-weight: 700;
+  top: 10px; right: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 182, 146, 0.3);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--green);
-  padding: 4px 8px;
-  border-radius: 4px;
+  color: #00B692;
+  padding: 3px 9px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+.tmpl-badge.pro {
+  color: #ff6b2c;
+  border-color: rgba(255, 107, 44, 0.3);
+}
+html.dark .tmpl-badge {
+  background: rgba(17, 24, 39, 0.92);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 .tmpl-info {
   padding: 18px;
@@ -1570,21 +1634,21 @@ html.dark .premium-footer {
     <p class="lead" style="max-width:540px; margin:0 auto;">Fully optimized, print-ready, and digitally interactive branding presets for your storefront.</p>
     
     @php $tmpls = [
-      ['📋','Menu Templates','Dine-in / Room service','FREE'],
-      ['🥤','Coaster Designs','Cup & Glass branding','PRO'],
-      ['🖼️','Poster Layouts','Promotional wall flyers','FREE'],
-      ['🎪','Table Tent Formats','QR standees','FREE'],
-      ['🔖','Stickers & Labels','Delivery box branding','PRO'],
-      ['🪧','A-Frame Designs','Sidewalk signage','FREE'],
-      ['💳','Business Cards','Executive networking','FREE'],
-      ['🎁','Gift Cards','Discount vouchers','PRO']
+      ['/img/templates/menu-template.jpg','Menu Templates','Dine-in / Room service','FREE'],
+      ['/img/templates/coaster-design.jpg','Coaster Designs','Cup & Glass branding','PRO'],
+      ['/img/templates/poster-layout.jpg','Poster Layouts','Promotional wall flyers','FREE'],
+      ['/img/templates/table-tent.jpg','Table Tent Formats','QR standees','FREE'],
+      ['/img/templates/stickers-labels.jpg','Stickers & Labels','Delivery box branding','PRO'],
+      ['/img/templates/a-frame.jpg','A-Frame Designs','Sidewalk signage','FREE'],
+      ['/img/templates/business-card.jpg','Business Cards','Executive networking','FREE'],
+      ['/img/templates/gift-card.jpg','Gift Cards','Discount vouchers','PRO']
     ]; @endphp
     <div class="premium-tmpl-grid">
       @foreach($tmpls as $t)
       <div class="premium-tmpl-card">
         <div class="tmpl-preview-box">
-          <span class="tmpl-badge">{{ $t[3] }}</span>
-          {{ $t[0] }}
+          <span class="tmpl-badge {{ $t[3] === 'PRO' ? 'pro' : '' }}">{{ $t[3] }}</span>
+          <img src="{{ $t[0] }}" alt="{{ $t[1] }} Mockup" loading="lazy">
         </div>
         <div class="tmpl-info">
           <h4>{{ $t[1] }}</h4>
@@ -1644,60 +1708,184 @@ html.dark .premium-footer {
 
 {{-- ═══════════ 14. FAQ ═══════════ --}}
 <style>
-/* ── FAQ PRICING STYLE ── */
-.pr-faq-section { padding: 60px 24px 30px; background: transparent !important; }
-.pr-faq-inner { max-width: 1180px; margin: 0 auto; }
+/* ── FAQ SECTION (EXPLICIT LIGHT & DARK MODE) ── */
+.pr-faq-section {
+  padding: 64px 24px 44px !important;
+  background: #ffffff !important;
+  transition: background-color 0.3s ease;
+}
+html.dark .pr-faq-section {
+  background: #111827 !important;
+}
+.pr-faq-inner {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
+.pr-faq-section .section-title {
+  color: #111827 !important;
+}
+html.dark .pr-faq-section .section-title {
+  color: #f3f4f6 !important;
+}
+.pr-faq-section .section-sub {
+  color: #6b7280 !important;
+}
+html.dark .pr-faq-section .section-sub {
+  color: #9ca3af !important;
+}
 .faq-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  transition: border-color .2s;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  margin-bottom: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  transition: all .25s ease !important;
 }
-.faq-item:hover { border-color: #00b692; }
+.faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.1) !important;
+}
+html.dark .faq-item {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+  box-shadow: none !important;
+}
+html.dark .faq-item:hover {
+  border-color: #00b692 !important;
+  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.18) !important;
+}
 .faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 24px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dark);
-  user-select: none;
-  gap: 12px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px 24px !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  user-select: none !important;
+  gap: 14px !important;
+  transition: color .2s ease !important;
 }
-.faq-question svg { flex-shrink: 0; color: #00b692; transition: transform .25s; }
-.faq-question.open svg { transform: rotate(45deg); }
+.faq-question:hover,
+.faq-question.open {
+  color: #00b692 !important;
+}
+html.dark .faq-question {
+  color: #f3f4f6 !important;
+}
+html.dark .faq-question:hover,
+html.dark .faq-question.open {
+  color: #00b692 !important;
+}
+.faq-toggle-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  background: #ecfdf5 !important;
+  border: 1.5px solid #a7f3d0 !important;
+  color: #00b692 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  transition: all .25s ease !important;
+}
+.faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+  transform: rotate(180deg);
+}
+html.dark .faq-toggle-icon {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+  color: #34d399 !important;
+}
+html.dark .faq-question.open .faq-toggle-icon {
+  background: #00b692 !important;
+  border-color: #00b692 !important;
+  color: #ffffff !important;
+}
 .faq-answer {
-  padding: 0 24px;
-  max-height: 0;
-  overflow: hidden;
-  font-size: 13.5px;
-  color: var(--gray);
-  line-height: 1.8;
-  transition: max-height .3s ease, padding .3s ease;
+  padding: 0 24px !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  line-height: 1.8 !important;
+  transition: max-height .3s ease, padding .3s ease !important;
 }
-.faq-answer.open { max-height: 300px; padding: 0 24px 20px; }
+.faq-answer.open {
+  max-height: 400px !important;
+  padding: 0 24px 22px !important;
+}
+html.dark .faq-answer {
+  color: #9ca3af !important;
+}
 </style>
 
 <section class="pr-faq-section" id="user-faqs">
   <div class="pr-faq-inner">
-    <div style="text-align:center; margin-bottom:24px;">
-      <h2 class="section-title" style="font-size:clamp(22px, 3vw, 32px);font-weight:900;color:var(--dark);margin:0 0 8px;">Frequently Asked <em style="font-style:normal;color:#00b692;">Questions</em></h2>
-      <p class="section-sub" style="font-size:14px;color:var(--gray);margin:0 0 20px;line-height:1.8;">Everything you need to know about our digital QR menu & restaurant OS platform.</p>
+    <div style="text-align:center; margin-bottom:32px;">
+      <h2 class="section-title" style="font-size:clamp(22px, 3vw, 32px);font-weight:900;margin:0 0 8px;">Frequently Asked <em style="font-style:normal;color:#00b692;">Questions</em></h2>
+      <p class="section-sub" style="font-size:14.5px;margin:0 0 20px;line-height:1.7;">Everything you need to know about our digital QR menu & restaurant OS platform.</p>
     </div>
 
     <div id="faq-container">
       {{-- Initial fallback skeleton/SSR items --}}
       <div class="faq-item">
         <div class="faq-question open" onclick="toggleFaq(this)">
-          How does ChowChak Digital QR Menu work?
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <span>How does ChowChak Digital QR Menu work?</span>
+          <span class="faq-toggle-icon">−</span>
         </div>
         <div class="faq-answer open">
-          ChowChak allows restaurant customers to scan a QR code placed on their table using their smartphone camera, view the digital interactive menu, customize their order, and place orders directly without waiting for a waiter.
+          Customers simply scan the QR code placed on their table using their smartphone camera. The interactive digital menu opens instantly without downloading any app, allowing guests to explore dishes, customize modifiers, and place orders directly to your kitchen.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can customers order and pay directly from the QR menu?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes! Guests can browse real-time item availability, customize dishes, and place instant orders. Depending on your restaurant preference, customers can pay directly via digital payments (UPI, Cards) or settle at the counter/table.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Do I need expensive hardware or special tablets?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          No proprietary hardware is required. ChowChak works seamlessly on any existing smartphone, tablet, laptop, and connects directly to standard thermal receipt printers (USB, Bluetooth, Wi-Fi, Ethernet).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How fast can I set up my restaurant menu and start?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          You can be up and running in under 30 minutes! Simply add your food categories and items, configure prices, and generate your custom branded QR code standees or stickers.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I manage multiple outlets from a single dashboard?</span>
+          <span class="faq-toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes! ChowChak includes multi-branch management. You can switch between outlets, track unified or branch-specific sales analytics, manage staff permissions, and update menus centrally.
         </div>
       </div>
     </div>
