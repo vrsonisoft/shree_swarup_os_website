@@ -6,7 +6,7 @@
  * If backend is on a separate domain (e.g. https://admin.yourdomain.com), put it in productionApiHost.
  */
 (function() {
-  const productionApiHost = 'https://shreeswarupos.vrsonisoft.com';
+  const productionApiHost = 'https://console.chowchak.com';
 
   const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
 
@@ -29,10 +29,10 @@
       if (!link) return;
 
       const href = link.getAttribute('href');
-      if (href === '/login' || href === 'https://shreeswarupos.vrsonisoft.com/login' || href === 'http://127.0.0.1:8000/login') {
+      if (href === '/login' || href === 'https://console.chowchak.com/login' || href === 'https://console.chowchak.com/login' || href === 'http://127.0.0.1:8000/login') {
         e.preventDefault();
         window.open(window.TABLETRACK_CONFIG.loginUrl, '_blank');
-      } else if (href === '/restaurant-signup' || href === 'https://shreeswarupos.vrsonisoft.com/restaurant-signup' || href === 'http://127.0.0.1:8000/restaurant-signup') {
+      } else if (href === '/restaurant-signup' || href === 'https://console.chowchak.com/restaurant-signup' || href === 'https://console.chowchak.com/restaurant-signup' || href === 'http://127.0.0.1:8000/restaurant-signup') {
         e.preventDefault();
         window.open(window.TABLETRACK_CONFIG.signupUrl, '_blank');
       }
