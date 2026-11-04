@@ -60,14 +60,14 @@ filesToUpdate.forEach(fileInfo => {
   if (fileInfo.active && fileInfo.active !== '/about-us') {
     // Reset About Us active style
     headerBlock = headerBlock.replace(
-      'href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-[#00b692] font-semibold"',
-      'href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-gray-700 font-medium hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692]"'
+      'href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-[#2E6F40] font-semibold"',
+      'href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-gray-700 font-medium hover:text-[#2E6F40] dark:text-gray-200 dark:hover:text-[#2E6F40]"'
     );
 
     // Set page active style in desktop nav
     headerBlock = headerBlock.replace(
-      `href="${fileInfo.active}" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692] text-[14px]"`,
-      `href="${fileInfo.active}" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-[#00b692] font-semibold"`
+      `href="${fileInfo.active}" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-700 hover:text-[#2E6F40] dark:text-gray-200 dark:hover:text-[#2E6F40] text-[14px]"`,
+      `href="${fileInfo.active}" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-[#2E6F40] font-semibold"`
     );
 
     // Set active class in drawer

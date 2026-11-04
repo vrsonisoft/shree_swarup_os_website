@@ -22,8 +22,14 @@
 @section('content')
 <style>
 :root {
-  --green: #00b692;
-  --green-dark: #009c7d;
+  --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
   --orange: #ff6b2c;
   --dark: #111827;
   --gray: #6b7280;
@@ -65,15 +71,15 @@ html.dark {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 25% 60%, rgba(0,182,146,0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 25% 60%, rgba(46, 111, 64, 0.1) 0%, transparent 55%),
     radial-gradient(ellipse at 75% 30%, rgba(255,107,44,0.05) 0%, transparent 55%);
   pointer-events: none;
 }
 .ab-hero-tag {
   display: inline-block;
-  background: rgba(0,182,146,0.08);
-  border: 1px solid rgba(0,182,146,0.25);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.08);
+  border: 1px solid rgba(46, 111, 64, 0.25);
+  color: #2E6F40;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -91,7 +97,7 @@ html.dark {
   margin: 0 0 20px;
   transition: color 0.3s ease;
 }
-.ab-hero h1 em { color: #00b692; font-style: normal; }
+.ab-hero h1 em { color: #2E6F40; font-style: normal; }
 .ab-hero p {
   font-size: 17px;
   color: #4b5563;
@@ -107,12 +113,12 @@ html.dark .ab-hero {
 }
 html.dark .ab-hero::before {
   background:
-    radial-gradient(ellipse at 25% 60%, rgba(0,182,146,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 25% 60%, rgba(46, 111, 64, 0.15) 0%, transparent 55%),
     radial-gradient(ellipse at 75% 30%, rgba(255,107,44,0.07) 0%, transparent 55%);
 }
 html.dark .ab-hero-tag {
-  background: rgba(0,182,146,0.12);
-  border-color: rgba(0,182,146,0.3);
+  background: rgba(46, 111, 64, 0.12);
+  border-color: rgba(46, 111, 64, 0.3);
   color: #34d399;
 }
 html.dark .ab-hero h1 {
@@ -137,15 +143,13 @@ html.dark .ab-hero p {
 
 .label-badge {
   display: inline-block;
-  background: rgba(0,182,146,0.08);
-  color: #00b692;
+  background: #CFFFDC;
+  border: 1.5px solid #68BA7F;
+  color: #253D2C;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 5px 16px;
+  padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 14px;
 }
 .section-head { text-align: center; margin-bottom: 56px; }
 .section-head h2 {
@@ -155,7 +159,7 @@ html.dark .ab-hero p {
   margin: 0 0 12px;
   line-height: 1.25;
 }
-.section-head h2 em { color: #00b692; font-style: normal; }
+.section-head h2 em { color: #2E6F40; font-style: normal; }
 .section-head p {
   font-size: 15px;
   color: var(--gray);
@@ -180,20 +184,20 @@ html.dark .ab-hero p {
   overflow: hidden;
   transition: transform .3s, box-shadow .3s;
 }
-.mv-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,182,146,0.1); }
+.mv-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(46, 111, 64, 0.1); }
 .mv-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #00b692, #009c7d);
+  background: linear-gradient(90deg, #2E6F40, #245833);
 }
 .mv-card-icon {
   width: 56px; height: 56px;
-  background: rgba(0,182,146,0.1);
+  background: rgba(46, 111, 64, 0.1);
   border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
-  color: #00b692;
+  color: #2E6F40;
   margin-bottom: 20px;
 }
 .mv-card h3 {
@@ -220,7 +224,7 @@ html.dark .ab-hero p {
   margin: 0 0 16px;
   line-height: 1.25;
 }
-.story-text h2 em { color: #00b692; font-style: normal; }
+.story-text h2 em { color: #2E6F40; font-style: normal; }
 .story-text p {
   font-size: 14.5px; color: var(--gray);
   line-height: 1.85; margin: 0 0 16px;
@@ -239,7 +243,7 @@ html.dark .ab-hero p {
   position: absolute;
   left: 20px; top: 0; bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #00b692, rgba(0,182,146,0.1));
+  background: linear-gradient(to bottom, #2E6F40, rgba(46, 111, 64, 0.1));
 }
 .tl-item {
   display: flex;
@@ -251,9 +255,9 @@ html.dark .ab-hero p {
 .tl-dot {
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: #00b692;
+  background: #2E6F40;
   border: 3px solid var(--white);
-  box-shadow: 0 0 0 3px rgba(0,182,146,0.2);
+  box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.2);
   display: flex; align-items: center; justify-content: center;
   color: #fff;
   font-size: 11px; font-weight: 800;
@@ -285,10 +289,10 @@ html.dark .ab-hero p {
   padding: 32px 20px;
   transition: transform .3s, border-color .3s;
 }
-.stat-card:hover { transform: translateY(-4px); border-color: #00b692; }
+.stat-card:hover { transform: translateY(-4px); border-color: #2E6F40; }
 .stat-num {
   font-size: 38px; font-weight: 900;
-  color: #00b692; line-height: 1;
+  color: #2E6F40; line-height: 1;
   display: block; margin-bottom: 8px;
 }
 .stat-lbl {
@@ -316,15 +320,15 @@ html.dark .ab-hero p {
 }
 .value-card:hover {
   transform: translateY(-5px);
-  border-color: #00b692;
-  box-shadow: 0 16px 40px rgba(0,182,146,0.1);
+  border-color: #2E6F40;
+  box-shadow: 0 16px 40px rgba(46, 111, 64, 0.1);
 }
 .value-icon {
   width: 50px; height: 50px;
   border-radius: 14px;
-  background: rgba(0,182,146,0.1);
+  background: rgba(46, 111, 64, 0.1);
   display: flex; align-items: center; justify-content: center;
-  color: #00b692;
+  color: #2E6F40;
   font-size: 22px;
 }
 .value-card h4 { font-size: 15px; font-weight: 800; color: var(--dark); margin: 0; }
@@ -346,7 +350,7 @@ html.dark .ab-hero p {
   text-align: center;
   transition: all .3s;
 }
-.team-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border-color: #00b692; }
+.team-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); border-color: #2E6F40; }
 .team-avatar {
   width: 100%;
   aspect-ratio: 1;
@@ -354,17 +358,17 @@ html.dark .ab-hero p {
   align-items: center;
   justify-content: center;
   font-size: 48px;
-  background: linear-gradient(135deg, rgba(0,182,146,0.08), rgba(0,182,146,0.02));
+  background: linear-gradient(135deg, rgba(46, 111, 64, 0.08), rgba(46, 111, 64, 0.02));
   border-bottom: 1px solid var(--border);
 }
 .team-info { padding: 20px 16px; }
 .team-name { font-size: 15px; font-weight: 800; color: var(--dark); margin: 0 0 4px; }
-.team-role { font-size: 12px; color: #00b692; font-weight: 600; margin: 0 0 10px; }
+.team-role { font-size: 12px; color: #2E6F40; font-weight: 600; margin: 0 0 10px; }
 .team-bio { font-size: 12px; color: var(--gray); line-height: 1.6; margin: 0; }
 
 /* ── CTA ── */
 .ab-cta {
-  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  background: linear-gradient(135deg, #2E6F40 0%, #245833 100%);
   padding: 80px 24px;
   text-align: center;
   position: relative;
@@ -379,7 +383,7 @@ html.dark .ab-hero p {
 .ab-cta h2 { font-size: clamp(24px, 3.5vw, 40px); font-weight: 900; color: #fff; margin: 0 0 14px; line-height: 1.25; }
 .ab-cta p { font-size: 15px; color: rgba(255,255,255,0.85); max-width: 480px; margin: 0 auto 36px; line-height: 1.8; }
 .btn-white {
-  background: #fff; color: #00b692;
+  background: #fff; color: #2E6F40;
   font-weight: 800; font-size: 15px;
   padding: 16px 40px; border-radius: 12px;
   text-decoration: none; display: inline-block;

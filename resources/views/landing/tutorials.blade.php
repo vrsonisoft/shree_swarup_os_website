@@ -22,8 +22,14 @@
 @section('content')
 <style>
 :root {
-  --green: #00b692;
-  --green-dark: #009c7d;
+  --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
   --orange: #ff6b2c;
   --dark: #0f172a;
   --gray: #475569;
@@ -65,7 +71,7 @@ html.dark {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 60%, rgba(0, 182, 146, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 60%, rgba(46, 111, 64, 0.12) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
@@ -115,7 +121,7 @@ html.dark {
 .search-input:focus {
   background: #ffffff;
   border-color: var(--green);
-  box-shadow: 0 0 0 4px rgba(0, 182, 146, 0.2), 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 4px rgba(46, 111, 64, 0.2), 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .search-icon-svg {
@@ -129,7 +135,7 @@ html.dark {
 }
 
 .search-wrapper:focus-within .search-icon-svg {
-  color: #00b692;
+  color: #2E6F40;
 }
 
 /* ── DARK HERO OVERRIDES ── */
@@ -154,7 +160,7 @@ html.dark .search-input::placeholder {
 }
 html.dark .search-input:focus {
   background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 0 0 4px rgba(0, 182, 146, 0.25), 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(46, 111, 64, 0.25), 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 html.dark .search-icon-svg {
   color: rgba(255, 255, 255, 0.45);
@@ -227,7 +233,7 @@ html.dark .search-icon-svg {
 
 .accordion-header:hover {
   background: var(--light);
-  color: #00b692;
+  color: #2E6F40;
 }
 
 .accordion-header.active {
@@ -243,7 +249,7 @@ html.dark .search-icon-svg {
 
 .accordion-header.active .accordion-icon {
   transform: rotate(180deg);
-  color: #00b692;
+  color: #2E6F40;
 }
 
 .accordion-content {
@@ -281,17 +287,17 @@ html.dark .search-icon-svg {
 }
 
 .subcategory-btn:hover {
-  background: rgba(0, 182, 146, 0.1);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.1);
+  color: #2E6F40;
   padding-left: 20px;
 }
 
 .subcategory-btn.active {
-  background: rgba(0, 182, 146, 0.16);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.16);
+  color: #2E6F40;
   font-weight: 800;
   padding-left: 20px;
-  border-left: 3px solid #00b692;
+  border-left: 3px solid #2E6F40;
 }
 
 
@@ -321,7 +327,7 @@ html.dark .search-icon-svg {
 .tutorial-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
-  border-color: rgba(0, 182, 146, 0.4);
+  border-color: rgba(46, 111, 64, 0.4);
 }
 
 /* Thumbnail Styling (CSS-Based Mockup to mirror exact user screenshots) */
@@ -438,7 +444,7 @@ html.dark .search-icon-svg {
 .device-box {
   width: 40%;
   height: 4px;
-  background: #00b692;
+  background: #2E6F40;
   border-radius: 1px;
 }
 
@@ -478,14 +484,14 @@ html.dark .search-icon-svg {
 
 .thumbnail-badge {
   align-self: flex-start;
-  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  background: linear-gradient(135deg, #2E6F40 0%, #245833 100%);
   color: #fff;
   font-size: 8px;
   font-weight: 700;
   padding: 3px 8px;
   border-radius: 4px;
   letter-spacing: 0.2px;
-  box-shadow: 0 2px 6px rgba(0, 182, 146, 0.2);
+  box-shadow: 0 2px 6px rgba(46, 111, 64, 0.2);
 }
 
 /* Play button overlay on hover */
@@ -509,7 +515,7 @@ html.dark .search-icon-svg {
 .play-btn-circle {
   width: 44px;
   height: 44px;
-  background: #00b692;
+  background: #2E6F40;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -517,7 +523,7 @@ html.dark .search-icon-svg {
   color: white;
   transform: scale(0.8);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 15px rgba(0, 182, 146, 0.4);
+  box-shadow: 0 4px 15px rgba(46, 111, 64, 0.4);
 }
 
 .tutorial-card:hover .play-btn-circle {
@@ -613,7 +619,7 @@ html.dark .search-icon-svg {
       <div>
         <div class="tutorials-grid" id="tutorials-grid">
           <div id="tutorials-loader" style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--gray);font-size:14px;">
-            <div style="width:36px;height:36px;margin:0 auto 12px;border:3px solid rgba(0,182,146,0.15);border-top-color:#00b692;border-radius:50%;animation:legalSpin 0.8s linear infinite;"></div>
+            <div style="width:36px;height:36px;margin:0 auto 12px;border:3px solid rgba(46, 111, 64, 0.15);border-top-color:#2E6F40;border-radius:50%;animation:legalSpin 0.8s linear infinite;"></div>
             <style>@keyframes legalSpin { to { transform: rotate(360deg); } }</style>
             <div>Loading tutorials...</div>
           </div>
@@ -827,8 +833,8 @@ function renderCards(cards) {
                 <div class="device-box" style="background:#8b5cf6;"></div>
                 <div class="device-line" style="width: 70%; height: 3px;"></div>
               </div>
-              <div class="device-card-item" style="background: rgba(0, 182, 146, 0.05); border-color: rgba(0, 182, 146, 0.2);">
-                <div class="device-box" style="background:#00b692;"></div>
+              <div class="device-card-item" style="background: rgba(46, 111, 64, 0.05); border-color: rgba(46, 111, 64, 0.2);">
+                <div class="device-box" style="background:#2E6F40;"></div>
                 <div class="device-line" style="width: 90%; height: 3px;"></div>
               </div>
               <div class="device-card-item">

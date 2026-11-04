@@ -364,7 +364,7 @@ body>[id^="tooltip-od-detail-status-"][role="tooltip"] {
 
 /* Color Variables for Menu Tiger */
 .text-menutiger-green {
-  color: #00b692 !important;
+  color: #2E6F40 !important;
 }
 .text-menutiger-orange {
   color: #ff7e2f !important;
@@ -373,7 +373,7 @@ body>[id^="tooltip-od-detail-status-"][role="tooltip"] {
   color: #2a4849 !important;
 }
 .bg-menutiger-green {
-  background-color: #00b692 !important;
+  background-color: #2E6F40 !important;
 }
 .bg-menutiger-light {
   background-color: #e1f6f3 !important;
@@ -382,33 +382,33 @@ body>[id^="tooltip-od-detail-status-"][role="tooltip"] {
   background-color: #2a4849 !important;
 }
 .border-menutiger-green {
-  border-color: #00b692 !important;
+  border-color: #2E6F40 !important;
 }
 
 /* Primary Button (Start for Free / CTAs) */
 .btn-menutiger-primary {
-  background-color: #00b692 !important;
+  background-color: #2E6F40 !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   border-radius: 6px !important;
   transition: all 0.3s ease;
 }
 .btn-menutiger-primary:hover {
-  background-color: #009c7d !important;
+  background-color: #245833 !important;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 182, 146, 0.25) !important;
+  box-shadow: 0 4px 12px rgba(46, 111, 64, 0.25) !important;
 }
 
 /* Muted Button (Customer Success Stories, etc.) */
 .btn-menutiger-secondary {
   background-color: transparent !important;
-  color: #00b692 !important;
+  color: #2E6F40 !important;
   font-weight: 600 !important;
   text-decoration: underline !important;
   transition: all 0.3s ease;
 }
 .btn-menutiger-secondary:hover {
-  color: #009c7d !important;
+  color: #245833 !important;
 }
 
 /* Card layouts matching Menu Tiger */
@@ -447,6 +447,6 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #00b692 !important;
-  box-shadow: 0 0 0 3px rgba(0, 182, 146, 0.15) !important;
+  border-color: #2E6F40 !important;
+  box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.15) !important;
 }

@@ -62,16 +62,16 @@ html.dark .connect-desc {
 .connect-icon-box {
   width: 42px !important;
   height: 42px !important;
-  background: rgba(0, 182, 146, 0.1) !important;
+  background: rgba(46, 111, 64, 0.1) !important;
   border-radius: 10px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #00b692 !important;
+  color: #2E6F40 !important;
   flex-shrink: 0 !important;
 }
 html.dark .connect-icon-box {
-  background: rgba(0, 182, 146, 0.18) !important;
+  background: rgba(46, 111, 64, 0.18) !important;
   color: #34d399 !important;
 }
 .connect-text strong {
@@ -111,9 +111,9 @@ html.dark .connect-text span {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
 }
 .social-circle:hover {
-  background: #00b692 !important;
+  background: #2E6F40 !important;
   color: #ffffff !important;
-  border-color: #00b692 !important;
+  border-color: #2E6F40 !important;
   transform: translateY(-2px) !important;
 }
 html.dark .social-circle {
@@ -123,9 +123,9 @@ html.dark .social-circle {
   box-shadow: none !important;
 }
 html.dark .social-circle:hover {
-  background: #00b692 !important;
+  background: #2E6F40 !important;
   color: #ffffff !important;
-  border-color: #00b692 !important;
+  border-color: #2E6F40 !important;
 }
 .connect-card {
   background: #ffffff !important;
@@ -193,8 +193,8 @@ html.dark .connect-card h3 {
 .connect-input-group input:focus,
 .connect-input-group textarea:focus,
 .connect-input-group select:focus {
-  border-color: #00b692 !important;
-  box-shadow: 0 0 0 3px rgba(0, 182, 146, 0.15) !important;
+  border-color: #2E6F40 !important;
+  box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.15) !important;
 }
 html.dark .connect-input-group input,
 html.dark .connect-input-group textarea,
@@ -210,13 +210,13 @@ html.dark .connect-input-group textarea::placeholder {
 html.dark .connect-input-group input:focus,
 html.dark .connect-input-group textarea:focus,
 html.dark .connect-input-group select:focus {
-  border-color: #00b692 !important;
-  box-shadow: 0 0 0 3px rgba(0, 182, 146, 0.25) !important;
+  border-color: #2E6F40 !important;
+  box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.25) !important;
 }
 .connect-submit-btn {
   width: 100% !important;
   padding: 14px !important;
-  background: #00b692 !important;
+  background: #2E6F40 !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 10px !important;
@@ -224,12 +224,12 @@ html.dark .connect-input-group select:focus {
   font-weight: 700 !important;
   cursor: pointer !important;
   transition: all 0.2s ease !important;
-  box-shadow: 0 4px 14px rgba(0, 182, 146, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(46, 111, 64, 0.35) !important;
 }
 .connect-submit-btn:hover {
-  background: #009c7d !important;
+  background: #245833 !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 8px 20px rgba(0, 182, 146, 0.45) !important;
+  box-shadow: 0 8px 20px rgba(46, 111, 64, 0.45) !important;
 }
 </style>
 

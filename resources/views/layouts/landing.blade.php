@@ -151,7 +151,7 @@
       transition: color 0.2s ease;
     }
     .top-contact-container a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     @media (max-width: 768px) {
       .top-contact-bar {
@@ -168,7 +168,7 @@
       color: #e5e7eb !important;
     }
     html.dark .top-contact-container a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
 
     /* ── HEADER NAVIGATION LINK STYLES ── */
@@ -198,10 +198,10 @@
       color: #e5e7eb !important; /* Light grey for dark mode */
     }
     .menutiger-nav a:hover, #mobile-menu-2 a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     .menutiger-nav a.active-nav-link, #mobile-menu-2 a.active-nav-link {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
       font-weight: 700 !important;
     }
 
@@ -210,8 +210,14 @@
        (Applies to all pages using layouts.landing)
     ═══════════════════════════════════════════ */
     :root {
-      --green: #00b692;
-      --green-dark: #009c7d;
+      --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
       --dark: #111827;
       --gray: #6b7280;
       --light: #f6f9f8;
@@ -230,32 +236,32 @@
     /* Brand Color Utility Overrides */
     .text-menutiger-orange,
     .text-menutiger-green {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     .bg-menutiger-green,
     .bg-menutiger-orange {
-      background-color: #00b692 !important;
+      background-color: #2E6F40 !important;
     }
     .btn-menutiger-primary {
-      background-color: #00b692 !important;
+      background-color: #2E6F40 !important;
       color: #ffffff !important;
       font-weight: 700 !important;
       border-radius: 12px !important;
       transition: all 0.25s ease !important;
     }
     .btn-menutiger-primary:hover {
-      background-color: #009c7d !important;
+      background-color: #245833 !important;
       transform: translateY(-2px) !important;
-      box-shadow: 0 10px 25px rgba(0, 182, 146, 0.3) !important;
+      box-shadow: 0 10px 25px rgba(46, 111, 64, 0.3) !important;
     }
     .btn-menutiger-secondary {
-      color: #00b692 !important;
-      border: 2px solid #00b692 !important;
+      color: #2E6F40 !important;
+      border: 2px solid #2E6F40 !important;
       border-radius: 12px !important;
       transition: all 0.25s ease !important;
     }
     .btn-menutiger-secondary:hover {
-      background-color: rgba(0, 182, 146, 0.08) !important;
+      background-color: rgba(46, 111, 64, 0.08) !important;
     }
     .footer-main-grid {
       display: grid !important;
@@ -300,14 +306,14 @@
       display: inline-block !important;
     }
     .footer-col-links a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
       padding-left: 4px !important;
     }
     html.dark .footer-col-links a {
       color: #9ca3af !important;
     }
     html.dark .footer-col-links a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     .brand-desc, .newsletter-desc, .copyright-text {
       font-size: 13.5px !important;
@@ -370,9 +376,9 @@
       transition: all 0.2s ease !important;
     }
     .social-icon-btn:hover {
-      background: #00b692 !important;
+      background: #2E6F40 !important;
       color: #ffffff !important;
-      border-color: #00b692 !important;
+      border-color: #2E6F40 !important;
       transform: translateY(-2px) !important;
     }
     html.dark .social-icon-btn {
@@ -381,9 +387,9 @@
       color: #9ca3af !important;
     }
     html.dark .social-icon-btn:hover {
-      background: #00b692 !important;
+      background: #2E6F40 !important;
       color: #ffffff !important;
-      border-color: #00b692 !important;
+      border-color: #2E6F40 !important;
     }
     .footer-container {
       max-width: 1180px !important;
@@ -585,7 +591,7 @@
                     <a href="/" class="flex items-center gap-2.5 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="{{ asset('img/logo.png') }}" class="w-[52px] h-[52px] object-contain rounded-md shrink-0" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text" style="font-size:19px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:10px;">
-                            <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
+                            <span style="color:#2E6F40; font-weight:900;">CHOW</span><span style="color:#68BA7F; font-weight:900;">CHAK</span>
                         </span>
                     </a>
                     <div class="flex flex-shrink-0 items-center gap-1 sm:gap-2">
@@ -742,7 +748,7 @@
                     <a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="{{ asset('img/logo.png') }}" class="w-[52px] h-[52px] object-contain rounded-md shrink-0 shadow-sm" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text" style="font-size:22px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
-                            <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
+                            <span style="color:#2E6F40; font-weight:900;">CHOW</span><span style="color:#68BA7F; font-weight:900;">CHAK</span>
                         </span>
                     </a>
                     <div class="flex items-center lg:order-2">
@@ -797,8 +803,8 @@
                             <li>
                                 <a href="/" wire:navigate @class([
                                     'block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 transition duration-200 font-medium text-[14px]',
-                                    'text-gray-900 hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692]' => !request()->routeIs(['home']),
-                                    'text-[#00b692]' => request()->routeIs(['home']),
+                                    'text-gray-900 hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40]' => !request()->routeIs(['home']),
+                                    'text-[#2E6F40]' => request()->routeIs(['home']),
                                 ])
                                     aria-current="page">@lang('menu.home')</a>
                             </li>
@@ -806,8 +812,8 @@
                             <li>
                                 <a href="{{ url('/features') }}" @class([
                                     'transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px]',
-                                    'text-gray-900 font-medium hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692]' => !request()->routeIs(['landing.features']),
-                                    'text-[#00b692]' => request()->routeIs(['landing.features']),
+                                    'text-gray-900 font-medium hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40]' => !request()->routeIs(['landing.features']),
+                                    'text-[#2E6F40]' => request()->routeIs(['landing.features']),
                                 ])
                                     aria-current="page">@lang('landing.features')</a>
                             </li>
@@ -815,28 +821,28 @@
                             <li>
                                 <a href="{{ url('/pricing') }}" @class([
                                     'transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px]',
-                                    'text-gray-900 font-medium hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692]' => !request()->routeIs(['landing.pricing']),
-                                    'text-[#00b692]' => request()->routeIs(['landing.pricing']),
+                                    'text-gray-900 font-medium hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40]' => !request()->routeIs(['landing.pricing']),
+                                    'text-[#2E6F40]' => request()->routeIs(['landing.pricing']),
                                 ])
                                     aria-current="page">@lang('landing.pricing')</a>
                             </li>
 
                             <li>
-                                <a href="{{ url('/about-us') }}" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-900 font-medium hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692] text-[14px]"
+                                <a href="{{ url('/about-us') }}" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-900 font-medium hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40] text-[14px]"
                                     aria-current="page">About Us</a>
                             </li>
 
                             <li>
                                 <a href="{{ route('landing.tutorials') }}" @class([
                                     'transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px]',
-                                    'text-gray-900 font-medium hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692]' => !request()->routeIs(['landing.tutorials', 'landing.tutorial_detail']),
-                                    'text-[#00b692]' => request()->routeIs(['landing.tutorials', 'landing.tutorial_detail']),
+                                    'text-gray-900 font-medium hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40]' => !request()->routeIs(['landing.tutorials', 'landing.tutorial_detail']),
+                                    'text-[#2E6F40]' => request()->routeIs(['landing.tutorials', 'landing.tutorial_detail']),
                                 ])
                                     aria-current="page">Tutorials</a>
                             </li>
 
                             <li>
-                                <a href="/#user-faqs" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-900 font-medium hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692] text-[14px]"
+                                <a href="/#user-faqs" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-900 font-medium hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40] text-[14px]"
                                     aria-current="page">@lang('landing.faq')</a>
                             </li>
 
@@ -844,7 +850,7 @@
                                 @if ($menu->is_active && $menu->position == 'header')
                                     <li>
                                         <a href="{{ route('customMenu', ['slug' => $menu->menu_slug]) }}" @class([
-                                            'transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-900 font-medium hover:text-[#00b692] dark:text-gray-900 dark:hover:text-[#00b692] text-[14px]',
+                                            'transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-gray-900 font-medium hover:text-[#2E6F40] dark:text-gray-900 dark:hover:text-[#2E6F40] text-[14px]',
                                         ])
                                             aria-current="page">
                                             {{ $menu->menu_name }}
@@ -873,7 +879,7 @@
                             <a href="/" class="footer-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                                 <img src="{{ asset('img/logo.png') }}" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ChowChak Logo" />
                                 <span class="logo-text" style="font-size:22px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
-                                    <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
+                                    <span style="color:#2E6F40; font-weight:900;">CHOW</span><span style="color:#68BA7F; font-weight:900;">CHAK</span>
                                 </span>
                             </a>
                             <p class="brand-desc" style="font-size:13.5px; color:#6b7280; line-height:1.6; margin:0; max-width:280px;">
@@ -925,7 +931,7 @@
                             <p class="newsletter-desc" style="line-height:1.6; margin:0;">Subscribe to our newsletter to receive the latest updates, tips, and feature announcements.</p>
                             <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
                                 <input type="email" placeholder="Email Address" required id="ns-email">
-                                <button type="submit" class="newsletter-submit-btn" title="Subscribe" style="width:36px; height:36px; background:#00b692; color:#fff; border:none; border-radius:8px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                                <button type="submit" class="newsletter-submit-btn" title="Subscribe" style="width:36px; height:36px; background:#2E6F40; color:#fff; border:none; border-radius:8px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                                 </button>
                             </form>
@@ -947,7 +953,7 @@
         const feedback = document.getElementById('ns-feedback');
         if (feedback) {
             feedback.style.display = 'block';
-            feedback.style.color = isSuccess ? '#00b692' : '#ef4444';
+            feedback.style.color = isSuccess ? '#2E6F40' : '#ef4444';
             feedback.innerHTML = isSuccess 
                 ? `<span style="display:inline-flex;align-items:center;gap:4px;">✓ ${message}</span>`
                 : `<span style="display:inline-flex;align-items:center;gap:4px;">✕ ${message}</span>`;
@@ -976,7 +982,7 @@
             padding:12px 20px;
             border-radius:12px;
             box-shadow:0 10px 25px rgba(0,0,0,0.25);
-            border:1px solid ${isSuccess ? 'rgba(0,182,146,0.4)' : 'rgba(239,68,68,0.4)'};
+            border:1px solid ${isSuccess ? 'rgba(46, 111, 64, 0.4)' : 'rgba(239,68,68,0.4)'};
             font-family:'Montserrat','Plus Jakarta Sans',sans-serif;
             font-size:13.5px;
             font-weight:500;
@@ -986,7 +992,7 @@
         `;
 
         const iconSvg = isSuccess
-            ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b692" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
+            ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6F40" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
             : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>`;
 
         toast.innerHTML = `${iconSvg} <span>${message}</span>`;
@@ -1074,7 +1080,7 @@
             
             if (isCurrent) {
                 link.classList.add('active-nav-link');
-                link.style.setProperty('color', '#00b692', 'important');
+                link.style.setProperty('color', '#2E6F40', 'important');
                 link.style.setProperty('font-weight', '700', 'important');
             } else {
                 link.classList.remove('active-nav-link');

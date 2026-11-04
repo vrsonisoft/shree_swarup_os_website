@@ -43,7 +43,7 @@ htmlFiles.forEach((filePath) => {
     }
 
     // 1. Replace desktop and mobile header logos
-    content = content.replace(/<span style="color:#00B692; font-weight:900;">SHREESWARUP<\/span>\s*<span style="color:#9CB080; font-weight:900;">OS<\/span>/g, '<span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>');
+    content = content.replace(/<span style="color:#2E6F40; font-weight:900;">SHREESWARUP<\/span>\s*<span style="color:#9CB080; font-weight:900;">OS<\/span>/g, '<span style="color:#2E6F40; font-weight:900;">CHOW</span><span style="color:#53B86F; font-weight:900;">CHAK</span>');
     content = content.replace(/SHREESWARUP/g, 'CHOW');
     content = content.replace(/<span style="color:#9CB080; font-weight:900;">OS<\/span>/g, '<span style="color:#9CB080; font-weight:900;">CHAK</span>');
     content = content.replace(/<span class="logo-subtext"[^>]*>OS<\/span>/g, '<span class="logo-subtext" style="font-weight:900;">CHAK</span>');
@@ -52,7 +52,7 @@ htmlFiles.forEach((filePath) => {
     const newDesktopLogo = `<a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="/img/logo.png" class="w-[52px] h-[52px] object-contain rounded-md shrink-0 shadow-sm" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text" style="font-size:22px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
-                            <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
+                            <span style="color:#2E6F40; font-weight:900;">CHOW</span><span style="color:#53B86F; font-weight:900;">CHAK</span>
                         </span>
                     </a>`;
     content = content.replace(desktopLogoRegex, newDesktopLogo);
@@ -62,7 +62,7 @@ htmlFiles.forEach((filePath) => {
     const newFooterLogo = `<a href="/" class="footer-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                                 <img src="/img/logo.png" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ChowChak Logo" />
                                 <span class="logo-text" style="font-size:22px; font-family:'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight:900; letter-spacing:0.5px; text-transform:uppercase; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
-                                    <span style="color:#00B692; font-weight:900;">CHOW</span><span style="color:#9CB080; font-weight:900;">CHAK</span>
+                                    <span style="color:#2E6F40; font-weight:900;">CHOW</span><span style="color:#53B86F; font-weight:900;">CHAK</span>
                                 </span>
                             </a>`;
     content = content.replace(footerLogoRegex, newFooterLogo);

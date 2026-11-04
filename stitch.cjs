@@ -49,12 +49,12 @@ function updateNavLinksInFile(filePath) {
 
     // Now insert the correct pair of About Us and Tutorials links
     const aboutUsClass = isAboutUsPage 
-        ? 'text-[#00b692] font-semibold' 
-        : 'text-gray-700 font-medium hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692]';
+        ? 'text-[#2E6F40] font-semibold' 
+        : 'text-gray-700 font-medium hover:text-[#2E6F40] dark:text-gray-200 dark:hover:text-[#2E6F40]';
         
     const tutorialsClass = isTutorialsPage 
-        ? 'text-[#00b692] font-semibold' 
-        : 'text-gray-700 font-medium hover:text-[#00b692] dark:text-gray-200 dark:hover:text-[#00b692]';
+        ? 'text-[#2E6F40] font-semibold' 
+        : 'text-gray-700 font-medium hover:text-[#2E6F40] dark:text-gray-200 dark:hover:text-[#2E6F40]';
 
     const desktopReplacement = `<li>\n                                 <a href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] ${aboutUsClass}" aria-current="page">About Us</a>\n                             </li>\n                             <li>\n                                 <a href="/tutorials" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] ${tutorialsClass}" aria-current="page">Tutorials</a>\n                             </li>`;
 
@@ -70,7 +70,7 @@ function updateNavLinksInFile(filePath) {
     }
 
     // Standardize Login button
-    html = html.replace(/class="([^"]*inline-flex items-center px-4 py-2[^"]*)"/g, 'class="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg font-medium text-sm text-gray-800 dark:text-white shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-[#00b692] dark:hover:text-[#00b692] transition ease-in-out duration-150 ltr:pl-4 rtl:pr-4"');
+    html = html.replace(/class="([^"]*inline-flex items-center px-4 py-2[^"]*)"/g, 'class="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg font-medium text-sm text-gray-800 dark:text-white shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-[#2E6F40] dark:hover:text-[#2E6F40] transition ease-in-out duration-150 ltr:pl-4 rtl:pr-4"');
 
     // Standardize desktop menu link classes for Light (text-gray-700) & Dark (dark:text-gray-200) mode
     html = html.replace(/dark:text-gray-900/g, 'dark:text-gray-200');
@@ -79,8 +79,8 @@ function updateNavLinksInFile(filePath) {
     html = html.replace(/dark:text-white/g, 'dark:text-gray-200');
     html = html.replace(/text-gray-900/g, 'text-gray-700');
     html = html.replace(/text-gray-600/g, 'text-gray-700');
-    html = html.replace(/dark:hover:text-teal-400/g, 'dark:hover:text-[#00b692]');
-    html = html.replace(/dark:hover:text-white/g, 'dark:hover:text-[#00b692]');
+    html = html.replace(/dark:hover:text-teal-400/g, 'dark:hover:text-[#2E6F40]');
+    html = html.replace(/dark:hover:text-white/g, 'dark:hover:text-[#2E6F40]');
 
     // 3. Make Nav Link Fonts Smaller (text-[14px])
     // Target any desktop nav link class
@@ -115,7 +115,7 @@ function updateNavLinksInFile(filePath) {
         const feedback = document.getElementById('ns-feedback');
         if (feedback) {
             feedback.style.display = 'block';
-            feedback.style.color = isSuccess ? '#00b692' : '#ef4444';
+            feedback.style.color = isSuccess ? '#2E6F40' : '#ef4444';
             feedback.innerHTML = isSuccess 
                 ? \`<span style="display:inline-flex;align-items:center;gap:4px;">✓ \${message}</span>\`
                 : \`<span style="display:inline-flex;align-items:center;gap:4px;">✕ \${message}</span>\`;
@@ -144,7 +144,7 @@ function updateNavLinksInFile(filePath) {
             padding:12px 20px;
             border-radius:12px;
             box-shadow:0 10px 25px rgba(0,0,0,0.25);
-            border:1px solid \${isSuccess ? 'rgba(0,182,146,0.4)' : 'rgba(239,68,68,0.4)'};
+            border:1px solid \${isSuccess ? 'rgba(46, 111, 64, 0.4)' : 'rgba(239,68,68,0.4)'};
             font-family:'Montserrat','Plus Jakarta Sans',sans-serif;
             font-size:13.5px;
             font-weight:500;
@@ -154,7 +154,7 @@ function updateNavLinksInFile(filePath) {
         \`;
 
         const iconSvg = isSuccess
-            ? \`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b692" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>\`
+            ? \`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6F40" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>\`
             : \`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>\`;
 
         toast.innerHTML = \`\${iconSvg} <span>\${message}</span>\`;
@@ -489,14 +489,14 @@ const customNavStyles = `
       display: inline-block !important;
     }
     .footer-col-links a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
       padding-left: 4px !important;
     }
     html.dark .footer-col-links a {
       color: #9ca3af !important;
     }
     html.dark .footer-col-links a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     .brand-desc, .newsletter-desc, .copyright-text {
       font-size: 13.5px !important;
@@ -559,9 +559,9 @@ const customNavStyles = `
       transition: all 0.2s ease !important;
     }
     .social-icon-btn:hover {
-      background: #00b692 !important;
+      background: #2E6F40 !important;
       color: #ffffff !important;
-      border-color: #00b692 !important;
+      border-color: #2E6F40 !important;
       transform: translateY(-2px) !important;
     }
     html.dark .social-icon-btn {
@@ -570,9 +570,9 @@ const customNavStyles = `
       color: #9ca3af !important;
     }
     html.dark .social-icon-btn:hover {
-      background: #00b692 !important;
+      background: #2E6F40 !important;
       color: #ffffff !important;
-      border-color: #00b692 !important;
+      border-color: #2E6F40 !important;
     }
 
     /* ── TOP CONTACT BAR STYLES ── */
@@ -601,7 +601,7 @@ const customNavStyles = `
       transition: color 0.2s ease;
     }
     .top-contact-container a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     @media (max-width: 768px) {
       .top-contact-bar {
@@ -618,7 +618,7 @@ const customNavStyles = `
       color: #e5e7eb !important;
     }
     html.dark .top-contact-container a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
 
     /* ── HEADER NAVIGATION LINK STYLES ── */
@@ -631,10 +631,10 @@ const customNavStyles = `
       color: #e5e7eb !important; /* Light grey for dark mode */
     }
     .menutiger-nav ul li a:hover, #mobile-menu-2 ul li a:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
     }
     .menutiger-nav ul li a.active-nav-link, #mobile-menu-2 ul li a.active-nav-link {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
       font-weight: 700 !important;
     }
 
@@ -655,17 +655,17 @@ const customNavStyles = `
       color: #1f2937 !important;
     }
     .menutiger-nav a[href="/login"]:hover, #mobile-menu-2 a[href="/login"]:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
       background-color: #f9fafb !important;
-      border-color: #00b692 !important;
+      border-color: #2E6F40 !important;
     }
     .menutiger-nav a[href="/restaurant-signup"], #mobile-menu-2 a[href="/restaurant-signup"] {
-      background-color: #00b692 !important;
+      background-color: #2E6F40 !important;
       color: #ffffff !important;
       border: none !important;
     }
     .menutiger-nav a[href="/restaurant-signup"]:hover, #mobile-menu-2 a[href="/restaurant-signup"]:hover {
-      background-color: #009c7d !important;
+      background-color: #245833 !important;
       color: #ffffff !important;
     }
 
@@ -685,12 +685,12 @@ const customNavStyles = `
       color: #e5e7eb !important;
     }
     html.dark .menutiger-nav a[href="/login"]:hover, html.dark #mobile-menu-2 a[href="/login"]:hover {
-      color: #00b692 !important;
+      color: #2E6F40 !important;
       background-color: #374151 !important;
-      border-color: #00b692 !important;
+      border-color: #2E6F40 !important;
     }
     html.dark .menutiger-nav a[href="/restaurant-signup"], html.dark #mobile-menu-2 a[href="/restaurant-signup"] {
-      background-color: #00b692 !important;
+      background-color: #2E6F40 !important;
       color: #ffffff !important;
     }
     </style>
@@ -726,7 +726,7 @@ const customNavScript = `
             
             if (isCurrent) {
                 link.classList.add('active-nav-link');
-                link.style.setProperty('color', '#00b692', 'important');
+                link.style.setProperty('color', '#2E6F40', 'important');
                 link.style.setProperty('font-weight', '700', 'important');
             } else {
                 link.classList.remove('active-nav-link');

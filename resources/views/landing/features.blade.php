@@ -22,8 +22,14 @@
 @section('content')
 <style>
 :root {
-  --green: #00b692;
-  --green-dark: #009c7d;
+  --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
   --orange: #ff6b2c;
   --dark: #0f172a;
   --gray: #475569;
@@ -58,22 +64,21 @@ html.dark {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.12) 0%, transparent 60%),
+  background: radial-gradient(ellipse at 30% 60%, rgba(46, 111, 64, 0.12) 0%, transparent 60%),
               radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .feat-hero-tag {
   display: inline-block;
-  background: rgba(0,182,146,0.12);
-  border: 1px solid rgba(0,182,146,0.3);
-  color: #00b692;
+  background: #CFFFDC;
+  border: 1.5px solid #68BA7F;
+  color: #253D2C;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 6px 18px;
-  border-radius: 30px;
-  margin-bottom: 24px;
+  padding: 6px 16px;
+  border-radius: 20px;
 }
 .feat-hero h1 {
   font-size: clamp(32px, 5vw, 58px);
@@ -83,7 +88,7 @@ html.dark {
   margin: 0 0 20px;
   transition: color 0.3s ease;
 }
-.feat-hero h1 em { color: #00b692; font-style: normal; }
+.feat-hero h1 em { color: #2E6F40; font-style: normal; }
 .feat-hero p {
   font-size: 17px;
   color: #4b5563;
@@ -94,7 +99,7 @@ html.dark {
 }
 .feat-hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .btn-hero-primary {
-  background: #00b692;
+  background: #2E6F40;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -103,7 +108,7 @@ html.dark {
   text-decoration: none;
   transition: background .2s, transform .2s;
 }
-.btn-hero-primary:hover { background: #009c7d; transform: translateY(-2px); }
+.btn-hero-primary:hover { background: #245833; transform: translateY(-2px); }
 .btn-hero-ghost {
   background: transparent;
   color: #1f2937;
@@ -115,7 +120,7 @@ html.dark {
   text-decoration: none;
   transition: border-color .2s, color .2s, transform .2s;
 }
-.btn-hero-ghost:hover { border-color: #00b692; color: #00b692; transform: translateY(-2px); }
+.btn-hero-ghost:hover { border-color: #2E6F40; color: #2E6F40; transform: translateY(-2px); }
 
 /* ── DARK HERO OVERRIDES ── */
 html.dark .feat-hero {
@@ -123,7 +128,7 @@ html.dark .feat-hero {
   border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 html.dark .feat-hero::before {
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.15) 0%, transparent 60%),
+  background: radial-gradient(ellipse at 30% 60%, rgba(46, 111, 64, 0.15) 0%, transparent 60%),
               radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.08) 0%, transparent 60%);
 }
 html.dark .feat-hero h1 {
@@ -155,7 +160,7 @@ html.dark .btn-hero-ghost {
 .stat-num {
   font-size: 28px;
   font-weight: 900;
-  color: #00b692;
+  color: #2E6F40;
   display: block;
 }
 .stat-lbl {
@@ -174,15 +179,13 @@ html.dark .btn-hero-ghost {
 .section-head { text-align: center; margin-bottom: 56px; }
 .label-badge {
   display: inline-block;
-  background: rgba(0,182,146,0.08);
-  color: #00b692;
+  background: #CFFFDC;
+  border: 1.5px solid #68BA7F;
+  color: #253D2C;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 5px 16px;
+  padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 14px;
 }
 .section-head h2 {
   font-size: clamp(24px, 3.5vw, 38px);
@@ -191,7 +194,7 @@ html.dark .btn-hero-ghost {
   margin: 0 0 12px;
   line-height: 1.25;
 }
-.section-head h2 em { color: #00b692; font-style: normal; }
+.section-head h2 em { color: #2E6F40; font-style: normal; }
 .section-head p {
   font-size: 15px;
   color: var(--gray);
@@ -219,9 +222,9 @@ html.dark .btn-hero-ghost {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0,182,146,0.08);
-  border: 1px solid rgba(0,182,146,0.15);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.08);
+  border: 1px solid rgba(46, 111, 64, 0.15);
+  color: #2E6F40;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -264,9 +267,9 @@ html.dark .btn-hero-ghost {
   content: '';
   width: 18px;
   height: 18px;
-  background: rgba(0,182,146,0.12);
+  background: rgba(46, 111, 64, 0.12);
   border-radius: 50%;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 5L4 7.5L8.5 2.5' stroke='%2300b692' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 5L4 7.5L8.5 2.5' stroke='%232E6F40' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px;
@@ -322,7 +325,7 @@ html.dark .btn-hero-ghost {
 .menu-item-info { flex: 1; }
 .menu-item-name { font-size: 13px; font-weight: 700; color: var(--dark); }
 .menu-item-desc { font-size: 11px; color: var(--gray); margin-top: 2px; }
-.menu-item-price { font-size: 14px; font-weight: 800; color: #00b692; }
+.menu-item-price { font-size: 14px; font-weight: 800; color: #2E6F40; }
 
 /* Table tracking mockup */
 .table-grid-demo {
@@ -343,7 +346,7 @@ html.dark .btn-hero-ghost {
   border: 1.5px solid transparent;
   transition: transform .2s;
 }
-.tbl-cell.available { background: rgba(0,182,146,0.08); border-color: rgba(0,182,146,0.25); color: #00b692; }
+.tbl-cell.available { background: rgba(46, 111, 64, 0.08); border-color: rgba(46, 111, 64, 0.25); color: #2E6F40; }
 .tbl-cell.occupied { background: rgba(255,107,44,0.08); border-color: rgba(255,107,44,0.25); color: #ff6b2c; }
 .tbl-cell.reserved { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.25); color: #6366f1; }
 .tbl-cell:hover { transform: scale(1.04); }
@@ -366,7 +369,7 @@ html.dark .btn-hero-ghost {
   font-weight: 700;
   white-space: nowrap;
 }
-.order-badge.new { background: rgba(0,182,146,0.12); color: #00b692; }
+.order-badge.new { background: rgba(46, 111, 64, 0.12); color: #2E6F40; }
 .order-badge.prep { background: rgba(255,193,7,0.15); color: #d97706; }
 .order-badge.done { background: rgba(99,102,241,0.12); color: #6366f1; }
 .order-info { flex: 1; }
@@ -384,7 +387,7 @@ html.dark .btn-hero-ghost {
   border-radius: 4px;
   overflow: hidden;
 }
-.chart-bar-fill { height: 100%; background: #00b692; border-radius: 4px; }
+.chart-bar-fill { height: 100%; background: #2E6F40; border-radius: 4px; }
 
 /* Integration mockup */
 .integ-grid-demo { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -401,7 +404,7 @@ html.dark .btn-hero-ghost {
   color: var(--dark);
   transition: border-color .2s, transform .2s;
 }
-.integ-chip-demo:hover { border-color: #00b692; transform: translateY(-2px); }
+.integ-chip-demo:hover { border-color: #2E6F40; transform: translateY(-2px); }
 .integ-chip-demo span { font-size: 16px; }
 
 /* ── FEATURE CARDS GRID ── */
@@ -426,25 +429,25 @@ html.dark .btn-hero-ghost {
 }
 .feat-card-mini:hover {
   transform: translateY(-6px);
-  border-color: #00b692;
-  box-shadow: 0 16px 40px rgba(0,182,146,0.1);
+  border-color: #2E6F40;
+  box-shadow: 0 16px 40px rgba(46, 111, 64, 0.1);
 }
 .feat-card-icon {
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: rgba(0,182,146,0.1);
+  background: rgba(46, 111, 64, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00b692;
+  color: #2E6F40;
 }
 .feat-card-mini h4 { font-size: 15px; font-weight: 800; color: var(--dark); margin: 0; }
 .feat-card-mini p { font-size: 13px; color: var(--gray); line-height: 1.7; margin: 0; }
 
 /* ── CTA BOTTOM ── */
 .feat-cta {
-  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  background: linear-gradient(135deg, #2E6F40 0%, #245833 100%);
   padding: 80px 24px;
   text-align: center;
   position: relative;
@@ -462,7 +465,7 @@ html.dark .btn-hero-ghost {
 .feat-cta p { font-size: 16px; color: rgba(255,255,255,0.85); margin: 0 auto 36px; max-width: 500px; line-height: 1.8; }
 .btn-cta-white {
   background: #fff;
-  color: #00b692;
+  color: #2E6F40;
   font-weight: 800;
   font-size: 15px;
   padding: 16px 40px;
@@ -514,7 +517,7 @@ html.dark .btn-hero-ghost {
 <section class="feat-section">
   <div class="section-inner" id="core-features-container">
     <div id="features-loading" style="text-align:center;padding:60px 0;color:var(--gray);font-size:14px;">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00b692" stroke-width="2" style="animation:spin 1s linear infinite;margin-bottom:12px;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2E6F40" stroke-width="2" style="animation:spin 1s linear infinite;margin-bottom:12px;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
       <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
       <div>Loading features...</div>
     </div>
@@ -587,7 +590,7 @@ html.dark .btn-hero-ghost {
     const shortDescText = feature.short_desc || feature.description || '';
     const imageHtml = feature.image
       ? `<img src="${feature.image}" alt="${feature.title || 'Feature'}" style="max-width:100%;max-height:360px;object-fit:contain;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.08);">`
-      : `<div style="width:100%;min-height:180px;background:linear-gradient(135deg,rgba(0,182,146,0.08),rgba(99,102,241,0.08));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:48px;">✨</div>`;
+      : `<div style="width:100%;min-height:180px;background:linear-gradient(135deg,rgba(46, 111, 64, 0.08),rgba(99,102,241,0.08));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:48px;">✨</div>`;
 
     return `
       <div class="feat-spotlight ${isReverse ? 'reverse' : ''}">

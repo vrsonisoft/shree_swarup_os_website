@@ -28,8 +28,14 @@
 @section('content')
 <style>
 :root {
-  --green: #00b692;
-  --green-dark: #009c7d;
+  --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
   --orange: #ff6b2c;
   --dark: #111827;
   --gray: #6b7280;
@@ -64,15 +70,15 @@ html.dark {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.12) 0%, transparent 60%),
+  background: radial-gradient(ellipse at 30% 60%, rgba(46, 111, 64, 0.12) 0%, transparent 60%),
               radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .pr-hero-tag {
   display: inline-block;
-  background: rgba(0,182,146,0.12);
-  border: 1px solid rgba(0,182,146,0.3);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.12);
+  border: 1px solid rgba(46, 111, 64, 0.3);
+  color: #2E6F40;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -89,7 +95,7 @@ html.dark {
   margin: 0 0 16px;
   transition: color 0.3s ease;
 }
-.pr-hero h1 em { color: #00b692; font-style: normal; }
+.pr-hero h1 em { color: #2E6F40; font-style: normal; }
 .pr-hero p {
   font-size: 16px;
   color: #4b5563;
@@ -105,7 +111,7 @@ html.dark .pr-hero {
   border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 html.dark .pr-hero::before {
-  background: radial-gradient(ellipse at 30% 60%, rgba(0,182,146,0.15) 0%, transparent 60%),
+  background: radial-gradient(ellipse at 30% 60%, rgba(46, 111, 64, 0.15) 0%, transparent 60%),
               radial-gradient(ellipse at 70% 30%, rgba(255,107,44,0.08) 0%, transparent 60%);
 }
 html.dark .pr-hero h1 {
@@ -138,7 +144,7 @@ html.dark .pr-hero p {
   transition: color .2s;
   white-space: nowrap;
 }
-.billing-toggle-label.active { color: #00b692; }
+.billing-toggle-label.active { color: #2E6F40; }
 .billing-toggle {
   position: relative;
   width: 48px;
@@ -149,7 +155,7 @@ html.dark .pr-hero p {
   cursor: pointer;
   transition: background .2s;
 }
-.billing-toggle.on { background: #00b692; }
+.billing-toggle.on { background: #2E6F40; }
 .billing-toggle-thumb {
   position: absolute;
   top: 3px;
@@ -163,10 +169,11 @@ html.dark .pr-hero p {
 }
 .billing-toggle.on .billing-toggle-thumb { transform: translateX(22px); }
 .save-badge {
-  background: linear-gradient(135deg, #00b692, #009c7d);
-  color: #fff;
+  background: #CFFFDC;
+  border: 1.5px solid #68BA7F;
+  color: #253D2C;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   padding: 4px 12px;
   border-radius: 20px;
   letter-spacing: 0.5px;
@@ -193,25 +200,26 @@ html.dark .pr-hero p {
 }
 .pr-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(0,182,146,0.12);
-  border-color: #00b692;
+  box-shadow: 0 24px 60px rgba(46, 111, 64, 0.12);
+  border-color: #2E6F40;
 }
 .pr-card.featured {
-  border-color: #00b692;
-  background: linear-gradient(160deg, rgba(0,182,146,0.04) 0%, var(--card) 60%);
-  box-shadow: 0 12px 40px rgba(0,182,146,0.14);
+  border-color: #2E6F40;
+  background: linear-gradient(160deg, rgba(46, 111, 64, 0.04) 0%, var(--card) 60%);
+  box-shadow: 0 12px 40px rgba(46, 111, 64, 0.14);
 }
 .pr-card.featured:hover {
   transform: translateY(-8px);
-  box-shadow: 0 30px 70px rgba(0,182,146,0.2);
+  box-shadow: 0 30px 70px rgba(46, 111, 64, 0.2);
 }
 .pr-popular-badge {
   position: absolute;
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #00b692, #009c7d);
-  color: #fff;
+  background: #CFFFDC;
+  border: 1.5px solid #68BA7F;
+  color: #253D2C;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -219,7 +227,7 @@ html.dark .pr-hero p {
   padding: 5px 18px;
   border-radius: 20px;
   white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(0,182,146,0.35);
+  box-shadow: 0 4px 16px rgba(37, 61, 44, 0.25);
 }
 .pr-card-name {
   font-size: 20px;
@@ -239,7 +247,7 @@ html.dark .pr-hero p {
 .pr-price-main {
   font-size: 40px;
   font-weight: 900;
-  color: #00b692;
+  color: #2E6F40;
   line-height: 1;
 }
 .pr-price-period {
@@ -265,17 +273,17 @@ html.dark .pr-hero p {
   margin-bottom: 28px;
 }
 .pr-btn-primary {
-  background: #00b692;
+  background: #2E6F40;
   color: #fff;
-  border: 2px solid #00b692;
+  border: 2px solid #2E6F40;
 }
-.pr-btn-primary:hover { background: #009c7d; border-color: #009c7d; transform: translateY(-1px); }
+.pr-btn-primary:hover { background: #245833; border-color: #245833; transform: translateY(-1px); }
 .pr-btn-outline {
   background: transparent;
-  color: #00b692;
-  border: 2px solid #00b692;
+  color: #2E6F40;
+  border: 2px solid #2E6F40;
 }
-.pr-btn-outline:hover { background: rgba(0,182,146,0.06); transform: translateY(-1px); }
+.pr-btn-outline:hover { background: rgba(46, 111, 64, 0.06); transform: translateY(-1px); }
 .pr-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 20px; }
 .pr-features-list {
   list-style: none;
@@ -294,7 +302,7 @@ html.dark .pr-hero p {
   line-height: 1.6;
 }
 .pr-features-list li.disabled { color: var(--gray); opacity: 0.55; }
-.pr-check-icon { color: #00b692; flex-shrink: 0; margin-top: 2px; }
+.pr-check-icon { color: #2E6F40; flex-shrink: 0; margin-top: 2px; }
 .pr-cross-icon { color: var(--gray); flex-shrink: 0; margin-top: 2px; opacity: 0.4; }
 
 /* ── COMPARISON TABLE ── */
@@ -306,7 +314,7 @@ html.dark .pr-hero p {
   color: var(--dark);
   margin: 0 0 8px;
 }
-.section-title em { color: #00b692; font-style: normal; }
+.section-title em { color: #2E6F40; font-style: normal; }
 .section-sub { font-size: 14px; color: var(--gray); margin: 0 0 40px; line-height: 1.8; }
 
 .compare-table { width: 100%; overflow-x: auto; }
@@ -325,7 +333,7 @@ html.dark .pr-hero p {
   border-bottom: 2px solid var(--border);
 }
 .compare-table th.plan-col { text-align: center; }
-.compare-table th.highlight { background: rgba(0,182,146,0.06); border-top: 3px solid #00b692; }
+.compare-table th.highlight { background: rgba(46, 111, 64, 0.06); border-top: 3px solid #2E6F40; }
 .compare-table td {
   padding: 14px 20px;
   font-size: 13px;
@@ -334,10 +342,10 @@ html.dark .pr-hero p {
   vertical-align: middle;
 }
 .compare-table td.plan-col { text-align: center; }
-.compare-table td.highlight { background: rgba(0,182,146,0.03); }
+.compare-table td.highlight { background: rgba(46, 111, 64, 0.03); }
 .compare-table tr:last-child td { border-bottom: none; }
-.compare-table tr:hover td { background: rgba(0,182,146,0.03); }
-.check-svg { color: #00b692; display: inline-block; }
+.compare-table tr:hover td { background: rgba(46, 111, 64, 0.03); }
+.check-svg { color: #2E6F40; display: inline-block; }
 .dash-svg { color: var(--border); display: inline-block; }
 
 /* ── FAQ (EXPLICIT LIGHT & DARK MODE) ── */
@@ -375,8 +383,8 @@ html.dark .pr-faq-section .section-sub {
   transition: all .25s ease !important;
 }
 .faq-item:hover {
-  border-color: #00b692 !important;
-  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.1) !important;
+  border-color: #2E6F40 !important;
+  box-shadow: 0 4px 16px rgba(46, 111, 64, 0.1) !important;
 }
 html.dark .faq-item {
   background: #1f2937 !important;
@@ -384,8 +392,8 @@ html.dark .faq-item {
   box-shadow: none !important;
 }
 html.dark .faq-item:hover {
-  border-color: #00b692 !important;
-  box-shadow: 0 4px 16px rgba(0, 182, 146, 0.18) !important;
+  border-color: #2E6F40 !important;
+  box-shadow: 0 4px 16px rgba(46, 111, 64, 0.18) !important;
 }
 .faq-question {
   display: flex !important;
@@ -402,14 +410,14 @@ html.dark .faq-item:hover {
 }
 .faq-question:hover,
 .faq-question.open {
-  color: #00b692 !important;
+  color: #2E6F40 !important;
 }
 html.dark .faq-question {
   color: #f3f4f6 !important;
 }
 html.dark .faq-question:hover,
 html.dark .faq-question.open {
-  color: #00b692 !important;
+  color: #2E6F40 !important;
 }
 .faq-toggle-icon {
   width: 32px !important;
@@ -418,7 +426,7 @@ html.dark .faq-question.open {
   border-radius: 50% !important;
   background: #ecfdf5 !important;
   border: 1.5px solid #a7f3d0 !important;
-  color: #00b692 !important;
+  color: #2E6F40 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -429,8 +437,8 @@ html.dark .faq-question.open {
   transition: all .25s ease !important;
 }
 .faq-question.open .faq-toggle-icon {
-  background: #00b692 !important;
-  border-color: #00b692 !important;
+  background: #2E6F40 !important;
+  border-color: #2E6F40 !important;
   color: #ffffff !important;
   transform: rotate(180deg);
 }
@@ -440,8 +448,8 @@ html.dark .faq-toggle-icon {
   color: #34d399 !important;
 }
 html.dark .faq-question.open .faq-toggle-icon {
-  background: #00b692 !important;
-  border-color: #00b692 !important;
+  background: #2E6F40 !important;
+  border-color: #2E6F40 !important;
   color: #ffffff !important;
 }
 .faq-answer {
@@ -463,7 +471,7 @@ html.dark .faq-answer {
 
 /* ── CTA ── */
 .pr-cta {
-  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  background: linear-gradient(135deg, #2E6F40 0%, #245833 100%);
   padding: 80px 24px;
   text-align: center;
   position: relative;
@@ -480,7 +488,7 @@ html.dark .faq-answer {
 .pr-cta p { font-size: 15px; color: rgba(255,255,255,0.85); max-width: 480px; margin: 0 auto 36px; line-height: 1.8; }
 .btn-cta-white {
   background: #fff;
-  color: #00b692;
+  color: #2E6F40;
   font-weight: 800;
   font-size: 15px;
   padding: 16px 40px;
@@ -971,7 +979,7 @@ function loadPricingPageData() {
                 ${packages.map((pkg, i) => `
                   <th class="plan-col ${i === 1 ? 'highlight' : ''}">
                     ${pkg.package_name}
-                    ${i === 1 ? '<br><span style="font-size:11px;font-weight:600;color:#00b692;">⭐ Popular</span>' : ''}
+                    ${i === 1 ? '<br><span style="font-size:11px;font-weight:600;color:#2E6F40;">⭐ Popular</span>' : ''}
                   </th>
                 `).join('')}
               </tr>
@@ -985,20 +993,20 @@ function loadPricingPageData() {
                   if (pkg.package_type === 'lifetime') priceStr = `${symbol}${pkg.price}<br><small style="font-weight:500;color:var(--gray);">one-time</small>`;
                   else if (pkg.monthly_price) priceStr = `${symbol}${pkg.monthly_price}<br><small style="font-weight:500;color:var(--gray);">/month</small>`;
                   else if (pkg.annual_price) priceStr = `${symbol}${pkg.annual_price}<br><small style="font-weight:500;color:var(--gray);">/year</small>`;
-                  return `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-weight:800;color:#00b692;">${priceStr}</td>`;
+                  return `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-weight:800;color:#2E6F40;">${priceStr}</td>`;
                 }).join('')}
               </tr>
               <tr>
                 <td>Menu Items Limit</td>
-                ${packages.map((pkg, i) => `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-size:12px;font-weight:600;color:#00b692;">${pkg.menu_items_limit === -1 ? 'Unlimited' : (pkg.menu_items_limit || '—')}</td>`).join('')}
+                ${packages.map((pkg, i) => `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-size:12px;font-weight:600;color:#2E6F40;">${pkg.menu_items_limit === -1 ? 'Unlimited' : (pkg.menu_items_limit || '—')}</td>`).join('')}
               </tr>
               <tr>
                 <td>Daily Orders</td>
-                ${packages.map((pkg, i) => `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-size:12px;font-weight:600;color:#00b692;">${pkg.order_limit === -1 ? 'Unlimited' : (pkg.order_limit ? pkg.order_limit + '/day' : '—')}</td>`).join('')}
+                ${packages.map((pkg, i) => `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-size:12px;font-weight:600;color:#2E6F40;">${pkg.order_limit === -1 ? 'Unlimited' : (pkg.order_limit ? pkg.order_limit + '/day' : '—')}</td>`).join('')}
               </tr>
               <tr>
                 <td>Staff Members</td>
-                ${packages.map((pkg, i) => `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-size:12px;font-weight:600;color:#00b692;">${pkg.staff_limit === -1 ? 'Unlimited' : (pkg.staff_limit || '—')}</td>`).join('')}
+                ${packages.map((pkg, i) => `<td class="plan-col ${i === 1 ? 'highlight' : ''}" style="font-size:12px;font-weight:600;color:#2E6F40;">${pkg.staff_limit === -1 ? 'Unlimited' : (pkg.staff_limit || '—')}</td>`).join('')}
               </tr>
               ${allModules.map(modName => `
                 <tr>
@@ -1020,7 +1028,7 @@ function loadPricingPageData() {
                 <td><strong>Get Started</strong></td>
                 ${packages.map((pkg, i) => `
                   <td class="plan-col ${i === 1 ? 'highlight' : ''}">
-                    <a href="/restaurant-signup" style="display:inline-block;background:${i === 1 ? '#00b692' : 'transparent'};color:${i === 1 ? '#fff' : '#00b692'};border:1.5px solid #00b692;font-weight:700;font-size:12px;padding:8px 18px;border-radius:8px;text-decoration:none;transition:all .2s;">Get Started</a>
+                    <a href="/restaurant-signup" style="display:inline-block;background:${i === 1 ? '#2E6F40' : 'transparent'};color:${i === 1 ? '#fff' : '#2E6F40'};border:1.5px solid #2E6F40;font-weight:700;font-size:12px;padding:8px 18px;border-radius:8px;text-decoration:none;transition:all .2s;">Get Started</a>
                   </td>
                 `).join('')}
               </tr>

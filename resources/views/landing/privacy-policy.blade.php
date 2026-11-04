@@ -6,8 +6,14 @@
 @section('content')
 <style>
 :root {
-  --green: #00b692;
-  --green-dark: #009c7d;
+  --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
   --dark: #111827;
   --gray: #6b7280;
   --light: #f8fafc;
@@ -41,14 +47,14 @@ html.dark {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, rgba(0,182,146,0.12) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 50%, rgba(46, 111, 64, 0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 .legal-badge {
   display: inline-block;
-  background: rgba(0,182,146,0.12);
-  border: 1px solid rgba(0,182,146,0.3);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.12);
+  border: 1px solid rgba(46, 111, 64, 0.3);
+  color: #2E6F40;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -65,7 +71,7 @@ html.dark {
   margin: 0 0 14px;
   transition: color 0.3s ease;
 }
-.legal-hero h1 em { color: #00b692; font-style: normal; }
+.legal-hero h1 em { color: #2E6F40; font-style: normal; }
 .legal-hero-meta {
   font-size: 13.5px;
   color: #4b5563;
@@ -143,8 +149,8 @@ html.dark .legal-hero-meta {
   font-weight: 500;
 }
 .legal-sidebar a:hover {
-  background: rgba(0,182,146,0.08);
-  color: #00b692;
+  background: rgba(46, 111, 64, 0.08);
+  color: #2E6F40;
   padding-left: 16px;
 }
 
@@ -166,13 +172,13 @@ html.dark .legal-hero-meta {
   color: var(--dark);
   margin: 0 0 16px;
   padding-bottom: 8px;
-  border-bottom: 2px solid rgba(0,182,146,0.2);
+  border-bottom: 2px solid rgba(46, 111, 64, 0.2);
   display: flex;
   align-items: center;
   gap: 10px;
 }
 .legal-section h2 span.num {
-  background: #00b692;
+  background: #2E6F40;
   color: #fff;
   width: 28px;
   height: 28px;
@@ -202,8 +208,8 @@ html.dark .legal-hero-meta {
 
 /* Callout Box */
 .legal-callout {
-  background: rgba(0,182,146,0.06);
-  border-left: 4px solid #00b692;
+  background: rgba(46, 111, 64, 0.06);
+  border-left: 4px solid #2E6F40;
   border-radius: 12px;
   padding: 20px 24px;
   margin: 20px 0;
@@ -217,7 +223,7 @@ html.dark .legal-hero-meta {
 
 /* ── CTA BANNER ── */
 .legal-cta {
-  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  background: linear-gradient(135deg, #2E6F40 0%, #245833 100%);
   padding: 60px 24px;
   text-align: center;
   color: #fff;
@@ -227,7 +233,7 @@ html.dark .legal-hero-meta {
 .legal-cta a {
   display: inline-block;
   background: #fff;
-  color: #00b692;
+  color: #2E6F40;
   font-weight: 800;
   font-size: 14px;
   padding: 14px 32px;
@@ -274,7 +280,7 @@ html.dark .legal-hero-meta {
 
       <!-- SLEEK SPINNER LOADER -->
       <div id="legal-loader" style="padding:60px 20px;text-align:center;">
-        <div style="width:40px;height:40px;margin:0 auto 16px;border:3px solid rgba(0,182,146,0.15);border-top-color:#00b692;border-radius:50%;animation:legalSpin 0.8s linear infinite;"></div>
+        <div style="width:40px;height:40px;margin:0 auto 16px;border:3px solid rgba(46, 111, 64, 0.15);border-top-color:#2E6F40;border-radius:50%;animation:legalSpin 0.8s linear infinite;"></div>
         <style>@keyframes legalSpin { to { transform: rotate(360deg); } }</style>
         <div style="font-size:14px;font-weight:600;color:var(--gray);">Loading Privacy Policy...</div>
       </div>

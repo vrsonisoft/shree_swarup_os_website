@@ -53,8 +53,14 @@
 @section('content')
 <style>
 :root {
-  --green: #00b692;
-  --green-dark: #009c7d;
+  --forest-primary: #2E6F40;
+  --forest-mint: #CFFFDC;
+  --forest-accent: #68BA7F;
+  --forest-dark: #253D2C;
+  --green: #2E6F40;
+  --green-dark: #253D2C;
+  --green-accent: #68BA7F;
+  --green-mint: #CFFFDC;
   --orange: #ff6b2c;
   --dark: #111827;
   --gray: #6b7280;
@@ -92,7 +98,7 @@ html.dark {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 60%, rgba(0, 182, 146, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 60%, rgba(46, 111, 64, 0.12) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
@@ -142,7 +148,7 @@ html.dark .detail-hero-title {
 
 .detail-hero-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #00b692 0%, #009c7d 100%);
+  background: linear-gradient(135deg, #2E6F40 0%, #245833 100%);
   color: #fff;
   font-size: 11px;
   font-weight: 700;
@@ -150,7 +156,7 @@ html.dark .detail-hero-title {
   border-radius: 30px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(0, 182, 146, 0.25);
+  box-shadow: 0 2px 6px rgba(46, 111, 64, 0.25);
 }
 
 /* ── LAYOUT GRID ── */
@@ -216,8 +222,8 @@ html.dark .detail-hero-title {
 }
 
 .sidebar-tutorial-link.active {
-  background: rgba(0, 182, 146, 0.08);
-  border-color: rgba(0, 182, 146, 0.25);
+  background: rgba(46, 111, 64, 0.08);
+  border-color: rgba(46, 111, 64, 0.25);
   color: var(--green);
   font-weight: 600;
 }
@@ -288,19 +294,19 @@ html.dark .detail-hero-title {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(0, 182, 146, 0.9);
+  background: rgba(46, 111, 64, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(0, 182, 146, 0.5);
+  box-shadow: 0 0 20px rgba(46, 111, 64, 0.5);
   transition: transform 0.2s, background 0.2s;
 }
 
 .video-play-indicator:hover {
   transform: scale(1.1);
-  background: #00b692;
+  background: #2E6F40;
 }
 
 .video-title-overlay {
@@ -339,7 +345,7 @@ html.dark .detail-hero-title {
 .video-progress-fill {
   width: 0%;
   height: 100%;
-  background: #00b692;
+  background: #2E6F40;
   border-radius: 2px;
   transition: width 0.1s linear;
 }
@@ -385,10 +391,10 @@ html.dark .detail-hero-title {
 .step-number {
   width: 26px;
   height: 26px;
-  background: rgba(0, 182, 146, 0.12);
-  border: 1.5px solid rgba(0, 182, 146, 0.25);
+  background: rgba(46, 111, 64, 0.12);
+  border: 1.5px solid rgba(46, 111, 64, 0.25);
   border-radius: 50%;
-  color: #00b692;
+  color: #2E6F40;
   font-size: 12px;
   font-weight: 700;
   display: flex;
