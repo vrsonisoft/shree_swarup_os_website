@@ -608,7 +608,7 @@
                 <div class="flex flex-nowrap justify-between items-center w-full mx-auto">
                     <a href="/" class="flex items-center gap-2 app-logo min-w-0 shrink" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="{{ asset('img/logo.png') }}" class="h-10 w-auto object-contain rounded-xl shrink-0 shadow-sm" style="height:38px; max-height:38px; width:auto; object-fit:contain; border-radius:8px; flex-shrink:0;" alt="ChowChak Logo" />
-                        <span class="logo-text shrink min-w-0 overflow-hidden text-ellipsis" style="font-size:clamp(16px, 4.5vw, 20px); font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:8px; white-space:nowrap;">
+                        <span class="logo-text shrink min-w-0 overflow-hidden text-ellipsis" style="color:#2E6F40 !important; font-size:clamp(16px, 4.5vw, 20px); font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:8px; white-space:nowrap;">
                             ChowChak
                         </span>
                     </a>
@@ -654,7 +654,7 @@
             <div class="drawer-top-bar flex justify-between items-center shrink-0 border-b border-gray-100 dark:border-gray-800" style="padding-bottom: 18px; margin-bottom: 8px;">
                 <a href="/" class="flex items-center gap-2.5 app-logo" style="text-decoration:none;">
                     <img src="{{ asset('img/logo.png') }}" style="height:36px; width:38px; object-fit:contain; border-radius:6px;" alt="ChowChak Logo" />
-                    <span class="logo-text" style="font-size:20px; font-family:'Outfit', sans-serif; font-weight:800; line-height:1;">
+                    <span class="logo-text" style="color:#2E6F40 !important; font-size:20px; font-family:'Outfit', sans-serif; font-weight:800; line-height:1;">
                         ChowChak
                     </span>
                 </a>
@@ -762,11 +762,12 @@
                     { dark: document.getElementById('theme-toggle-dark-icon-mobile'), light: document.getElementById('theme-toggle-light-icon-mobile') },
                     { dark: document.getElementById('theme-toggle-dark-icon-drawer'), light: document.getElementById('theme-toggle-light-icon-drawer') }
                 ];
+                const btnDesktop = document.getElementById('theme-toggle');
                 const btnMobile = document.getElementById('theme-toggle-mobile');
                 const btnDrawer = document.getElementById('theme-toggle-drawer');
 
                 function updateThemeUI() {
-                    const isDark = document.documentElement.classList.contains('dark') || localStorage.getItem('color-theme') === 'dark';
+                    const isDark = document.documentElement.classList.contains('dark');
                     iconPairs.forEach(pair => {
                         if (pair.dark && pair.light) {
                             if (isDark) {
@@ -780,7 +781,8 @@
                     });
                 }
 
-                function toggleTheme() {
+                function toggleTheme(e) {
+                    if (e && e.preventDefault) e.preventDefault();
                     if (document.documentElement.classList.contains('dark')) {
                         document.documentElement.classList.remove('dark');
                         localStorage.setItem('color-theme', 'light');
@@ -792,8 +794,18 @@
                     document.dispatchEvent(new Event('dark-mode'));
                 }
 
-                if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
-                if (btnDrawer) btnDrawer.addEventListener('click', toggleTheme);
+                if (btnDesktop) {
+                    btnDesktop.dataset.initialized = 'true';
+                    btnDesktop.addEventListener('click', toggleTheme);
+                }
+                if (btnMobile) {
+                    btnMobile.dataset.initialized = 'true';
+                    btnMobile.addEventListener('click', toggleTheme);
+                }
+                if (btnDrawer) {
+                    btnDrawer.dataset.initialized = 'true';
+                    btnDrawer.addEventListener('click', toggleTheme);
+                }
                 document.addEventListener('dark-mode', updateThemeUI);
 
                 updateThemeUI();
@@ -805,7 +817,7 @@
                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4" style="height:64px;">
                     <a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="{{ asset('img/logo.png') }}" class="w-[52px] h-[52px] object-contain rounded-md shrink-0 shadow-sm" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
-                        <span class="logo-text" style="font-size:22px; font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
+                        <span class="logo-text" style="color:#2E6F40 !important; font-size:22px; font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
                             ChowChak
                         </span>
                     </a>
@@ -936,7 +948,7 @@
                         <div class="footer-brand-col" style="display:flex; flex-direction:column; gap:14px; text-align:left;">
                             <a href="/" class="footer-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                                 <img src="{{ asset('img/logo.png') }}" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:10px; flex-shrink:0;" alt="ChowChak Logo" />
-                                <span class="logo-text" style="font-size:22px; font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
+                                <span class="logo-text" style="color:#2E6F40 !important; font-size:22px; font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
                                     ChowChak
                                 </span>
                             </a>
