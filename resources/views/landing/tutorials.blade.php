@@ -52,7 +52,7 @@ html.dark {
 .tutorials-page {
   color: var(--dark);
   background: var(--white);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 /* ── HERO SECTION ── */
@@ -380,7 +380,7 @@ html.dark .search-icon-svg {
   color: #fff;
   font-size: 28px;
   font-weight: 900;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   letter-spacing: -1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

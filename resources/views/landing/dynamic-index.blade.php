@@ -55,7 +55,7 @@ html.dark {
   --bg-connect: #0f172a;
 }
 
-.mt { font-family: 'Poppins', sans-serif; color: var(--dark); }
+.mt { font-family: 'Outfit', sans-serif; color: var(--dark); }
 .mt *, .mt *::before, .mt *::after { box-sizing: border-box; }
 .mt a { text-decoration: none; }
 

@@ -30,7 +30,7 @@ html.dark {
   --card: #1f2937;
 }
 
-.legal-page { font-family: 'Poppins', sans-serif; color: var(--dark); background: var(--light); min-height: 100vh; }
+.legal-page { font-family: 'Outfit', sans-serif; color: var(--dark); background: var(--light); min-height: 100vh; }
 .legal-page *, .legal-page *::before, .legal-page *::after { box-sizing: border-box; }
 
 /* ── HERO ── */

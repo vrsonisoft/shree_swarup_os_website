@@ -355,10 +355,10 @@ body>[id^="tooltip-od-detail-status-"][role="tooltip"] {
   pointer-events: auto !important;
 }
 
-/* Menu Tiger Brand Theme Override */
+/* ChowChak Brand Theme Override */
 @layer base {
-  html, body {
-    font-family: 'Poppins', sans-serif !important;
+  html, body, button, input, select, textarea {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
 }
 

@@ -47,7 +47,7 @@ html.dark {
   --card: #111827;
 }
 
-.feat-page { font-family: 'Poppins', sans-serif; color: var(--dark); background: var(--white); }
+.feat-page { font-family: 'Outfit', sans-serif; color: var(--dark); background: var(--white); }
 .feat-page *, .feat-page *::before, .feat-page *::after { box-sizing: border-box; }
 
 /* ── HERO ── */

@@ -42,7 +42,8 @@ export default {
                 },
             },
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                sans: ["'Outfit'", ...defaultTheme.fontFamily.sans],
+                outfit: ["'Outfit'", "sans-serif"],
             },
             animation: {
                 blink: "blink 1s infinite", // Define the blink animation

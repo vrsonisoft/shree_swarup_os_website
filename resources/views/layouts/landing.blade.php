@@ -81,10 +81,10 @@
     </script>
     @yield('schema')
 
-    <!-- Google Fonts: Montserrat, Poppins & Plus Jakarta Sans -->
+    <!-- Google Fonts: Outfit & Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:wght@700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS & Flowbite CDN -->
     <script>
@@ -125,13 +125,18 @@
     {{-- Include file for widgets if exist --}}
     @includeIf('sections.custom_script_landing')
     <style>
+    /* ── GLOBAL FONT: OUTFIT ── */
+    html, body, button, input, select, textarea {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+
     /* ── TOP CONTACT BAR STYLES ── */
     .top-contact-bar {
       background: #f8fafc;
       color: #4b5563;
       padding: 8px 24px;
       font-size: 12px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
       border-bottom: 1px solid #e5e7eb;
     }
     .top-contact-container {
@@ -281,7 +286,7 @@
       background: #f8fafc !important;
       padding: 24px 24px 28px !important;
       border-top: 1px solid var(--border) !important;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
       width: 100% !important;
       box-sizing: border-box !important;
     }
@@ -871,7 +876,7 @@
                 @include('sections.connect')
             </main>
 
-            <footer class="premium-footer" style="padding:28px 24px 28px; font-family:'Poppins', sans-serif; width:100%; box-sizing:border-box;">
+            <footer class="premium-footer" style="padding:28px 24px 28px; font-family:'Outfit', sans-serif; width:100%; box-sizing:border-box;">
                 <div class="footer-container" style="max-width:1180px; margin:0 auto; width:100%;">
                     <div class="footer-main-grid" style="display:grid; align-items:start;">
                         <!-- Column 1: Logo & Info -->

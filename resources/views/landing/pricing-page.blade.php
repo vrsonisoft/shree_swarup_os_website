@@ -53,7 +53,7 @@ html.dark {
   --card: #1f2937;
 }
 
-.pr-page { font-family: 'Poppins', sans-serif; color: var(--dark); }
+.pr-page { font-family: 'Outfit', sans-serif; color: var(--dark); }
 .pr-page *, .pr-page *::before, .pr-page *::after { box-sizing: border-box; }
 
 /* ── HERO ── */

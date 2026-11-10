@@ -48,7 +48,7 @@ html.dark {
 }
 
 .ab-page {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   color: var(--dark);
   background: var(--white);
   transition: background-color 0.3s ease, color 0.3s ease;
