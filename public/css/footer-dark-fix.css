@@ -458,6 +458,14 @@ html.dark .top-contact-container a:hover {
 }
 
 /* ── DESKTOP HEADER & NAV ── */
+.app-logo .logo-text {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 800 !important;
+  color: #2E6F40 !important;
+}
+html.dark .app-logo .logo-text {
+  color: #ffffff !important;
+}
 header.hidden.lg\:block {
   position: sticky !important;
   top: 0 !important;
@@ -796,13 +804,14 @@ html.dark .premium-footer {
   text-decoration: none !important;
 }
 .footer-logo .logo-text {
-  font-size: 20px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 22px !important;
   font-weight: 800 !important;
-  color: #111827 !important;
-  letter-spacing: -0.5px !important;
+  color: #2E6F40 !important;
+  letter-spacing: -0.3px !important;
 }
 html.dark .footer-logo .logo-text {
-  color: #f3f4f6 !important;
+  color: #ffffff !important;
 }
 .footer-col-title {
   font-size: 14px !important;
