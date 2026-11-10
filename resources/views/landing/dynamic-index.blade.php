@@ -8,11 +8,61 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "ChowChak",
-  "operatingSystem": "Web, Android, iOS",
-  "applicationCategory": "BusinessApplication",
-  "description": "Complete Restaurant Management Software & Digital QR Code Menu Platform."
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "ChowChak",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "description": "Complete Restaurant Management Software & Digital QR Code Menu Platform."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://chowchak.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does ChowChak Digital QR Menu work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customers simply scan the QR code placed on their table using their smartphone camera. The interactive digital menu opens instantly without downloading any app, allowing guests to explore dishes, customize modifiers, and place orders directly to your kitchen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can customers order and pay directly from the QR menu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Guests can browse real-time item availability, customize dishes, and place instant orders. Depending on your restaurant preference, customers can pay directly via digital payments (UPI, Cards) or settle at the counter/table."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need expensive hardware or special tablets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No proprietary hardware is required. ChowChak works seamlessly on any existing smartphone, tablet, laptop, and connects directly to standard thermal receipt printers (USB, Bluetooth, Wi-Fi, Ethernet)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can I set up my restaurant menu and start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can be up and running in under 30 minutes! Simply add your food categories and items, configure prices, and generate your custom branded QR code standees or stickers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I manage multiple outlets from a single dashboard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! ChowChak includes multi-branch management. You can switch between outlets, track unified or branch-specific sales analytics, manage staff permissions, and update menus centrally."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 @endsection

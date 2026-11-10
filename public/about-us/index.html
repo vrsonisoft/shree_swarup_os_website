@@ -334,6 +334,28 @@
     <link href="/css/footer-dark-fix.css" rel="stylesheet" />
 
     <style>html, body, button, input, select, textarea { font-family: 'Outfit', sans-serif !important; }</style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chowchak.com/" },
+            { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://chowchak.com/about-us" }
+          ]
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://chowchak.com/about-us#webpage",
+          "url": "https://chowchak.com/about-us",
+          "name": "About ChowChak",
+          "description": "Discover ChowChak, our mission to modernize hospitality, and how our cloud restaurant platform helps food businesses increase revenue and streamline service."
+        }
+      ]
+    }
+    </script>
 </head>   <body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">

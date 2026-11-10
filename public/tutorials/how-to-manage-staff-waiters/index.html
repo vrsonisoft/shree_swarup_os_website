@@ -275,6 +275,75 @@
     <link href="/css/footer-dark-fix.css" rel="stylesheet" />
 
     <style>html, body, button, input, select, textarea { font-family: 'Outfit', sans-serif !important; }</style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chowchak.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://chowchak.com/tutorials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Manage Staff & Waiters",
+          "item": "https://chowchak.com/tutorials/how-to-manage-staff-waiters"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Manage Staff & Waiters",
+      "description": "Add waiters, managers, and delivery staff. Track active waiter requests and table assignments.",
+      "image": "https://chowchak.com/img/favicons/android-chrome-512x512.png",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1",
+          "text": "Go to the Staff Management section on your admin dashboard."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2",
+          "text": "Tap on + Add Staff and enter their name, contact details, and secure login PIN."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3",
+          "text": "Select their job role type: Waiter, Chef, Manager, or Delivery Executive."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4",
+          "text": "Assign specific table areas to waiters to optimize service delivery."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5",
+          "text": "Track staff attendance and real-time customer table service requests."
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>   <body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">
@@ -699,11 +768,11 @@ html.dark .detail-hero-title {
         <span>&rsaquo;</span>
         <a href="/tutorials">Tutorials</a>
         <span>&rsaquo;</span>
-        <span id="breadcrumb-current" style="color: #fff;">Setup</span>
+        <span id="breadcrumb-current" class="text-gray-900 dark:text-white font-medium">How to Manage Staff & Waiters</span>
       </div>
       
-      <span class="detail-hero-badge" id="tutorial-badge">Setup</span>
-      <h1 class="detail-hero-title" id="tutorial-title">Tutorial Title</h1>
+      <span class="detail-hero-badge tag-setup" id="tutorial-badge">Setup</span>
+      <h1 class="detail-hero-title" id="tutorial-title">How to Manage Staff & Waiters</h1>
     </div>
   </section>
 

@@ -275,6 +275,75 @@
     <link href="/css/footer-dark-fix.css" rel="stylesheet" />
 
     <style>html, body, button, input, select, textarea { font-family: 'Outfit', sans-serif !important; }</style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chowchak.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://chowchak.com/tutorials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Manage Guest Table Bookings & Slots",
+          "item": "https://chowchak.com/tutorials/how-to-manage-table-reservations"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Manage Guest Table Bookings & Slots",
+      "description": "Record advance table bookings, manage customer details, assign tables, and track reservation timelines.",
+      "image": "https://chowchak.com/img/favicons/android-chrome-512x512.png",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1",
+          "text": "Go to the Bookings & Reservations tab in the main sidebar."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2",
+          "text": "Click on + New Booking and enter guest details: Name, Mobile, and Date/Time."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3",
+          "text": "Select the table(s) to hold for the booking slot."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4",
+          "text": "Save the reservation. The interactive table map will block the selected tables for the slot."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5",
+          "text": "When the guest arrives, mark their status as Seated to automatically open a billing session."
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>   <body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">
@@ -699,11 +768,11 @@ html.dark .detail-hero-title {
         <span>&rsaquo;</span>
         <a href="/tutorials">Tutorials</a>
         <span>&rsaquo;</span>
-        <span id="breadcrumb-current" style="color: #fff;">Setup</span>
+        <span id="breadcrumb-current" class="text-gray-900 dark:text-white font-medium">How to Manage Guest Table Bookings & Slots</span>
       </div>
       
-      <span class="detail-hero-badge" id="tutorial-badge">Setup</span>
-      <h1 class="detail-hero-title" id="tutorial-title">Tutorial Title</h1>
+      <span class="detail-hero-badge tag-pos" id="tutorial-badge">POS</span>
+      <h1 class="detail-hero-title" id="tutorial-title">How to Manage Guest Table Bookings & Slots</h1>
     </div>
   </section>
 

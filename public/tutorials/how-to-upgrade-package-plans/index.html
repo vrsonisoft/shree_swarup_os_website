@@ -275,6 +275,75 @@
     <link href="/css/footer-dark-fix.css" rel="stylesheet" />
 
     <style>html, body, button, input, select, textarea { font-family: 'Outfit', sans-serif !important; }</style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chowchak.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://chowchak.com/tutorials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Upgrade Restaurant Subscription Plans",
+          "item": "https://chowchak.com/tutorials/how-to-upgrade-package-plans"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Upgrade Restaurant Subscription Plans",
+      "description": "View current subscription package details, manage payments, and upgrade to premium plans.",
+      "image": "https://chowchak.com/img/favicons/android-chrome-512x512.png",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1",
+          "text": "Go to your restaurant's Billing Dashboard."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2",
+          "text": "View your current subscription package details, expiry date, and limit usages."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3",
+          "text": "Click on Upgrade Plan to browse available standard, pro, or premium enterprise plans."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4",
+          "text": "Choose your billing cycle (Monthly or Annual billing options)."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5",
+          "text": "Process the subscription renewal payment securely using credit card, stripe, or razorpay."
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>   <body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">
@@ -699,11 +768,11 @@ html.dark .detail-hero-title {
         <span>&rsaquo;</span>
         <a href="/tutorials">Tutorials</a>
         <span>&rsaquo;</span>
-        <span id="breadcrumb-current" style="color: #fff;">Setup</span>
+        <span id="breadcrumb-current" class="text-gray-900 dark:text-white font-medium">How to Upgrade Restaurant Subscription Plans</span>
       </div>
       
-      <span class="detail-hero-badge" id="tutorial-badge">Setup</span>
-      <h1 class="detail-hero-title" id="tutorial-title">Tutorial Title</h1>
+      <span class="detail-hero-badge tag-reports" id="tutorial-badge">Billing</span>
+      <h1 class="detail-hero-title" id="tutorial-title">How to Upgrade Restaurant Subscription Plans</h1>
     </div>
   </section>
 

@@ -275,6 +275,75 @@
     <link href="/css/footer-dark-fix.css" rel="stylesheet" />
 
     <style>html, body, button, input, select, textarea { font-family: 'Outfit', sans-serif !important; }</style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chowchak.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tutorials",
+          "item": "https://chowchak.com/tutorials"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Export Daily Sales & Financial Reports",
+          "item": "https://chowchak.com/tutorials/how-to-export-sales-reports"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Export Daily Sales & Financial Reports",
+      "description": "Analyze restaurant revenue performance, track daily sales, check payment modes, and download statements.",
+      "image": "https://chowchak.com/img/favicons/android-chrome-512x512.png",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1",
+          "text": "Access the Reports Dashboard from the bottom menu list."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2",
+          "text": "Choose a specific report category: Order Report, Payment Mode Report, or Staff Commission Report."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3",
+          "text": "Set your start date and end date filters for the transaction statement."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4",
+          "text": "Check total gross revenue, tax collections, discount amounts, and net earnings."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5",
+          "text": "Click the Excel or PDF button at the top header to save or email the statement."
+        }
+      ]
+    }
+  ]
+}
+    </script>
 </head>   <body class="font-sans antialiased bg-white dark:bg-gray-900">
     <div class="top-contact-bar">
       <div class="top-contact-container">
@@ -699,11 +768,11 @@ html.dark .detail-hero-title {
         <span>&rsaquo;</span>
         <a href="/tutorials">Tutorials</a>
         <span>&rsaquo;</span>
-        <span id="breadcrumb-current" style="color: #fff;">Setup</span>
+        <span id="breadcrumb-current" class="text-gray-900 dark:text-white font-medium">How to Export Daily Sales & Financial Reports</span>
       </div>
       
-      <span class="detail-hero-badge" id="tutorial-badge">Setup</span>
-      <h1 class="detail-hero-title" id="tutorial-title">Tutorial Title</h1>
+      <span class="detail-hero-badge tag-reports" id="tutorial-badge">Reports</span>
+      <h1 class="detail-hero-title" id="tutorial-title">How to Export Daily Sales & Financial Reports</h1>
     </div>
   </section>
 
