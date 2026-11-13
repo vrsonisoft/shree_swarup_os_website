@@ -142,6 +142,13 @@ class HomeController extends Controller
         return view('landing.about-us', compact('customMenu'));
     }
 
+    public function contact()
+    {
+        $customMenu = CustomMenu::all();
+        $globalSetting = global_setting();
+        return view('landing.contact', compact('customMenu', 'globalSetting'));
+    }
+
     public function tutorials()
     {
         $customMenu = CustomMenu::all();

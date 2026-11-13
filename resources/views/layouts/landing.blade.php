@@ -938,9 +938,12 @@
             <main class="flex-grow">
                 @yield('content')
                 {{ $slot ?? '' }}
-                @include('sections.connect')
+                @if (!request()->is('contact*') && empty($hideConnect))
+                    @include('sections.connect')
+                @endif
             </main>
 
+            @if (!request()->is('contact*') && empty($hideFooter))
             <footer class="premium-footer">
                 <div class="footer-container" style="max-width:1180px; margin:0 auto; width:100%;">
                     <div class="footer-main-grid">
@@ -1016,6 +1019,7 @@
                     </div>
                 </div>
             </footer>
+            @endif
         </div>
     </div>
     <script>

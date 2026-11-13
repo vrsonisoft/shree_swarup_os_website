@@ -21,6 +21,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/features', [HomeController::class, 'features'])->name('landing.features');
     Route::get('/pricing', [HomeController::class, 'pricingPage'])->name('landing.pricing');
     Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('landing.about');
+    Route::get('/contact', [HomeController::class, 'contact'])->name('landing.contact');
     Route::get('/tutorials', [HomeController::class, 'tutorials'])->name('landing.tutorials');
     Route::get('/tutorials/{slug}', [HomeController::class, 'tutorialDetail'])->name('landing.tutorial_detail');
     Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy'])->name('landing.privacy');
