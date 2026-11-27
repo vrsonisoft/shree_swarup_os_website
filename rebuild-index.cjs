@@ -45,7 +45,7 @@ blade = blade.replace(/\{\{--[\s\S]*?--\}\}/g, '');
 
 // ── Replace $frontDetails variables ──
 blade = blade.replace(/\{\{\s*\$frontDetails->header_title\s*\?\?\s*__\('landing\.heroTitle'\)\s*\}\}/g,
-  'Restaurant POS software made simple!');
+  'Restaurant POS software made simple');
 
 blade = blade.replace(/\{\{\s*\$frontDetails->header_description\s*\?\?\s*__\('landing\.heroSubTitle'\)\s*\}\}/g,
   'Easily manage orders, menus, and tables in one place. Save time, reduce errors, and grow your restaurant business.');
@@ -59,68 +59,11 @@ blade = blade.replace(/\{\{\s*\$frontDetails->video_thumbnail_url\s*\?\?\s*asset
 // ── Replace route() calls ──
 blade = blade.replace(/\{\{\s*route\('restaurant_signup'\)\s*\}\}/g, 'https://console.chowchak.com/restaurant-signup');
 
-// ── Replace $love @php block + @foreach ──
-const loveData = [
-  ['https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=500&q=80','Transition to contactless ordering','Go paperless and embrace contactless ordering and payments using a restaurant QR code menu for a cleaner and safer experience.','EFFICIENCY'],
-  ['https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80','Easy-to-update menu items and prices','Modify menus and prices in real-time with an interactive restaurant menu. Keep item availability accurate.','MENU UPDATES'],
-  ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80','Reduce wait times','Our streamlined ordering system enhances efficiency with faster service, keeping customers happy and return-rates high.','FAST SERVICE'],
-  ['https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80','Create cost-effective solutions','Our QR code menu is a cost-effective solution that reduces the need for printing and minimizes staff workload.','COST SAVINGS'],
-  ['https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&q=80','Increase order accuracy','Bid farewell to incorrect dishes as a menu QR code guarantees precision, enhancing overall customer satisfaction.','ACCURACY'],
-  ['https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=500&q=80','Enhance customer experience','Elevate the dining experience with our customer-friendly interactive restaurant menu features.','ENGAGEMENT'],
-];
-
-const loveHtml = loveData.map(c => `
-      <div class="premium-love-card">
-        <div class="love-image-container">
-          <span class="love-badge">${c[3]}</span>
-          <img src="${c[0]}" alt="${c[1]}">
-        </div>
-        <div class="love-body">
-          <h3 style="font-size: 15px; font-weight: 700; color: var(--dark); margin: 0 0 10px; line-height: 1.4;">${c[1]}</h3>
-          <p style="font-size: 13px; color: var(--gray); line-height: 1.65; margin: 0;">${c[2]}</p>
-        </div>
-      </div>`).join('\n');
-
-// Replace @php $love block + @foreach loop
-blade = blade.replace(
-  /@php\s*\$love\s*=\s*\[[\s\S]*?\];\s*@endphp\s*<div class="love-grid">\s*@foreach\(\$love as \$c\)[\s\S]*?@endforeach\s*<\/div>/,
-  `<div class="love-grid">${loveHtml}\n    </div>`
-);
-
-// ── Replace $tmpls @php block + @foreach ──
-const tmplData = [
-  ['📋','Menu Templates','Dine-in / Room service','FREE'],
-  ['🥤','Coaster Designs','Cup & Glass branding','PRO'],
-  ['🖼️','Poster Layouts','Promotional wall flyers','FREE'],
-  ['🎪','Table Tent Formats','QR standees','FREE'],
-  ['🔖','Stickers & Labels','Delivery box branding','PRO'],
-  ['🪧','A-Frame Designs','Sidewalk signage','FREE'],
-  ['💳','Business Cards','Executive networking','FREE'],
-  ['🎁','Gift Cards','Discount vouchers','PRO'],
-];
-
-const tmplHtml = tmplData.map(t => `
-      <div class="premium-tmpl-card">
-        <div class="tmpl-preview-box">
-          <span class="tmpl-badge">${t[3]}</span>
-          ${t[0]}
-        </div>
-        <div class="tmpl-info">
-          <h4>${t[1]}</h4>
-          <span>${t[2]}</span>
-        </div>
-      </div>`).join('\n');
-
-blade = blade.replace(
-  /@php\s*\$tmpls\s*=\s*\[[\s\S]*?\];\s*@endphp\s*<div class="premium-tmpl-grid">\s*@foreach\(\$tmpls as \$t\)[\s\S]*?@endforeach\s*<\/div>/,
-  `<div class="premium-tmpl-grid">${tmplHtml}\n    </div>`
-);
-
 // ── Replace $revs @php block + @foreach ──
 const revData = [
   ['https://i.pravatar.cc/96?img=5','Abby G.','Restaurant Owner','We increased our average order size by 20% when we launched our QR code dine-in ordering. It\'s very easy to implement, and our customers love fast and convenient ordering.'],
-  ['https://i.pravatar.cc/96?img=15','Peter P.','Head of Marketing','I was able to save both money and time… I recommend MENU TIGER to those who have restaurants and small food businesses. Two thumbs up!'],
-  ['https://i.pravatar.cc/96?img=20','Adrian W.','General Manager','I recommend MENU TIGER for anyone looking to expand their restaurant business and add a digital edge. Easy, user-friendly, and highly cost-effective.'],
+  ['https://i.pravatar.cc/96?img=15','Peter P.','Head of Marketing','I was able to save both money and time. I recommend ChowChak POS to those who have restaurants and small food businesses.'],
+  ['https://i.pravatar.cc/96?img=20','Adrian W.','General Manager','I recommend ChowChak POS for anyone looking to expand their restaurant business and add a digital edge. Easy, user-friendly, and highly cost-effective.'],
 ];
 
 const revHtml = revData.map(r => `

@@ -177,6 +177,87 @@
     }
 
     /* ── HEADER NAVIGATION LINK STYLES ── */
+    /* STANDARDIZED HEADER CONTAINER (MATCHES PAGE .wrap 1180px) */
+    .menutiger-nav {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    .menutiger-nav .header-inner-wrap,
+    .menutiger-nav > div {
+      max-width: 1180px !important;
+      width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+      box-sizing: border-box !important;
+    }
+    .mobile-header-nav {
+      height: 60px !important;
+      display: flex !important;
+      align-items: center !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      background-color: #ffffff !important;
+      border-bottom: 1px solid #e5e7eb !important;
+    }
+    html.dark .mobile-header-nav {
+      background-color: #111827 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+    .mobile-header-nav .header-inner-wrap,
+    .mobile-header-nav > div {
+      max-width: 1180px !important;
+      width: 100% !important;
+      height: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 18px !important;
+      padding-right: 18px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      box-sizing: border-box !important;
+    }
+    /* Mobile & Desktop Logo Text Brand Color in both light and dark modes */
+    .mobile-header-nav .logo-text,
+    .menutiger-nav .logo-text,
+    html.dark .mobile-header-nav .logo-text,
+    html.dark .menutiger-nav .logo-text {
+      color: #2E6F40 !important;
+      font-weight: 800 !important;
+    }
+    /* Mobile Action Buttons Styling */
+    #theme-toggle-mobile,
+    #mobile-menu-toggle {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 10px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border: 1px solid #e5e7eb !important;
+      background: #f9fafb !important;
+      color: #374151 !important;
+      transition: all 0.2s ease !important;
+    }
+    #theme-toggle-mobile:hover,
+    #mobile-menu-toggle:hover {
+      background: #f3f4f6 !important;
+      border-color: #d1d5db !important;
+    }
+    html.dark #theme-toggle-mobile,
+    html.dark #mobile-menu-toggle {
+      background: rgba(255, 255, 255, 0.06) !important;
+      border-color: rgba(255, 255, 255, 0.12) !important;
+      color: #f3f4f6 !important;
+    }
+    html.dark #theme-toggle-mobile:hover,
+    html.dark #mobile-menu-toggle:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
     header.lg\:hidden nav, .mobile-header-nav {
       background-color: #ffffff !important;
       border-bottom: 1px solid #e5e7eb !important;
@@ -604,10 +685,10 @@
     @include('sections.offline-banner')
     <div class="w-full min-h-svh">
         <header class="lg:hidden sticky top-0 z-50">
-            <nav class="mobile-header-nav bg-white border-b border-gray-200 px-3 py-2.5 dark:bg-gray-900 dark:border-gray-800 transition-colors">
-                <div class="flex flex-nowrap justify-between items-center w-full mx-auto">
+            <nav class="mobile-header-nav bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-800 transition-colors">
+                <div class="header-inner-wrap flex flex-nowrap justify-between items-center w-full mx-auto" style="max-width: 1180px; width: 100%; padding: 0 18px; box-sizing: border-box;">
                     <a href="/" class="flex items-center gap-2 app-logo min-w-0 shrink" style="display:inline-flex; align-items:center; text-decoration:none;">
-                        <img src="{{ asset('img/logo.png') }}" class="h-10 w-auto object-contain rounded-xl shrink-0 shadow-sm" style="height:38px; max-height:38px; width:auto; object-fit:contain; border-radius:8px; flex-shrink:0;" alt="ChowChak Logo" />
+                        <img src="{{ asset('img/logo.png') }}" class="h-10 w-auto object-contain rounded-xl shrink-0 shadow-sm" style="height:36px; max-height:36px; width:auto; object-fit:contain; border-radius:8px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text shrink min-w-0 overflow-hidden text-ellipsis" style="color:#2E6F40 !important; font-size:clamp(16px, 4.5vw, 20px); font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:8px; white-space:nowrap;">
                             ChowChak
                         </span>
@@ -813,8 +894,8 @@
         </script>
 
         <header class="hidden lg:block z-50 sticky top-0 inset-x-0">
-            <nav class="menutiger-nav sticky top-0 px-8 py-0 border-b border-gray-200/70 dark:border-white/10 shadow-sm bg-white dark:bg-gray-900" style="z-index:999;">
-                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4" style="height:64px;">
+            <nav class="menutiger-nav sticky top-0 border-b border-gray-200/70 dark:border-white/10 shadow-sm bg-white dark:bg-gray-900" style="z-index:999; padding: 0;">
+                <div class="header-inner-wrap flex flex-wrap justify-between items-center mx-auto" style="max-width: 1180px; width: 100%; padding: 0 24px; height: 64px; box-sizing: border-box;">
                     <a href="/" class="flex items-center gap-3 app-logo" style="display:inline-flex; align-items:center; text-decoration:none;">
                         <img src="{{ asset('img/logo.png') }}" class="w-[52px] h-[52px] object-contain rounded-md shrink-0 shadow-sm" style="height:52px; width:52px; max-height:52px; max-width:52px; object-fit:contain; border-radius:6px; flex-shrink:0;" alt="ChowChak Logo" />
                         <span class="logo-text" style="color:#2E6F40 !important; font-size:22px; font-family:'Outfit', sans-serif; font-weight:800; display:inline-flex; align-items:center; line-height:1; margin-left:12px;">
