@@ -30,8 +30,51 @@ if (mainStartIdx === -1 || mainEndIdx === -1) {
   process.exit(1);
 }
 
-const headerTemplate = aboutHtml.substring(0, mainStartIdx + mainStartTag.length);
+let headerTemplate = aboutHtml.substring(0, mainStartIdx + mainStartTag.length);
 const footerTemplate = aboutHtml.substring(mainEndIdx); // includes </main>
+
+// ── Extract Homepage Schema from blade before stripping ──
+const schemaMatch = blade.match(/@section\('schema'\)([\s\S]*?)@endsection/);
+const homepageSchema = schemaMatch ? schemaMatch[1].trim() : '';
+
+// ── Fix Homepage Head SEO Meta, Title, and Canonical in headerTemplate ──
+headerTemplate = headerTemplate
+  .replace(/<title>[\s\S]*?<\/title>/i, '<title>ChowChak - Complete Restaurant Software & Digital Menu Platform</title>')
+  .replace(/<meta name="keywords"[^>]*>/i, '<meta name="keywords" content="restaurant software, digital menu platform, QR ordering system, restaurant POS, food ordering system, ChowChak">')
+  .replace(/<meta name="description"[^>]*>/i, '<meta name="description" content="Empower your restaurant with ChowChak. Smart QR code menus, instant order dispatching, POS integration, customer feedback, and multi-location management.">')
+  .replace(/<link rel="canonical"[^>]*>/i, '<link rel="canonical" href="https://chowchak.com/">')
+  .replace(/<meta property="og:title"[^>]*>/i, '<meta property="og:title" content="ChowChak - Complete Restaurant Software & Digital Menu Platform">')
+  .replace(/<meta property="og:url"[^>]*>/i, '<meta property="og:url" content="https://chowchak.com/">')
+  .replace(/<meta property="og:description"[^>]*>/i, '<meta property="og:description" content="Empower your restaurant with ChowChak. Smart QR code menus, instant order dispatching, POS integration, customer feedback, and multi-location management.">')
+  .replace(/<meta name="twitter:url"[^>]*>/i, '<meta name="twitter:url" content="https://chowchak.com/">')
+  .replace(/<meta name="twitter:title"[^>]*>/i, '<meta name="twitter:title" content="ChowChak - Complete Restaurant Software & Digital Menu Platform">')
+  .replace(/<meta name="twitter:description"[^>]*>/i, '<meta name="twitter:description" content="Empower your restaurant with ChowChak. Smart QR code menus, instant order dispatching, POS integration, customer feedback, and multi-location management.">');
+
+// Replace About Us schema in head with Homepage schema
+if (homepageSchema) {
+  headerTemplate = headerTemplate.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>\s*<\/head>/i, homepageSchema + '\n</head>');
+}
+
+// ── Fix Desktop and Mobile Nav Link Active States for Home ──
+// Make Home link active on homepage
+headerTemplate = headerTemplate.replace(
+  '<a href="/" wire:navigate class="block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 transition duration-200 font-medium text-gray-700 hover:text-[#2E6F40] dark:text-gray-200 dark:hover:text-[#2E6F40] text-[14px]"',
+  '<a href="/" wire:navigate class="block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 transition duration-200 font-semibold text-[#2E6F40] dark:text-[#2E6F40] text-[14px]"'
+);
+// Make About Us link inactive on homepage
+headerTemplate = headerTemplate.replace(
+  '<a href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-[#2E6F40] font-semibold" aria-current="page">About Us</a>',
+  '<a href="/about-us" class="transition-all duration-300 block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:p-0 text-[14px] text-gray-700 font-medium hover:text-[#2E6F40] dark:text-gray-200 dark:hover:text-[#2E6F40]">About Us</a>'
+);
+// Make Mobile drawer Home active
+headerTemplate = headerTemplate.replace(
+  '<a href="/" class="drawer-nav-link block py-3.5 text-[15px] font-semibold transition">Home</a>',
+  '<a href="/" class="drawer-nav-link active-nav-link block py-3.5 text-[15px] font-bold text-[#2E6F40] transition">Home</a>'
+);
+headerTemplate = headerTemplate.replace(
+  '<a href="/about-us" class="drawer-nav-link active-nav-link block py-3.5 text-[15px] font-semibold text-[#2E6F40] transition">About Us</a>',
+  '<a href="/about-us" class="drawer-nav-link block py-3.5 text-[15px] font-medium transition">About Us</a>'
+);
 
 // ── Strip Blade directives ──
 // Remove @extends, @section, @endsection, schema blocks, etc.
