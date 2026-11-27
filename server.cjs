@@ -33,9 +33,14 @@ function resolveFile(urlPath) {
         cleanPath = decodeURIComponent(cleanPath);
     } catch (e) {}
 
-    // Security check against directory traversal
-    const safePath = path.normalize(cleanPath).replace(/^(\.\.[\/\\])+/, '');
-    let fullPath = path.join(PUBLIC_DIR, safePath);
+    // Strict boundary defense against directory traversal
+    const normalized = path.normalize(cleanPath).replace(/^[/\\]+/, '');
+    const fullPath = path.resolve(PUBLIC_DIR, normalized);
+
+    // Ensure resolved path is strictly within PUBLIC_DIR
+    if (!fullPath.startsWith(PUBLIC_DIR)) {
+        return null;
+    }
 
     // 1. Direct file match
     if (fs.existsSync(fullPath) && fs.statSync(fullPath).isFile()) {
@@ -70,11 +75,36 @@ function resolveFile(urlPath) {
     return null;
 }
 
+const ALLOWED_ORIGINS = new Set([
+    'https://chowchak.com',
+    'https://www.chowchak.com',
+    'https://console.chowchak.com',
+    'http://localhost:8080',
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8080',
+    'http://127.0.0.1:8000',
+    'http://127.0.0.1:3000'
+]);
+
 const server = http.createServer((req, res) => {
-    // Add CORS headers for local testing
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    // Defensive CORS origin handling
+    const origin = req.headers.origin;
+    if (origin && (ALLOWED_ORIGINS.has(origin) || origin.endsWith('.chowchak.com'))) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+        res.setHeader('Vary', 'Origin');
+    } else if (!origin) {
+        // Direct browser address bar navigation has no origin header
+    } else {
+        res.setHeader('Access-Control-Allow-Origin', 'null');
+    }
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, HEAD');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, Authorization, X-Requested-With');
+
+    // Security Headers on all dev server responses
+    res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
 
     if (req.method === 'OPTIONS') {
         res.writeHead(204);

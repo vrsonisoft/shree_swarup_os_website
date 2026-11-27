@@ -1585,6 +1585,11 @@ html.dark .menutiger-nav .logo-text {
                             <textarea id="contact-message" name="message" rows="4" maxlength="500" placeholder="Tell us about your restaurant setup, number of tables, bill printers needed, or any specific requirements..." class="cc-textarea" style="resize:none;"></textarea>
                         </div>
 
+                        <!-- Honeypot Field for Spam Bot Protection -->
+                        <div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;" aria-hidden="true">
+                            <input type="text" name="_hp_website_chk" tabindex="-1" autocomplete="off">
+                        </div>
+
                         <div style="padding-top:8px; display:flex; flex-wrap:wrap; align-items:center; gap:16px;">
                             <button type="submit" id="btn-submit-form" class="btn-submit">
                                 <span id="submit-btn-text">Submit Message & Request Demo</span>
@@ -2014,6 +2019,27 @@ html.dark .menutiger-nav .logo-text {
                     return;
                 }
 
+                function escapeHtml(str) {
+                    if (!str) return '';
+                    return String(str)
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#39;');
+                }
+
+                // Bot Honeypot Check
+                const hpVal = form.querySelector('[name="_hp_website_chk"]')?.value;
+                if (hpVal) {
+                    console.warn('[Security] Bot automated contact submission blocked.');
+                    form.style.display = 'none';
+                    successCard.style.display = 'block';
+                    const summaryEl = document.getElementById('success-summary-text');
+                    if (summaryEl) summaryEl.textContent = 'Thank you! Your inquiry has been submitted.';
+                    return;
+                }
+
                 submitBtn.disabled = true;
                 submitBtnText.textContent = 'Submitting to ChowChak...';
                 submitBtnSpinner.style.display = 'inline-block';
@@ -2064,7 +2090,7 @@ html.dark .menutiger-nav .logo-text {
 
                         if (ticketEl) ticketEl.textContent = ticketDisplay;
                         if (summaryEl) {
-                            summaryEl.innerHTML = `Thank you <strong>${rawName}</strong>! Your inquiry for <strong>${rawRestaurant}</strong> regarding <em>"${rawTopic}"</em> has been saved with <strong>${ticketDisplay}</strong>. A ChowChak consultant will call or WhatsApp you at <strong>+91 ${cleanPhone}</strong> within 15 minutes.`;
+                            summaryEl.innerHTML = `Thank you <strong>${escapeHtml(rawName)}</strong>! Your inquiry for <strong>${escapeHtml(rawRestaurant)}</strong> regarding <em>"${escapeHtml(rawTopic)}"</em> has been saved with <strong>${escapeHtml(ticketDisplay)}</strong>. A ChowChak consultant will call or WhatsApp you at <strong>+91 ${escapeHtml(cleanPhone)}</strong> within 15 minutes.`;
                         }
                         if (waLink) {
                             const waMsg = encodeURIComponent(`Hi ChowChak! I just submitted ${ticketDisplay} for ${rawRestaurant}. Looking forward to connecting!`);

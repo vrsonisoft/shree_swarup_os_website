@@ -2021,6 +2021,12 @@ html.dark .connect-section {
           <div class="connect-input-group">
             <textarea placeholder="Detailed Requirements (e.g. number of tables, layout preference, etc.)" rows="4" required id="inq-message"></textarea>
           </div>
+          <!-- Honeypot Field for Spam Bot Protection -->
+          <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+            <input type="text" name="_hp_website_chk" tabindex="-1" autocomplete="off">
+          </div>
+          <div>
+          </div>
           
           <button type="submit" class="connect-submit-btn">Send Inquiry</button>
         </form>
@@ -2163,7 +2169,31 @@ function handleInquirySubmit(e) {
             </footer>
 
     <script>
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
     function showNewsletterNotice(message, isSuccess = true) {
+        const safeMsg = escapeHtml(message);
+        const feedback = document.getElementById('ns-feedback');
+        if (feedback) {
+            feedback.style.display = 'block';
+            feedback.style.color = isSuccess ? '#2E6F40' : '#ef4444';
+            feedback.innerHTML = isSuccess 
+                ? `<span style="display:inline-flex;align-items:center;gap:4px;">✓ ${safeMsg}</span>`
+                : `<span style="display:inline-flex;align-items:center;gap:4px;">✕ ${safeMsg}</span>`;
+            
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 5000);
+        }
+
         let toastContainer = document.getElementById('custom-toast-container');
         if (!toastContainer) {
             toastContainer = document.createElement('div');
@@ -2173,15 +2203,36 @@ function handleInquirySubmit(e) {
         }
 
         const toast = document.createElement('div');
-        toast.style.cssText = 'background:#fff;border-left:4px solid ' + (isSuccess ? '#2E6F40' : '#ef4444') + ';box-shadow:0 10px 30px rgba(0,0,0,0.08);padding:16px 20px;border-radius:12px;display:flex;align-items:center;gap:12px;min-width:300px;transform:translateX(100px);opacity:0;transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);pointer-events:auto;';
-        
-        toast.innerHTML = '<div><p style="margin:0;font-size:14px;font-weight:600;color:#111827;">' + (isSuccess ? 'Success' : 'Notice') + '</p><p style="margin:2px 0 0;font-size:13px;color:#6b7280;">' + message + '</p></div>';
+        toast.style.cssText = `
+            pointer-events:auto;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            background:${isSuccess ? '#0f172a' : '#7f1d1d'};
+            color:#ffffff;
+            padding:12px 20px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.25);
+            border:1px solid ${isSuccess ? 'rgba(46, 111, 64, 0.4)' : 'rgba(239,68,68,0.4)'};
+            font-family:'Montserrat','Plus Jakarta Sans',sans-serif;
+            font-size:13.5px;
+            font-weight:500;
+            transform:translateX(100px);
+            opacity:0;
+            transition:all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        `;
+
+        const iconSvg = isSuccess
+            ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6F40" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
+            : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>`;
+
+        toast.innerHTML = `${iconSvg} <span>${safeMsg}</span>`;
         toastContainer.appendChild(toast);
 
-        setTimeout(() => {
+        requestAnimationFrame(() => {
             toast.style.transform = 'translateX(0)';
             toast.style.opacity = '1';
-        }, 100);
+        });
 
         setTimeout(() => {
             toast.style.transform = 'translateX(100px)';

@@ -322,6 +322,11 @@ html.dark .connect-input-group select:focus {
           <div class="connect-input-group">
             <textarea placeholder="Detailed Requirements (e.g. number of tables, layout preference, etc.)" rows="4" required id="inq-message"></textarea>
           </div>
+
+          <!-- Honeypot Field for Spam Bot Protection -->
+          <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+            <input type="text" name="_hp_website_chk" tabindex="-1" autocomplete="off">
+          </div>
           
           <button type="submit" class="connect-submit-btn">Send Inquiry</button>
         </form>
@@ -333,6 +338,18 @@ html.dark .connect-input-group select:focus {
 <script>
 function handleInquirySubmit(e) {
   e.preventDefault();
+
+  // Bot Honeypot Check
+  const hpVal = e.target.querySelector('[name="_hp_website_chk"]')?.value;
+  if (hpVal) {
+    console.warn('[Security] Bot automated inquiry blocked.');
+    if (typeof showNewsletterNotice === 'function') {
+      showNewsletterNotice('Your project inquiry has been submitted successfully!', true);
+    }
+    e.target.reset();
+    return;
+  }
+
   const name = document.getElementById('inq-name')?.value || '';
   const email = document.getElementById('inq-email')?.value || '';
   const phone = document.getElementById('inq-phone')?.value || '';

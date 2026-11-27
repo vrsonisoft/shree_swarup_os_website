@@ -3246,6 +3246,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 function handleInquirySubmit(e) {
   e.preventDefault();
+
+  // Bot Honeypot Check
+  const hpVal = e.target.querySelector('[name="_hp_website_chk"]')?.value;
+  if (hpVal) {
+    console.warn('[Security] Bot automated inquiry blocked.');
+    if (typeof showNewsletterNotice === 'function') {
+      showNewsletterNotice('Your project inquiry has been submitted successfully!', true);
+    }
+    e.target.reset();
+    return;
+  }
+
   const name = document.getElementById('inq-name')?.value || '';
   const email = document.getElementById('inq-email')?.value || '';
   const phone = document.getElementById('inq-phone')?.value || '';

@@ -1085,6 +1085,10 @@
                             <p class="newsletter-desc" style="line-height:1.6; margin:0;">Subscribe to our newsletter to receive the latest updates, tips, and feature announcements.</p>
                             <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
                                 <input type="email" placeholder="Email Address" required id="ns-email">
+                                <!-- Honeypot Field for Spam Bot Protection -->
+                                <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
+                                    <input type="text" name="_hp_website_chk" tabindex="-1" autocomplete="off">
+                                </div>
                                 <button type="submit" class="newsletter-submit-btn" title="Subscribe" style="width:36px; height:36px; background:#2E6F40; color:#fff; border:none; border-radius:8px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                                 </button>
@@ -1104,14 +1108,25 @@
         </div>
     </div>
     <script>
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
     function showNewsletterNotice(message, isSuccess = true) {
+        const safeMsg = escapeHtml(message);
         const feedback = document.getElementById('ns-feedback');
         if (feedback) {
             feedback.style.display = 'block';
             feedback.style.color = isSuccess ? '#2E6F40' : '#ef4444';
             feedback.innerHTML = isSuccess 
-                ? `<span style="display:inline-flex;align-items:center;gap:4px;">✓ ${message}</span>`
-                : `<span style="display:inline-flex;align-items:center;gap:4px;">✕ ${message}</span>`;
+                ? `<span style="display:inline-flex;align-items:center;gap:4px;">✓ ${safeMsg}</span>`
+                : `<span style="display:inline-flex;align-items:center;gap:4px;">✕ ${safeMsg}</span>`;
             
             setTimeout(() => {
                 feedback.style.display = 'none';
@@ -1150,7 +1165,7 @@
             ? `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6F40" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`
             : `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>`;
 
-        toast.innerHTML = `${iconSvg} <span>${message}</span>`;
+        toast.innerHTML = `${iconSvg} <span>${safeMsg}</span>`;
         toastContainer.appendChild(toast);
 
         requestAnimationFrame(() => {
@@ -1167,6 +1182,16 @@
 
     function handleNewsletterSubmit(e) {
         e.preventDefault();
+
+        // Bot Honeypot Check
+        const hpVal = e.target.querySelector('[name="_hp_website_chk"]')?.value;
+        if (hpVal) {
+            console.warn('[Security] Bot automated newsletter subscription blocked.');
+            showNewsletterNotice('Subscribed successfully to newsletter!', true);
+            e.target.reset();
+            return;
+        }
+
         const emailInput = document.getElementById('ns-email');
         if (!emailInput || !emailInput.value) return;
 
